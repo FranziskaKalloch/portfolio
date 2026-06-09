@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Anta';
+  src: url('/public/fonts/Anta-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/public/fonts/JosefinSans-Medium.ttf') format('truetype');
+}
+
+// SCSS Variable
+
+$bg-color: #262e34;

@@ -1,59 +1,142 @@
-# Portfolio
+# Mein Portfolio Projekt
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
+Dieses Projekt wird in Angular umgesetzt.
+Der Fokus liegt auf einem modernen, dunklen Design mit hellblauen Akzenten, Bubble Elementen, Hover-Effekten, responsive Layout und klarer Projektstruktur.
 
-## Development server
+## Farbpalette
 
-To start a local development server, run:
+- Background color | #262E34 | Haupt-Hintergrund der Webseite |
+- Primary color | #89BCD9 | Akzente, Highlights, Links, Icons, aktive Elemente |
+- Secondary color | #F8F5EC | Helle Schrift, Kontraste, wichtige Texte |
+- Hover color dark | rgb(58, 68, 72) | Dunkler Hover-Zustand |
+- Surface color | rgb(45, 56, 64) | Projekt-Section, Tabs/Reiter, Skill-Bubbles, hervorgehobene Flächen |
+- Error color | #E44C36 | Fehlermeldungen im Kontaktformular |
+- Done color | #97E163 | Erfolgreiche Formularzustände |
 
-```bash
-ng serve
-```
+## Schriften
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### Anta
 
-## Code scaffolding
+Verwendung für:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Logo
+- Überschriften
+- Navigation
+- Buttons
 
-```bash
-ng generate component component-name
-```
+### Josefin Sans
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Verwendung für:
 
-```bash
-ng generate --help
-```
+- Absätze
+- Projektbeschreibungen
+- About-Me-Texte
+- Formulartexte
+- längere Lesetexte
 
-## Building
+## Geplante Sections
 
-To build the project run:
+1. Header / Navigation
+2. Hero Section
+3. Why Me / About Me
+4. Skills
+5. Projects
+6. Contact
+7. Footer
+8. Legal Notice / Impressum
+9. Privacy Policy / Datenschutzerklärung
 
-```bash
-ng build
-```
+## Komponenten
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Phase 1
 
-## Running unit tests
+1. Header
+2. Hero
+3. WhyMe
+4. Skills
+5. Projects
+6. Contact
+7. Footer
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Phase 2
 
-```bash
-ng test
-```
+ProjectCard
+Button
+Bubble
 
-## Running end-to-end tests
+## Project Card Komponenten
 
-For end-to-end (e2e) testing, run:
+- Titel
+- Beschreibung
+- Organisation
+- Learnings
+- Icons
+- Image
+- Live-Link
+- GitHub-Link
 
-```bash
-ng e2e
-```
+## Assets
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Alle heruntergeladenen Design-Dateien werden lokal im Projekt gespeichert.
+Geplante Asset-Struktur:
 
-## Additional Resources
+- Logos
+- Icons
+- Bilder
+- Bubbles
+- Fonts
+- Projektbilder
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Besonderheiten aus der Figma-Vorlage
+
+- Bubble im Hero-Bereich
+- Header im unteren Herobereich und beim scrollen sticky oben
+- Bubble-Hover-Effekte im Header
+- Bubble-Elemente bei Navigation
+- Projektbereich mit Tabs/Reitern
+- Skill-Bereich mit Bubble-Design
+- Kontaktformular mit Validierung
+- Responsive Mobile-Menü
+- Mehrsprachigkeit Deutsch / Englisch
+
+## Kontaktformular
+
+Das Formular soll visuelles Feedback geben.
+
+Fehlerzustand:
+
+- leeres Pflichtfeld
+- ungültige Eingabe
+- Privacy Policy nicht angekreuzt
+
+Erfolgszustand:
+
+- korrekt ausgefüllte Felder
+- erfolgreich gesendete Nachricht
+
+## globale Variablen
+
+Diese Dinge werden überall benutzt.
+
+- Farben
+- Fonts
+- Abstände
+- Container-Breiten
+- Breakpoints
+- Animation
+
+## Content Breite
+
+Content Widths
+
+Wide Container
+
+- Hero
+- Projects
+- References
+
+Narrow Container
+
+- Why Me
+- Skills
+- Contact
