@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+// Hier werden alle Dateien gesammelt!
+
+@use './base/global';
+@use './abstract/variables';
+@use './base/fonts';
+@use './base/typography';
+@use './components/buttons';
