@@ -1,0 +1,94 @@
+@use '../../../scss/abstract/mixin';
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+.header {
+  &__inner {
+    @include mixin.flex-center;
+
+    padding-inline: var(--section-inl-sm);
+    padding-top: var(--space-sm);
+    padding-bottom: var(--space-sm);
+  }
+
+  &__left {
+    @include mixin.flex-center(column);
+  }
+
+  &__text {
+    font-family: 'Anta';
+    letter-spacing: 2px;
+    font-size: 12px;
+
+    & .color-white {
+      color: white;
+      font-weight: bold;
+    }
+
+    &-developer {
+      margin-top: 4px;
+    }
+  }
+
+  &__logo {
+    width: 68px;
+    height: 52px;
+  }
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex: 5;
+  letter-spacing: 1px;
+
+  &-link {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+/* -------------------- */
+/* LANGUAGE */
+/* -------------------- */
+
+.header__language {
+  display: flex;
+  gap: 10px;
+
+  &-item {
+    position: relative;
+  }
+
+  &-bubble {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-button {
+    position: relative;
+    z-index: 10;
+
+    border: none;
+    background: none;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--secondary-color);
+    }
+
+    &--active {
+      color: var(--secondary-color);
+    }
+  }
+}

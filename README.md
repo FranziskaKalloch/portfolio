@@ -99,6 +99,26 @@ Geplante Asset-Struktur:
 - Responsive Mobile-Menü
 - Mehrsprachigkeit Deutsch / Englisch
 
+## Projektaufbau - Component
+
+src/app/
+├-layout/
+├── header/
+└── footer/
+
+sections/
+├── hero/
+├── why-me/
+├── skills/
+├── projects/
+├── references/
+└── contact/
+
+pages/
+├── home/
+├── legal-notice/
+└── privacy-policy/
+
 ## Ordnerstruktur | SCSS 7-1 Pattern
 
 Die Idee:
@@ -199,3 +219,135 @@ Narrow Container
 - Why Me
 - Skills
 - Contact
+
+## Style
+
+## BEM (Block Element Modifier)
+
+Ziel:
+
+- eindeutige Klassennamen
+- wiederverwendbare Komponenten
+- weniger CSS Konflikte
+- bessere Lesbarkeit
+
+----- AUFBAU ------
+
+.block
+.block__element
+.block--modifier
+
+----- BLOCK ------
+
+Ein Block ist eine eigenständige Komponente.
+
+- .button
+- .header
+- .footer
+- .project-card
+- .contact-form
+
+``scss
+.button {}
+``html
+``<button class="button>Kontakt</button>
+
+----- ELEMENT ------
+
+Ein Element gehört zu einem Block. Ein Element kann nicht alleine existieren.
+
+- .button__icon
+- .button__text
+- .header__logo
+- .header__navigation
+- .card__title
+
+``
+<button class="button">
+  <span class="button__icon"></span>
+  <span class="button__text">Kontakt</span>
+</button>
+``
+
+----- MODIFIER ------
+
+- .button--primary
+- .button--secondary
+- .button--disabled
+
+- .card--active
+- .card--selected
+
+.button {
+  // Grundstil
+
+  &--primary {
+    // Hauptbutton
+  }
+
+  &--secondary {
+    // Zweitbutton
+  }
+
+  &--ghost {
+    // transparenter Button
+  }
+}
+
+`
+<button class="button button--primary">
+  Kontakt
+</button>
+`
+
+## Nestin mit BEM
+
+.button {
+  border: none;
+  cursor: pointer;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__text {
+    font-size: 1rem;
+  }
+
+  &--primary {
+    background-color: var(--primary-color);
+  }
+
+  &--secondary {
+    background-color: transparent;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+## DE EN Button HOVER TECHNIK
+
+Normaler Zustand:
+
+DE dunkel
+EN weiß + Bubble
+
+Hover auf DE:
+
+DE weiß
+EN dunkel + Bubble weg
+
+Mouse weg:
+
+DE dunkel
+EN weiß + Bubble
+
+Klick auf DE:
+
+DE weiß + Bubble
+EN dunkel
+
+Danach ist DE der neue Active State

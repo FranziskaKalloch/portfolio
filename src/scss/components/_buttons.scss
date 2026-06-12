@@ -1,0 +1,30 @@
+.button {
+  border: none;
+  cursor: pointer;
+  border-radius: 24px;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  //&__text {}
+
+  &--primary {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+  }
+
+  &--secondary {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+  }
+}
+
+// .button--primary {}
+// .button--secondary {}
+.button--disabled {
+  color: var(--inactive);
+}
+
+// button__text {}

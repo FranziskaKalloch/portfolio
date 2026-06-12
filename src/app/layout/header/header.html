@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="content-limit">
+    <!-- HEADER BEGINS -->
+    <div class="header__inner">
+      <div class="header__left">
+        <img class="header__logo" src="./assets/img/code.png" />
+        <div class="header__text">
+          <p class="color-white">F.Kalloch</p>
+          <p class="header__text-developer">developer</p>
+        </div>
+      </div>
+
+      <nav class="header__nav">
+        <div class="header__nav-item">
+          <a class="header__nav-link"><h3>Why me</h3></a>
+        </div>
+        <div class="header__nav-item"><a class="header__nav-link"><h3>Skills</h3></a></div>
+        <div class="header__nav-item"><a class="header__nav-link"><h3>Projects</h3></a></div>
+        <div class="header__nav-item"><a class="header__nav-link"><h3>Contact</h3></a></div>
+      </nav>
+      <div class="header__language">
+        <!-- LANGUAGE GERMAN -->
+        <div class="header__language-item">
+
+          @if(activeLanguage == 'de') {
+            <img class="header__language-bubble"
+                 src="./assets/bubbles/Ellipse-24.png">
+          }
+          <button
+            class="header__language-button"
+            [class]="activeLanguage == 'de' ? 'header__language-button--active': '' "
+            (click)="changeLanguage ('de')">
+            DE
+          </button>
+        </div>
+
+          <!-- LANGUAGE ENGLISCH -->
+        <div class="header__language-item">
+          @if(activeLanguage == 'en') {
+            <img class="header__language-bubble"
+                 src="./assets/bubbles/Ellipse-24.png">
+          }
+          <button
+            class="header__language-button"
+            [class]="activeLanguage == 'en' ? 'header__language-button--active': '' "
+            (click)="changeLanguage('en')">
+            EN
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- HEADER ENDS -->
+  </div>
+</header>
