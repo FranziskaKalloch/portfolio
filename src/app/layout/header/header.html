@@ -19,30 +19,40 @@
         <div class="header__nav-item"><a class="header__nav-link"><h3>Contact</h3></a></div>
       </nav>
       <div class="header__language">
-        <!-- LANGUAGE GERMAN -->
-        <div class="header__language-item">
 
-          @if(activeLanguage == 'de') {
+        <!-- LANGUAGE GERMAN -->
+        <div class="header__language-item"
+            (mouseover)="onMouseOver('de')"
+            (mouseleave)="onMouseLeave()"
+        >
+          @if(activeLanguage == 'de' && hoveredLanguage == "") {
             <img class="header__language-bubble"
                  src="./assets/bubbles/Ellipse-24.png">
           }
           <button
             class="header__language-button"
-            [class]="activeLanguage == 'de' ? 'header__language-button--active': '' "
+            [class]="(hoveredLanguage == 'de') ||
+                     (hoveredLanguage == '' && activeLanguage == 'de')
+                     ? 'header__language-button--active': '' "
             (click)="changeLanguage ('de')">
             DE
           </button>
         </div>
 
           <!-- LANGUAGE ENGLISCH -->
-        <div class="header__language-item">
-          @if(activeLanguage == 'en') {
+        <div class="header__language-item"
+             (mouseover)="onMouseOver('en')"
+            (mouseleave)="onMouseLeave()"
+            >
+          @if(activeLanguage == 'en' && hoveredLanguage == "") {
             <img class="header__language-bubble"
                  src="./assets/bubbles/Ellipse-24.png">
           }
           <button
             class="header__language-button"
-            [class]="activeLanguage == 'en' ? 'header__language-button--active': '' "
+            [class]="(hoveredLanguage == 'en') ||
+                     (hoveredLanguage == '' && activeLanguage == 'en')
+                      ? 'header__language-button--active': '' "
             (click)="changeLanguage('en')">
             EN
           </button>
