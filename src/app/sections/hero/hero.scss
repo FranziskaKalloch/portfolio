@@ -1,0 +1,101 @@
+@use '../../../scss/abstract/mixin';
+
+.hero {
+  height: 100vh;
+  font-family: 'Anta';
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--secondary-color);
+
+    padding-top: 100px;
+  }
+}
+
+.hero__image {
+  width: 600px;
+  height: 500px;
+}
+
+.hero__content-side {
+  @include mixin.flex-center(column);
+  gap: 64px;
+}
+
+.hero {
+  &__top {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__logo-icon-wrapper {
+    @include mixin.flex-center;
+  }
+
+  &__logo-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__logo-text {
+    @include mixin.flex-center(column);
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+
+  // &__color-blue {}
+
+  &__text-developer {
+    color: var(--primary-color);
+    font-size: 12px;
+    margin-top: 4px;
+    letter-spacing: 2px;
+  }
+
+  &__socials {
+    @include mixin.flex-center(column);
+
+    position: absolute;
+    right: 0;
+
+    gap: 12px;
+  }
+}
+
+.hero {
+  &__headline {
+    @include mixin.flex-center(column);
+    gap: 16px;
+  }
+
+  &__name {
+    font-size: 60px;
+    letter-spacing: 2px;
+  }
+
+  &__job-title {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+}
+
+// BUTTON
+
+.hero {
+  &__button {
+    margin-top: 68px;
+  }
+}

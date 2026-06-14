@@ -3,6 +3,10 @@
 .header {
   background-color: var(--primary-color);
   color: var(--background-color);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .header {
@@ -34,8 +38,8 @@
   }
 
   &__logo {
-    width: 68px;
-    height: 52px;
+    width: 64px;
+    height: 64px;
   }
 }
 
