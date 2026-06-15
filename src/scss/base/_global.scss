@@ -1,3 +1,5 @@
+@use '../abstract/mixin';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,4 +17,8 @@ body {
 .content-limit {
   max-width: 1440px;
   margin: 0 auto;
+}
+
+.color-blue {
+  color: #89bcd9;
 }

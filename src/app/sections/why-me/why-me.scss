@@ -1,0 +1,11 @@
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+@use '../../../scss/components/buttons';
+
+.app-why-me {
+  height: 100vh;
+}
+
+.why-me {
+  @include mixin.flex-center;
+}

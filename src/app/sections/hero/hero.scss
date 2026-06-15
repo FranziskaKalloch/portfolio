@@ -1,28 +1,45 @@
 @use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
 
-.hero {
+.app-hero {
   height: 100vh;
   font-family: 'Anta';
+}
 
+.hero {
   &__inner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
     color: var(--secondary-color);
 
     padding-top: 100px;
+    padding-inline: var(--section-inl-sm);
   }
 }
 
 .hero__image {
   width: 600px;
   height: 500px;
+
+  &-side {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-overlay {
+    position: absolute;
+    bottom: 100px;
+    left: auto;
+    z-index: 5;
+  }
 }
 
 .hero__content-side {
   @include mixin.flex-center(column);
   gap: 64px;
+  width: 60%;
 }
 
 .hero {
@@ -32,6 +49,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -80px;
   }
 
   &__logo {
@@ -42,11 +60,16 @@
 
   &__logo-icon-wrapper {
     @include mixin.flex-center;
+    padding-bottom: 4px;
   }
 
   &__logo-icon {
     width: 64px;
     height: 64px;
+
+    &:hover {
+      animation: spin 2s infinite;
+    }
   }
 
   &__logo-text {
@@ -56,10 +79,7 @@
     font-size: 12px;
   }
 
-  // &__color-blue {}
-
   &__text-developer {
-    color: var(--primary-color);
     font-size: 12px;
     margin-top: 4px;
     letter-spacing: 2px;
@@ -96,6 +116,34 @@
 
 .hero {
   &__button {
-    margin-top: 68px;
+    margin-top: 100px;
+    position: relative;
+    display: inline-block; // Passt den Container an die Bildgröße an
+    width: 40px;
+    height: 90px;
+    cursor: pointer;
+  }
+}
+
+// das zweite Bild standardmäßig unsichtbar machen
+.hero__button .hero__button-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3 ease-in-out;
+}
+// das zweite bild beim hovern einblenden
+.hero__button:hover .hero__button-hover {
+  opacity: 1;
+}
+// animation logo
+
+@keyframes spin {
+  from {
+    transform: (0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
