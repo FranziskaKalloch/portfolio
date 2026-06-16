@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
-export class Projects {}
+export class Projects {
+  activeProject = 0;
+
+  projects = [];
+}
