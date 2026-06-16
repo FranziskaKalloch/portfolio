@@ -4,7 +4,7 @@
 
 .app-why-me {
   height: 100vh;
-  padding-block: var(--section-gap);
+  padding-top: var(--section-gap);
   padding-inline: var(--section-inl-sm);
 }
 
@@ -18,10 +18,6 @@
 
   &__inner {
     @include mixin.flex-center(column);
-  }
-
-  &__headline {
-    font-size: 60px;
   }
 }
 
