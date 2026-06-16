@@ -4,8 +4,58 @@
 
 .app-why-me {
   height: 100vh;
+  padding-block: var(--section-gap);
+  padding-inline: var(--section-inl-sm);
 }
 
 .why-me {
   @include mixin.flex-center;
+  align-items: flex-start;
+  margin-top: var(--section-gap);
+  gap: 64px;
+  font-size: 20px;
+  color: white;
+
+  &__inner {
+    @include mixin.flex-center(column);
+  }
+
+  &__headline {
+    font-size: 60px;
+  }
+}
+
+.why-me {
+  &__located {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-top: 32px;
+  }
+}
+
+.span {
+  font-size: 32px;
+}
+
+.why-me__description {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 40%;
+
+  &-text {
+    line-height: 1.2;
+  }
+}
+
+.why-me-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button--primary {
+  &:hover {
+    background-color: rgb(58, 68, 72);
+  }
 }
