@@ -84,37 +84,46 @@
     margin-top: 4px;
     letter-spacing: 2px;
   }
+}
 
-  &__social {
-    @include mixin.flex-center(column);
+// SOCIAL MEDIA
 
+.hero__social {
+  @include mixin.flex-center(column);
+
+  position: absolute;
+  right: 0;
+  gap: 12px;
+
+  &-item {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+  }
+
+  &-icon {
     position: absolute;
-    right: 0;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    object-fit: contain;
+    cursor: pointer;
 
-    gap: 12px;
-
-    &-button {
-      width: 30px;
-      height: 30px;
-
-      background-color: transparent;
-      color: var(--primary-color);
-      border-radius: 50%;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        background-color: var(--primary-color);
-      }
-      &:hover svg path {
-        fill: var(--background-color);
-      }
+    &--default {
+      opacity: 1;
     }
+
+    &--hover {
+      opacity: 0;
+    }
+  }
+
+  &-item:hover &-icon--default {
+    opacity: 0;
+  }
+  &-item:hover &-icon--hover {
+    opacity: 1;
   }
 }
 

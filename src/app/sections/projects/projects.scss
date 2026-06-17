@@ -10,6 +10,10 @@ p {
   font-size: 18px;
 }
 
+.project__details-bg {
+  background-color: var(--surface-color);
+}
+
 .app-projects {
   padding-top: var(--section-gap);
 }
