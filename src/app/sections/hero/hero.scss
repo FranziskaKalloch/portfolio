@@ -17,29 +17,56 @@
 }
 
 .hero__image {
-  width: 600px;
-  height: 500px;
-
   &-side {
-    position: relative;
     width: 40%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+    width: 600px;
+    height: 600px;
   }
 
   &-overlay {
     position: absolute;
-    bottom: 100px;
+    bottom: -10px;
     left: auto;
-    z-index: 5;
+    z-index: 2;
   }
 }
+
+.background--default {
+  position: absolute;
+  opacity: 1;
+}
+
+.background--hover {
+  opacity: 0;
+  transform: scale(0.55);
+
+  z-index: 1;
+}
+
+// CHANGE BUBBLES
+
+.hero__image-side:hover {
+  .background--default {
+    opacity: 0;
+  }
+  .background--hover {
+    opacity: 1;
+  }
+}
+
+// CONTENT SIDE
 
 .hero__content-side {
   @include mixin.flex-center(column);
   gap: 64px;
   width: 60%;
+  text-align: center;
 }
 
 .hero {

@@ -1,0 +1,100 @@
+@use '../../../../scss/abstract/mixin';
+@use '../../../../scss/base/global';
+@use '../../../../scss/components/buttons';
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+.project__details-bg {
+  background-color: var(--surface-color);
+}
+
+.project__card {
+  padding-block: var(--space-lg);
+  padding-inline: 100px;
+
+  background-color: var(--surface-color);
+
+  display: flex;
+  color: var(--secondary-color);
+  gap: var(--space-lg);
+}
+
+// project infos left side
+
+.project__info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.project__info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.project__info-bubble {
+  width: 32px;
+  height: 32px;
+}
+
+.project__info-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+
+  line-height: 1.4;
+}
+
+.project__info-headline {
+  display: flex;
+  align-items: center;
+
+  gap: var(--space-md);
+}
+
+// project infos right side
+
+.project__overview {
+  @include mixin.flex-center(column);
+
+  gap: var(--space-md);
+
+  &-tech {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--space-sm);
+
+    &-list {
+      display: flex;
+      gap: 32px;
+    }
+  }
+}
+
+.project__image {
+  border-radius: 42px;
+
+  width: 500px;
+  height: 340px;
+}
+
+.project__overview-links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.button--primary:hover {
+  background-color: var(--hover-color-dark);
+}
+
+.button--secondary:hover {
+  background-color: var(--secondary-color);
+}
