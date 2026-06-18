@@ -13,6 +13,10 @@ import { Project } from './project.interface';
 export class Projects {
   activeProject = 0;
 
+  changeProject(index: number) {
+    this.activeProject = index;
+  }
+
   projects: Project[] = [
     {
       title: 'Pokedex',
