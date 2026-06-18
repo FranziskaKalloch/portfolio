@@ -31,12 +31,14 @@ p {
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  width: 55%;
 }
 
 .project__info-item {
   display: flex;
   align-items: flex-start;
   gap: var(--space-sm);
+  min-height: 120px;
 }
 
 .project__info-bubble {
@@ -50,6 +52,7 @@ p {
   gap: var(--space-sm);
 
   line-height: 1.4;
+  min-height: 100px;
 }
 
 .project__info-headline {
@@ -63,7 +66,7 @@ p {
 
 .project__overview {
   @include mixin.flex-center(column);
-
+  width: 45%;
   gap: 32px;
 
   &-tech {
@@ -77,6 +80,9 @@ p {
       gap: 32px;
     }
   }
+  &-image {
+    position: relative;
+  }
 }
 
 .project__image {
@@ -84,6 +90,19 @@ p {
 
   width: 500px;
   height: 340px;
+}
+
+.project__image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+  &-text {
+    color: var(--primary-color);
+    font-size: 20px;
+  }
 }
 
 .project__overview-links {
