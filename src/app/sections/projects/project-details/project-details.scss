@@ -64,7 +64,7 @@ p {
 .project__overview {
   @include mixin.flex-center(column);
 
-  gap: var(--space-md);
+  gap: 32px;
 
   &-tech {
     display: flex;

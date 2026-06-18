@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+
+import { Project } from '../project.interface';
 
 @Component({
   selector: 'app-project-details',
@@ -6,4 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './project-details.html',
   styleUrl: './project-details.scss',
 })
-export class ProjectDetails {}
+export class ProjectDetails {
+  // der Klasse muss activeProject übergeben werden - es bekommt also ein Projekt von außen
+  @Input() project?: Project;
+}

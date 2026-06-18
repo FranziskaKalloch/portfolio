@@ -11,5 +11,17 @@
       <div class="projects__tabs-headline"><h3>4. Ongoing Project</h3></div>
     </div>
   </div>
-  <app-project-details></app-project-details>
+  <app-project-details [project]="projects[activeProject]"></app-project-details>
 </section>
+
+<!-- [project]="projects[activeProject] -->
+<!--
+activeProject = 0
+projects[0]
+-> ist dann das Objekt vom Pokedex
+----
+Das wird dann an den Input "project" übergeben
+Projektdetails erhält das komplette Pokedex-Objekt
+
+Hey ProjectDetails, dein Input "project" bekommt projects[activeProject]
+-->

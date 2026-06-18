@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { ProjectDetails } from './project-details/project-details';
+import { Project } from './project.interface';
 
 @Component({
   selector: 'app-projects',
@@ -12,7 +13,7 @@ import { ProjectDetails } from './project-details/project-details';
 export class Projects {
   activeProject = 0;
 
-  projects = [
+  projects: Project[] = [
     {
       title: 'Pokedex',
       duration: '2 weeks',
@@ -98,3 +99,12 @@ export class Projects {
 // activeProject festlegen
 // activeProject an Child geben
 // Tabs schalten active Project um
+
+// Variante - mit Index
+// bedeutet dann:
+// 0 = Pokedex
+// 1 = El Pollo Loco
+// 2 = Join
+// 3 = Ongoing Project
+
+// Vorteil -> sehr einfach und passt perfekt zu dem Array

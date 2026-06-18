@@ -12,12 +12,11 @@
           <div class="project__info-content">
             <div class="project__info-headline">
               <h2>About the project</h2>
-              <span>Duration: 3 weeks</span>
+              <span>Duration: {{ project?.duration }}</span>
             </div>
 
             <p>
-              An interactive Pokédex application that allows users to explore Pokémon data, search
-              by name, and view detailed information in a responsive interface.
+              {{ project?.aboutText }}
             </p>
           </div>
         </div>
@@ -31,8 +30,7 @@
             </div>
 
             <p>
-              I developed the project step by step, separating data handling, rendering, and styling
-              into clear and maintainable structures.
+              {{ project?.organisationText }}
             </p>
           </div>
         </div>
@@ -43,12 +41,11 @@
 
           <div class="project__info-content">
             <div class="project__info-headline">
-              <h2>What I have learnt</h2>
+              <h2>{{ project?.learnedTitle }}</h2>
             </div>
 
             <p>
-              This project improved my understanding of API integration, dynamic rendering, and
-              organizing larger JavaScript applications.
+              {{ project?.learnedText }}
             </p>
           </div>
         </div>
@@ -59,18 +56,18 @@
         <div class="project__overview-tech">
           <p>Technologies</p>
           <div class="project__overview-tech-list">
-            <img src="./assets/icons/skill/HTML.png" />
-            <img src="./assets/icons/skill/Javascript.png" />
-            <img src="./assets/icons/skill/CSS.png" />
+            @for (path of project?.technologies; track path) {
+              <img [src]="path" />
+            }
           </div>
         </div>
 
         <div class="project__overview-image">
-          <img class="project__image" src="./assets/img/pokedex.png" />
+          <img class="project__image" src="{{ project?.image }}" />
         </div>
         <div class="project__overview-links">
-          <a href="" class="button button--secondary">Live Test</a>
-          <a href="" class="button button--primary">GitHub</a>
+          <a href="{{ project?.liveTestLink }}" class="button button--secondary">Live Test</a>
+          <a href="{{ project?.githubLink }}" class="button button--primary">GitHub</a>
         </div>
       </div>
     </div>
