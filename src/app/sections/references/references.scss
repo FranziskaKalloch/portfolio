@@ -1,0 +1,83 @@
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+@use '../../../scss/components/buttons';
+
+.app-references {
+  padding-top: var(--section-gap);
+}
+
+.ref__inner {
+  @include mixin.flex-center(column);
+}
+
+.ref__headline-div {
+  margin-bottom: 70px;
+  letter-spacing: 2px;
+}
+
+.ref__list {
+  @include mixin.flex-center;
+  gap: 16px;
+
+  &-item {
+    position: relative;
+  }
+}
+
+// NORMAL STATE
+
+.bubble-default {
+  opacity: 1;
+}
+
+.bubble-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+//  HOVER STATE
+
+.ref__list-item:hover .bubble-default {
+  opacity: 0;
+}
+
+.ref__list-item:hover .bubble-hover {
+  opacity: 1;
+}
+
+// CONTENT
+
+.ref__content {
+  @include mixin.flex-center(column);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  gap: 22px;
+
+  &-header {
+    @include mixin.flex-center(column);
+    gap: 8px;
+    letter-spacing: 2px;
+
+    color: var(--secondary-color);
+  }
+
+  &-feedback {
+    text-align: center;
+    color: var(--secondary-color);
+    line-height: 1.1;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+    width: 230px;
+  }
+
+  &-link a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--primary-color);
+    letter-spacing: 1px;
+  }
+}
