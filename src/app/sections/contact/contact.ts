@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {}
+export class Contact {
+  activeContact = '';
+
+  contact(param: string) {
+    this.activeContact = param;
+  }
+}

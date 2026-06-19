@@ -1,0 +1,124 @@
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+@use '../../../scss/components/buttons';
+
+.app-contact {
+  padding-top: var(--section-gap);
+}
+
+.contact__header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.contact__scroll-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button-default {
+  opacity: 1;
+}
+
+.button-hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact__scroll-button:hover .button-default {
+  opacity: 0;
+}
+
+.contact__scroll-button:hover .button-hover {
+  opacity: 1;
+}
+
+// TEXT SECTION
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.contact__text {
+  padding-inline: var(--section-inl-big);
+  color: var(--secondary-color);
+  display: flex;
+  letter-spacing: 1px;
+  gap: 32px;
+  padding-bottom: var(--section-inl-big);
+
+  &-description {
+    width: 50%;
+
+    & p {
+      text-align: justify;
+    }
+  }
+
+  &-contact {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+  }
+}
+
+.contact__mail,
+.contact__phone {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+//  hover & click
+
+.default__icon {
+  opacity: 1;
+}
+
+.hover__icon {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.contact__mail:hover .default__icon,
+.contact__phone:hover .default__icon {
+  opacity: 0;
+}
+
+.contact__phone:hover .hover__icon,
+.contact__mail:hover .hover__icon {
+  opacity: 1;
+}
+
+.contact__mail:hover a,
+.contact__phone:hover p {
+  color: var(--primary-color);
+}
+
+// ACTIVE CLASS
+
+.contact__mail.active .default__icon,
+.contact__phone.active .default__icon {
+  opacity: 0;
+}
+
+.contact__mail.active .hover__icon,
+.contact__phone.active .hover__icon {
+  opacity: 1;
+}
+
+.contact__mail.active a,
+.contact__phone.active p {
+  color: var(--primary-color);
+}
