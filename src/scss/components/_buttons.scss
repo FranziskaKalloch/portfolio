@@ -12,8 +12,6 @@
     height: 24px;
   }
 
-  //&__text {}
-
   &--primary {
     color: var(--primary-color);
     background-color: var(--background-color);
@@ -37,10 +35,12 @@
   }
 }
 
-// .button--primary {}
-// .button--secondary {}
 .button--disabled {
   color: var(--inactive);
+  border: 2px solid var(--inactive);
+  background-color: var(--background-color);
+  font-size: 20px;
+  padding-block: 12px;
+  padding-inline: 28px;
+  width: 120px;
 }
-
-// button__text {}

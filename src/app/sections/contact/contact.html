@@ -43,5 +43,43 @@
     </div>
 
     <!-- FORM AREA -->
+    <form class="contact__form">
+      <div class="contact__information">
+        <div class="contact__information-name">
+          <label for="name" class="color-blue">Your name</label>
+          <input type="text" id="name" name="name" />
+        </div>
+        <div class="contact__information-mail">
+          <label for="email" class="color-blue">Your Email</label>
+          <input type="email" id="email" name="email" />
+        </div>
+      </div>
+      <div class="contact__information-message">
+        <label for="message" class="color-blue">Your Message</label>
+        <input type="textarea" id="message" name="message" />
+      </div>
+      <div
+        class="contact__information-policy"
+        (click)="changePolicy()"
+        [class.checked]="acceptedPolicy"
+      >
+        <img class="checkbox-default" src="./assets/icons/checkbox/checkbox-default.png" />
+        <img class="checkbox-hover" src="./assets/icons/checkbox/checkbox-hover.png" />
+        <img class="checkbox-checked" src="./assets/icons/checkbox/checkbox-checked.png" />
+        <img class="checkbox-error" src="./assets/icons/checkbox/checkbox-error.png" />
+        <div class="policy-text-wrapper">
+          <label for="policy" class="label-policy"
+            >I've read the <span class="color-blue">privacy policy</span> and agree to the
+            processing of my data as outlined.</label
+          >
+        </div>
+        <div class="checkbox-error-text">Please accept the privacy policy</div>
+      </div>
+
+      <div class="submit-button">
+        <button class="button button--disabled">Send</button>
+      </div>
+    </form>
+    <!-- FORM AREA END -->
   </div>
 </section>

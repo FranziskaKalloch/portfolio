@@ -12,4 +12,10 @@ export class Contact {
   contact(param: string) {
     this.activeContact = param;
   }
+
+  acceptedPolicy = false;
+
+  changePolicy() {
+    this.acceptedPolicy = !this.acceptedPolicy;
+  }
 }

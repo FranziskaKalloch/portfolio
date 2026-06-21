@@ -52,7 +52,7 @@ a {
   display: flex;
   letter-spacing: 1px;
   gap: 32px;
-  padding-bottom: var(--section-inl-big);
+  padding-bottom: 64px;
 
   &-description {
     width: 50%;
@@ -122,3 +122,138 @@ a {
 .contact__phone.active p {
   color: var(--primary-color);
 }
+
+// FORM
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  padding-inline: var(--section-inl-big);
+
+  gap: 32px;
+}
+
+.contact__information {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &-name {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 45%;
+  }
+  &-mail {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 45%;
+  }
+  &-message {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  &-policy {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    color: white;
+  }
+}
+
+.checkbox-error-text {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.submit-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input {
+  background-color: var(--background-color);
+  border: 2px solid var(--background-color);
+  border-color: var(--primary-color);
+  border-radius: 50px;
+}
+
+label {
+  padding-left: 20px;
+}
+
+#name,
+#email {
+  height: 52px;
+}
+
+#message {
+  height: 150px;
+  border-radius: 32px;
+}
+
+// CHECKBOX STATES
+
+// DEFAULT STATE
+
+.checkbox-default {
+  opacity: 1;
+}
+
+.checkbox-hover {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox-checked {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox-error {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &-text {
+    color: var(--error-color);
+    padding-top: 12px;
+    padding-left: 20px;
+  }
+}
+
+// HOVER STATE
+
+.contact__information-policy:hover .checkbox-default {
+  opacity: 0;
+}
+
+.contact__information-policy:hover .checkbox-hover {
+  opacity: 1;
+}
+
+// CHECKED STATE
+
+.contact__information-policy.checked .checkbox-default {
+  opacity: 0;
+}
+
+.contact__information-policy.checked .checkbox-checked {
+  opacity: 1;
+}
+
+// 3. checked
+// Privacy Policy wurde akzeptiert
+// → Checkbox-checked.png
+// 4. error
+// Formular wurde abgeschickt/validiert, aber Policy ist nicht akzeptiert
+// → Checkbox-error.png
+// Zusätzlich erscheint darunter:
+// Please accept the privacy policy
