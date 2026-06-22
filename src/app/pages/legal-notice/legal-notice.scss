@@ -1,0 +1,40 @@
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+@use '../../../scss/components/buttons';
+
+.app-legal-notice {
+  padding-block: var(--section-gap);
+  padding-inline: var(--section-gap);
+  color: var(--secondary-color);
+}
+
+.legal-notice__inner {
+  @include mixin.flex-center(column);
+}
+
+.headline {
+  margin-bottom: 70px;
+  letter-spacing: 2px;
+}
+
+.legal-notice__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  letter-spacing: 2px;
+
+  & a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+}
+
+.back-to-home {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+.button:hover {
+  background-color: rgb(192, 193, 195, 0.2);
+}
