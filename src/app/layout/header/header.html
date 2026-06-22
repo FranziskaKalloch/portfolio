@@ -11,17 +11,47 @@
       </div>
 
       <nav class="header__nav">
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#why-me"><h3>Why me</h3></a>
+        <div class="header__nav-item" (click)="setActiveSection('why-me')">
+          @if (activeSection == 'why-me') {
+            <img class="header__nav-item-bubble" src="./assets/bubbles/Ellipse-24.png" />
+          }
+          <a class="header__nav-link" href="#why-me" [class.color-white]="activeSection == 'why-me'"
+            ><h3>Why me</h3></a
+          >
         </div>
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#skills"><h3>Skills</h3></a>
+        <div class="header__nav-item" (click)="setActiveSection('skills')">
+          @if (activeSection == 'skills') {
+            <img class="header__nav-item-bubble" src="./assets/bubbles/Ellipse-24.png" />
+          }
+          <a
+            class="header__nav-link"
+            href="#skills"
+            [class.color-white]="activeSection == 'skills'"
+          >
+            <h3>Skills</h3></a
+          >
         </div>
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#projects"><h3>Projects</h3></a>
+        <div class="header__nav-item" (click)="setActiveSection('projects')">
+          @if (activeSection == 'projects') {
+            <img class="header__nav-item-bubble" src="./assets/bubbles/Ellipse-24.png" />
+          }
+          <a
+            class="header__nav-link"
+            href="#projects"
+            [class.color-white]="activeSection == 'projects'"
+            ><h3>Projects</h3></a
+          >
         </div>
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#contact"><h3>Contact</h3></a>
+        <div class="header__nav-item" (click)="setActiveSection('contact')">
+          @if (activeSection == 'contact') {
+            <img class="header__nav-item-bubble" src="./assets/bubbles/Ellipse-24.png" />
+          }
+          <a
+            class="header__nav-link"
+            href="#contact"
+            [class.color-white]="activeSection == 'contact'"
+            ><h3>Contact</h3></a
+          >
         </div>
       </nav>
       <div class="header__language">

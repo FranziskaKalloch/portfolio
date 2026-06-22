@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
 export class Header {
   activeLanguage = 'en';
   hoveredLanguage = '';
+  activeSection = '';
 
   changeLanguage(lng: string) {
     if (lng === 'en') {
@@ -26,5 +27,9 @@ export class Header {
 
   onMouseLeave() {
     this.hoveredLanguage = '';
+  }
+
+  setActiveSection(sec: string) {
+    this.activeSection = sec;
   }
 }
