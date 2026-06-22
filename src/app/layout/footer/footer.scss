@@ -1,0 +1,92 @@
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+@use '../../../scss/components/buttons';
+
+.app-footer {
+  background-color: var(--primary-color);
+  padding-block: var(--section-gap);
+  padding-inline: var(--section-inl-sm);
+}
+
+.footer__inner {
+  display: flex;
+}
+
+.footer__description,
+.footer__logo,
+.footer__social {
+  width: 33%;
+}
+
+.footer__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 18px;
+}
+
+.footer__logo {
+  @include mixin.flex-center(column);
+  gap: 2px;
+
+  &-img {
+    height: 64px;
+    width: 64px;
+  }
+
+  &-text {
+    font-family: 'Anta';
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+
+  &-developer {
+    margin-top: 4px;
+  }
+}
+
+.color-white {
+  color: var(--secondary-color);
+}
+
+// social media
+
+.footer__social {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 20px;
+
+  &-icon {
+    position: relative;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.social__icon--default,
+.social__icon--hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.social__icon--default {
+  opacity: 1;
+}
+
+.social__icon--hover {
+  opacity: 0;
+}
+
+// HOVER STATE
+
+.footer__social-icon:hover .social__icon--default {
+  opacity: 0;
+}
+
+.footer__social-icon:hover .social__icon--hover {
+  opacity: 1;
+}
