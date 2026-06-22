@@ -4,6 +4,7 @@
 
 .app-contact {
   padding-top: var(--section-gap);
+  padding-bottom: var(--section-inl-big);
 }
 
 .contact__header {
@@ -163,9 +164,10 @@ a {
   }
 }
 
-.checkbox-error-text {
+.policy-text-wrapper {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  padding-left: 12px;
 }
 
 .submit-button {
@@ -200,6 +202,10 @@ label {
 
 .checkbox-default {
   opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-6px);
 }
 
 .checkbox-hover {
@@ -207,6 +213,7 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(-6px);
 }
 
 .checkbox-checked {
@@ -214,6 +221,7 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(-6px);
 }
 
 .checkbox-error {
@@ -221,11 +229,13 @@ label {
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(-6px);
 
   &-text {
     color: var(--error-color);
     padding-top: 12px;
     padding-left: 20px;
+    opacity: 0;
   }
 }
 
@@ -249,11 +259,16 @@ label {
   opacity: 1;
 }
 
-// 3. checked
-// Privacy Policy wurde akzeptiert
-// → Checkbox-checked.png
-// 4. error
-// Formular wurde abgeschickt/validiert, aber Policy ist nicht akzeptiert
-// → Checkbox-error.png
-// Zusätzlich erscheint darunter:
-// Please accept the privacy policy
+// STATE ERROR
+
+.contact__information-policy.error .checkbox-default {
+  opacity: 0;
+}
+
+.contact__information-policy.error .checkbox-error {
+  opacity: 1;
+}
+
+.contact__information-policy.error .checkbox-error-text {
+  opacity: 1;
+}

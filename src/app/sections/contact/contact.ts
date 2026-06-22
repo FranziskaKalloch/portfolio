@@ -17,5 +17,19 @@ export class Contact {
 
   changePolicy() {
     this.acceptedPolicy = !this.acceptedPolicy;
+
+    if (this.acceptedPolicy === true) {
+      this.showPolicyError = false;
+    }
+  }
+
+  showPolicyError = false;
+
+  validateForm() {
+    if (this.acceptedPolicy === false) {
+      this.showPolicyError = true;
+    } else if (this.acceptedPolicy === true) {
+      this.showPolicyError = false;
+    }
   }
 }
