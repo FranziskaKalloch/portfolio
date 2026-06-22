@@ -1,0 +1,30 @@
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+@use '../../../scss/components/buttons';
+
+.app-privacy-policy {
+  padding-block: var(--section-gap);
+  padding-inline: var(--section-gap);
+  color: var(--secondary-color);
+}
+
+.policy__inner {
+  @include mixin.flex-center(column);
+}
+
+.headline {
+  margin-bottom: 70px;
+  letter-spacing: 2px;
+}
+
+.legal-notice__content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  letter-spacing: 2px;
+
+  & a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+}
