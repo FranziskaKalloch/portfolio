@@ -27,6 +27,10 @@
   font-size: 18px;
 }
 
+.footer__legal-notice:hover {
+  color: var(--secondary-color);
+}
+
 .footer__logo {
   @include mixin.flex-center(column);
   gap: 2px;

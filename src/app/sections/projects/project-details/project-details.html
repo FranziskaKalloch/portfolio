@@ -67,7 +67,9 @@
           <!-- Overlay -->
 
           <div class="project__image-overlay">
-            <p class="project__image-overlay-text">Coming Soon...</p>
+            @if (project?.title === 'Ongoing Project') {
+              <p class="project__image-overlay-text">Coming Soon...</p>
+            }
           </div>
         </div>
         <div class="project__overview-links">

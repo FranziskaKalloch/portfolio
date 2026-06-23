@@ -43,16 +43,12 @@
 }
 
 .learning__section {
-  background-image: url('/assets/bubbles/Ellipse-default.png');
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-
+  position: relative;
   width: 40%;
   padding: 48px;
 
   @include mixin.flex-center(column);
-  gap: 22px;
+  gap: 42px;
   color: white;
   text-align: center;
 
@@ -66,4 +62,29 @@
     align-items: center;
     flex-direction: column;
   }
+}
+
+.bubble-default,
+.bubble-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bubble-default {
+  opacity: 1;
+}
+
+.bubble-hover {
+  opacity: 0;
+}
+
+.learning__section:hover .bubble-default {
+  opacity: 0;
+}
+
+.learning__section:hover .bubble-hover {
+  opacity: 1;
 }
