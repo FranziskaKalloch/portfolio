@@ -1,36 +1,74 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
-  imports: [RouterLink],
+  imports: [RouterLink, ReactiveFormsModule],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
 export class Contact {
+  form = new FormGroup({
+    name: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(3)],
+    }),
+
+    mail: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+    }),
+
+    message: new FormControl('', {
+      validators: [Validators.required, Validators.minLength(5)],
+    }),
+    policy: new FormControl(false, {
+      validators: [Validators.requiredTrue],
+    }),
+  });
+
   activeContact = '';
 
   contact(param: string) {
     this.activeContact = param;
   }
 
-  acceptedPolicy = false;
-
-  changePolicy() {
-    this.acceptedPolicy = !this.acceptedPolicy;
-
-    if (this.acceptedPolicy === true) {
-      this.showPolicyError = false;
+  formSubmit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
     }
   }
 
-  showPolicyError = false;
-
-  validateForm() {
-    if (this.acceptedPolicy === false) {
-      this.showPolicyError = true;
-    } else if (this.acceptedPolicy === true) {
-      this.showPolicyError = false;
-    }
+  formReset() {
+    this.form.reset();
   }
 }
+
+// @if(policy.touched && !name.valid) {
+// p<div class="checkbox-error-text error">Please accept the privacy policy</div>
+
+// <button (click)="untouch()">
+
+// untouch() {
+// this.policy.markAsUntouched();}
+
+//
+// acceptedPolicy = false;
+
+// changePolicy() {
+// this.acceptedPolicy = !this.acceptedPolicy;
+
+// if (this.acceptedPolicy === true) {
+// this.showPolicyError = false;
+// }
+// }
+
+// showPolicyError = false;
+
+// validateForm() {
+// if (this.acceptedPolicy === false) {
+// this.showPolicyError = true;
+// } else if (this.acceptedPolicy === true) {
+// this.showPolicyError = false;
+// }
+// }
