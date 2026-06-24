@@ -8,7 +8,11 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  constructor(private translate: TranslateService) {}
+  constructor(private translate: TranslateService) {
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    this.activeLanguage = savedLanguage;
+    this.translate.use(savedLanguage);
+  }
 
   activeLanguage = 'en';
   hoveredLanguage = '';
@@ -20,8 +24,8 @@ export class Header {
     } else {
       this.activeLanguage = 'de';
     }
-
     this.translate.use(language);
+    localStorage.setItem('language', language);
   }
 
   onMouseOver(language: string) {
