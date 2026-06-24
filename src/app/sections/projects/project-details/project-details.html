@@ -11,8 +11,8 @@
 
           <div class="project__info-content">
             <div class="project__info-headline">
-              <h2>About the project</h2>
-              <span>Duration: {{ project?.duration }}</span>
+              <h2>{{ 'projects.details.about' | translate }}</h2>
+              <span>{{ 'projects.details.duration' | translate }} {{ project?.duration }}</span>
             </div>
 
             <p>
@@ -26,7 +26,7 @@
 
           <div class="project__info-content">
             <div class="project__info-headline">
-              <h2>How i have organised my work process</h2>
+              <h2>{{ 'projects.details.organisation' | translate }}</h2>
             </div>
 
             <p>
@@ -54,7 +54,7 @@
       <!-- PROJECT CARD RIGHT SIDE -->
       <div class="project__overview">
         <div class="project__overview-tech">
-          <p>Technologies</p>
+          <p>{{ 'projects.details.technologies' | translate }}</p>
           <div class="project__overview-tech-list">
             @for (path of project?.technologies; track path) {
               <img [src]="path" />
@@ -68,7 +68,9 @@
 
           <div class="project__image-overlay">
             @if (project?.title === 'Ongoing Project') {
-              <p class="project__image-overlay-text">Coming Soon...</p>
+              <p class="project__image-overlay-text">
+                {{ 'projects.details.comingSoon' | translate }}
+              </p>
             }
           </div>
         </div>

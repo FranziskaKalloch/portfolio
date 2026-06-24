@@ -1,24 +1,25 @@
 <section class="content-limit app-why-me" id="why-me">
   <div class="why-me__inner">
-    <h2 class="why-me__headline color-blue headline">Why me</h2>
+    <h2 class="why-me__headline color-blue headline">{{ 'whyMe.headline' | translate }}</h2>
     <div class="why-me">
       <div class="why-me__located">
         <img class="why_me__located-icon" src="./assets/icons/group-location.png" />
-        <p><span class="color-blue">I am</span> located in Hamburg..<span class="span">|</span></p>
+        <p>
+          <span class="color-blue">{{ 'whyMe.locatedPrefix' | translate }}</span>
+          {{ 'whyMe.locatedText' | translate }}..<span class="span">|</span>
+        </p>
       </div>
       <div class="why-me__description">
         <div class="why-me__description-text">
-          <p>Why are you passionate about coding?</p>
+          <p>{{ 'whyMe.aboutHeadline' | translate }}</p>
           <p>
-            My passion for coding comes from solving problems and continuously learning new things.
-            I enjoy understanding how systems work, breaking down complex challenges into smaller
-            steps, and finding practical solutions. Software development challenges me to think
-            logically, stay persistent, and keep improving my skills. Every project teaches me
-            something new and motivates me to grow as a developer.
+            {{ 'whyMe.aboutText' | translate }}
           </p>
         </div>
         <div class="why-me-button">
-          <button class="button button--primary button-default">Let's talk</button>
+          <button class="button button--primary button-default">
+            {{ 'whyMe.button' | translate }}
+          </button>
         </div>
       </div>
     </div>

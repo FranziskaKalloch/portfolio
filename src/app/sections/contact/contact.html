@@ -1,7 +1,7 @@
 <section class="app-contact content-limit" id="contact">
   <div class="contact__inner">
     <div class="contact__header">
-      <h2 class="headline color-blue">Contact me</h2>
+      <h2 class="headline color-blue">{{ 'contact.headline' | translate }}</h2>
       <div class="contact__scroll-button">
         <img class="button-default" src="./assets/icons/Arrow-up-default.png" />
         <img class="button-hover" src="./assets/icons/Arrow-up-hover.png" />
@@ -12,12 +12,7 @@
     <div class="contact__text">
       <div class="contact__text-description">
         <p>
-          As a Junior Full Stack Developer, I am passionate about building modern web applications
-          and continuously improving my technical skills. I enjoy solving problems, learning new
-          technologies, and creating reliable, user-focused solutions. With a structured mindset and
-          strong determination, I am always ready to take on new challenges and grow as a developer.
-          Feel free to reach out regarding job opportunities, collaborations, or professional
-          networking.
+          {{ 'contact.description' | translate }}
         </p>
       </div>
       <div class="contact__text-contact">
@@ -47,9 +42,9 @@
       <div class="contact__information">
         <div class="contact__information-name">
           @if (form.controls.name.invalid && form.controls.name.touched) {
-            <label for="name" class="color-red">Your name is required</label>
+            <label for="name" class="color-red">{{ 'contact.nameError' | translate }}</label>
           } @else {
-            <label for="name" class="color-blue">Your name</label>
+            <label for="name" class="color-blue">{{ 'contact.name' | translate }}</label>
           }
           <input
             type="text"
@@ -60,9 +55,9 @@
         </div>
         <div class="contact__information-mail">
           @if (form.controls.email.invalid && form.controls.email.touched) {
-            <label for="email" class="color-red">Your Email is Required</label>
+            <label for="email" class="color-red">{{ 'contact.emailError' | translate }}</label>
           } @else {
-            <label for="email" class="color-blue">Your Email</label>
+            <label for="email" class="color-blue">{{ 'contact.email' | translate }}</label>
           }
 
           <input
@@ -75,9 +70,9 @@
       </div>
       <div class="contact__information-message">
         @if (form.controls.message.invalid && form.controls.message.touched) {
-          <label for="message" class="color-red">Your message is required</label>
+          <label for="message" class="color-red">{{ 'contact.messageError' | translate }}</label>
         } @else {
-          <label for="message" class="color-blue">Your message</label>
+          <label for="message" class="color-blue">{{ 'contact.message' | translate }}</label>
         }
         <textarea
           id="message"
@@ -97,11 +92,13 @@
         <img class="checkbox-error" src="./assets/icons/checkbox/checkbox-error.png" />
         <div class="policy-text-wrapper">
           <label for="policy" class="label-policy"
-            >I've read the
-            <span class="color-blue" routerLink="/privacy-policy">privacy policy</span> and agree to
-            the processing of my data as outlined.</label
+            >{{ 'contact.privacyText' | translate }}
+            <span class="color-blue" routerLink="/privacy-policy">{{
+              'contact.privacyPolicy' | translate
+            }}</span>
+            {{ 'contact.privacyTextEnd' | translate }}</label
           >
-          <div class="checkbox-error-text error">Please accept the privacy policy</div>
+          <div class="checkbox-error-text error">{{ 'contact.privacyError' | translate }}</div>
         </div>
       </div>
 
@@ -112,7 +109,7 @@
           [class.button--disabled]="!form.controls.policy.value"
           [class.button--active]="form.controls.policy.value"
         >
-          Send
+          {{ 'contact.send' | translate }}
         </button>
       </div>
     </form>

@@ -5,12 +5,98 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+
   "whyMe": {
-    "located": "I am located in Hamburg",
+    "headline": "Why me",
+    "locatedPrefix": "I am",
+    "locatedText": "located in Hamburg",
     "aboutHeadline": "Why are you passionate about coding?",
-    "aboutText": `My passion for coding comes from solving problems and continuously learning new things. I enjoy understanding how systems work, breaking down complex challenges into smaller steps, and finding practical solutions. Software development challenges me to think
-            logically, stay persistent, and keep improving my skills. Every project teaches me
-            something new and motivates me to grow as a developer.`,
+    "aboutText": "My passion for coding comes from solving problems and continuously learning new things. I enjoy understanding how systems work, breaking down complex challenges into smaller steps, and finding practical solutions. Software development challenges me to think logically, stay persistent, and keep improving my skills. Every project teaches me something new and motivates me to grow as a developer.",
     "button": "Let's talk"
+  },
+  "skills": {
+  "headline": "My Skills",
+  "currentlyLearning": "I am currently learning",
+  "learningText": "Show that you are motivated to continually improve your skills, implement innovative solutions and stay abreast of new technologies."
+},
+"projects": {
+  "headline": "My Projects",
+  "tabs": {
+    "pokedex": "1. Pokedex",
+    "elPolloLoco": "2. El Pollo Loco",
+    "join": "3. Join",
+    "ongoing": "4. Ongoing Project"
+  },
+  "details": {
+    "about": "About the project",
+    "duration": "Duration",
+    "organisation": "How I have organised my work process",
+    "technologies": "Technologies",
+    "comingSoon": "Coming Soon..."
   }
+},
+
+"references": {
+  "headline": "Need a teamplayer? Here's what my colleagues say about me",
+
+  "project": "Project",
+  "linkedin": "LinkedIn Profile",
+
+  "feedback1": "Franziska had to develop, format and deliver content in collaboration with the team members. She is a reliable and friendly person.",
+
+  "feedback2": "Franziska is a reliable and friendly person. Works in a structured way and writes clear code. I recommend her as a colleague.",
+
+  "feedback3": "She is a trustworthy team player and can cope with the stress of deadlines. Structured work and clear code."
+},
+"contact": {
+  "headline": "Contact me",
+
+  "description": "As a Junior Full Stack Developer, I am passionate about building modern web applications and continuously improving my technical skills. I enjoy solving problems, learning new technologies, and creating reliable, user-focused solutions. With a structured mindset and strong determination, I am always ready to take on new challenges and grow as a developer. Feel free to reach out regarding job opportunities, collaborations, or professional networking.",
+
+  "name": "Your name",
+  "nameError": "Your name is required",
+
+  "email": "Your Email",
+  "emailError": "Your Email is Required",
+
+  "message": "Your message",
+  "messageError": "Your message is required",
+
+  "privacyText": "I've read the",
+  "privacyPolicy": "privacy policy",
+  "privacyTextEnd": "and agree to the processing of my data as outlined.",
+
+  "privacyError": "Please accept the privacy policy",
+
+  "send": "Send"
+},
+"legalNotice": {
+  "headline": "Legal Notice",
+  "information": "Information according to Section 5 DDG",
+  "contact": "Contact",
+  "responsible": "Responsible for content according to Section 18 para. 2 MStV",
+  "home": "Home"
+},
+"privacyPolicy": {
+  "headline": "Privacy Policy",
+
+  "section1Title": "1. General Information",
+  "section1Text": "The protection of your personal data is important to me. This website processes personal data only to the extent necessary to provide the website and its contact functionality.",
+
+  "section2Title": "2. Contact Form",
+  "section2Text": "When you use the contact form on this website, the information you provide (name, email address, and message) will be processed solely for the purpose of responding to your inquiry.",
+
+  "section2Text2": "Your data will not be shared with third parties and will only be used for communication regarding your request.",
+
+  "section3Title": "3. Data Storage",
+  "section3Text": "Personal data submitted through the contact form will only be stored as long as necessary to process your request and fulfill legal obligations.",
+
+  "section4Title": "4. Your Rights",
+  "section4Text": "You have the right to request information about your stored personal data, correction of inaccurate data, deletion of your data, restriction of processing, and data portability, where applicable.",
+
+  "section5Title": "5. Contact",
+  "section5Text": "If you have questions regarding the processing of your personal data, please contact:",
+  "location": "Germany",
+  "home": "Home"
+}
 }

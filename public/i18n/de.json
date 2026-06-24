@@ -1,13 +1,103 @@
 {
   "header": {
     "whyMe": "Warum ich",
-    "skills": "Fähigkeiten",
+    "skills": "Skills",
     "projects": "Projekte",
     "contact": "Kontakt"
   },
 
   "whyMe": {
-    located: ""
-
+    "headline": "Warum ich",
+    "locatedPrefix": "Ich komme aus",
+    "locatedText": "Hamburg",
+    "aboutHeadline": "Warum begeisterst du dich für das Programmieren?",
+    "aboutText": "Meine Leidenschaft für das Programmieren kommt daher, Probleme zu lösen und ständig Neues zu lernen. Ich finde es spannend zu verstehen, wie Systeme funktionieren, komplexe Herausforderungen in kleinere Schritte zu zerlegen und praktische Lösungen zu entwickeln. Softwareentwicklung fordert mich heraus, logisch zu denken, dranzubleiben und meine Fähigkeiten kontinuierlich zu verbessern. Jedes Projekt bringt neue Erkenntnisse und motiviert mich, als Entwicklerin weiter zu wachsen.",
+    "button": "Lass uns sprechen"
+  },
+  "skills": {
+  "headline": "Meine Fähigkeiten",
+  "currentlyLearning": "Ich lerne aktuell",
+  "learningText": "Ich bin motiviert, meine Fähigkeiten kontinuierlich zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien auf dem neuesten Stand zu bleiben."
+},
+"projects": {
+  "headline": "Meine Projekte",
+  "tabs": {
+    "pokedex": "1. Pokedex",
+    "elPolloLoco": "2. El Pollo Loco",
+    "join": "3. Join",
+    "ongoing": "4. Laufendes Projekt"
+  },
+  "details": {
+    "about": "Über das Projekt",
+    "duration": "Dauer",
+    "organisation": "Wie ich meinen Arbeitsprozess organisiert habe",
+    "technologies": "Technologien",
+    "comingSoon": "Kommt bald..."
   }
+},
+"references": {
+  "headline": "Du suchst eine Teamplayerin? Das sagen meine Kolleginnen und Kollegen über mich",
+
+  "project": "Projekt",
+  "linkedin": "LinkedIn Profil",
+
+  "feedback1": "Franziska hat Inhalte gemeinsam mit dem Team entwickelt, aufbereitet und termingerecht geliefert. Sie ist eine zuverlässige und freundliche Person.",
+
+  "feedback2": "Franziska ist eine zuverlässige und freundliche Person. Sie arbeitet strukturiert und schreibt sauberen Code. Ich empfehle sie gerne als Kollegin weiter.",
+
+  "feedback3": "Sie ist eine vertrauenswürdige Teamplayerin und kann auch unter Zeitdruck zuverlässig arbeiten. Strukturierte Arbeitsweise und klarer Code."
+},
+"contact": {
+  "headline": "Kontaktiere mich",
+
+  "description": "Als Junior Full Stack Developerin begeistere ich mich für die Entwicklung moderner Webanwendungen und die kontinuierliche Verbesserung meiner technischen Fähigkeiten. Ich löse gerne Probleme, lerne neue Technologien kennen und entwickle zuverlässige, nutzerorientierte Lösungen. Mit einer strukturierten Arbeitsweise und viel Motivation stelle ich mich gerne neuen Herausforderungen und entwickle mich kontinuierlich weiter. Kontaktiere mich gerne bezüglich Jobmöglichkeiten, Kooperationen oder beruflichem Networking.",
+
+  "name": "Dein Name",
+  "nameError": "Dein Name ist erforderlich",
+
+  "email": "Deine E-Mail",
+  "emailError": "Deine E-Mail ist erforderlich",
+
+  "message": "Deine Nachricht",
+  "messageError": "Deine Nachricht ist erforderlich",
+
+  "privacyText": "Ich habe die",
+  "privacyPolicy": "Datenschutzerklärung",
+  "privacyTextEnd": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+
+  "privacyError": "Bitte akzeptiere die Datenschutzerklärung",
+
+  "send": "Senden"
+},
+"legalNotice": {
+  "headline": "Impressum",
+  "information": "Angaben gemäß § 5 DDG",
+  "contact": "Kontakt",
+  "responsible": "Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV",
+  "home": "Startseite"
+},
+"privacyPolicy": {
+  "headline": "Datenschutzerklärung",
+
+  "section1Title": "1. Allgemeine Informationen",
+  "section1Text": "Der Schutz Ihrer personenbezogenen Daten ist mir wichtig. Diese Website verarbeitet personenbezogene Daten nur in dem Umfang, der für die Bereitstellung der Website und ihrer Kontaktfunktion erforderlich ist.",
+
+  "section2Title": "2. Kontaktformular",
+  "section2Text": "Wenn Sie das Kontaktformular auf dieser Website nutzen, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse und Nachricht) ausschließlich zum Zweck der Bearbeitung Ihrer Anfrage verarbeitet.",
+
+  "section2Text2": "Ihre Daten werden nicht an Dritte weitergegeben und ausschließlich zur Kommunikation bezüglich Ihrer Anfrage verwendet.",
+
+  "section3Title": "3. Speicherung von Daten",
+  "section3Text": "Personenbezogene Daten, die über das Kontaktformular übermittelt werden, werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage und die Erfüllung gesetzlicher Verpflichtungen erforderlich ist.",
+
+  "section4Title": "4. Ihre Rechte",
+  "section4Text": "Sie haben das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten, auf Berichtigung unrichtiger Daten, auf Löschung Ihrer Daten, auf Einschränkung der Verarbeitung sowie auf Datenübertragbarkeit, soweit dies gesetzlich vorgesehen ist.",
+
+  "section5Title": "5. Kontakt",
+  "section5Text": "Wenn Sie Fragen zur Verarbeitung Ihrer personenbezogenen Daten haben, kontaktieren Sie mich bitte:",
+  "location": "Deutschland",
+
+  "home": "Startseite"
+}
+
 }

@@ -1,7 +1,7 @@
 <section class="app-projects" id="projects">
   <div class="project__inner content-limit">
     <div class="headline-div">
-      <h2 class="color-blue headline">My Projects</h2>
+      <h2 class="color-blue headline">{{ 'projects.headline' | translate }}</h2>
     </div>
 
     <div class="projects__tabs">
@@ -11,7 +11,7 @@
         (click)="changeProject(0)"
         [class.active-tab]="activeProject === 0"
       >
-        <h3>1. Pokedex</h3>
+        <h3>{{ 'projects.tabs.pokedex' | translate }}</h3>
       </div>
       <div
         class="projects__tabs-headline"
@@ -19,7 +19,7 @@
         (click)="changeProject(1)"
         [class.active-tab]="activeProject === 1"
       >
-        <h3>2. El Pollo Loco</h3>
+        <h3>{{ 'projects.tabs.elPolloLoco' | translate }}</h3>
       </div>
       <div
         class="projects__tabs-headline"
@@ -27,7 +27,7 @@
         (click)="changeProject(2)"
         [class.active-tab]="activeProject === 2"
       >
-        <h3>3. Join</h3>
+        <h3>{{ 'projects.tabs.join' | translate }}</h3>
       </div>
       <div
         class="projects__tabs-headline"
@@ -35,21 +35,9 @@
         (click)="changeProject(3)"
         [class.active-tab]="activeProject === 3"
       >
-        <h3>4. Ongoing Project</h3>
+        <h3>{{ 'projects.tabs.ongoing' | translate }}</h3>
       </div>
     </div>
   </div>
   <app-project-details [project]="projects[activeProject]"></app-project-details>
 </section>
-
-<!-- [project]="projects[activeProject] -->
-<!--
-activeProject = 0
-projects[0]
--> ist dann das Objekt vom Pokedex
-----
-Das wird dann an den Input "project" übergeben
-Projektdetails erhält das komplette Pokedex-Objekt
-
-Hey ProjectDetails, dein Input "project" bekommt projects[activeProject]
--->

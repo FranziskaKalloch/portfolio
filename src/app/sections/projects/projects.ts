@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 import { ProjectDetails } from './project-details/project-details';
 import { Project } from './project.interface';
@@ -6,18 +7,98 @@ import { Project } from './project.interface';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ProjectDetails],
+  imports: [ProjectDetails, TranslatePipe],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
 export class Projects {
-  activeProject = 0;
+  constructor(private translate: TranslateService) {
+    this.projects = this.englishProjects;
 
+    this.translate.onLangChange.subscribe((event) => {
+      this.projects = event.lang === 'de' ? this.germanProjects : this.englishProjects;
+    });
+  }
+
+  activeProject = 0;
+  projects: Project[] = [];
   changeProject(index: number) {
     this.activeProject = index;
   }
 
-  projects: Project[] = [
+  germanProjects: Project[] = [
+    {
+      title: 'Pokedex',
+      duration: '2 Wochen',
+      aboutText:
+        'Eine interaktive Pokédex-Anwendung, mit der Nutzer Pokémon-Daten durchsuchen, nach Namen suchen und detaillierte Informationen in einer responsiven Oberfläche anzeigen können.',
+      organisationText:
+        'Ich habe das Projekt Schritt für Schritt entwickelt und Datenverarbeitung, Rendering und Styling klar voneinander getrennt.',
+      learnedTitle: 'Was ich gelernt habe',
+      learnedText:
+        'Dieses Projekt hat mein Verständnis für API-Anbindung, dynamisches Rendering und die Organisation größerer JavaScript-Anwendungen verbessert.',
+      technologies: [
+        '/assets/icons/skill/HTML.png',
+        '/assets/icons/skill/CSS.png',
+        '/assets/icons/skill/Javascript.png',
+      ],
+      image: '/assets/img/pokedex.png',
+      liveTestLink: '',
+      githubLink: '',
+    },
+
+    {
+      title: 'El Pollo Loco',
+      duration: '3 Wochen',
+      aboutText:
+        'El Pollo Loco ist ein browserbasiertes Jump-and-Run-Spiel mit objektorientiertem JavaScript. Der Spieler sammelt Münzen und Flaschen, besiegt Gegner und kämpft gegen einen Endboss.',
+      organisationText:
+        'Ich habe das Projekt in separate Klassen für Charakter, Gegner, sammelbare Objekte und Spiellogik aufgeteilt. Dadurch blieb der Code übersichtlich und leichter zu erweitern.',
+      learnedTitle: 'Was ich gelernt habe',
+      learnedText:
+        'Durch dieses Projekt habe ich mein Verständnis für objektorientierte Programmierung, Kollisionserkennung, Animationen und Game-State-Management vertieft.',
+      technologies: [
+        '/assets/icons/skill/HTML.png',
+        '/assets/icons/skill/CSS.png',
+        '/assets/icons/skill/Javascript.png',
+      ],
+      image: './assets/img/El-Pollo-Loco.png',
+      liveTestLink: '',
+      githubLink: '',
+    },
+
+    {
+      title: 'Join',
+      duration: '2 Wochen',
+      aboutText: 'Kommt bald...',
+      organisationText: 'Kommt bald...',
+      learnedTitle: 'Meine Erfahrung in der Gruppenarbeit',
+      learnedText: 'Kommt bald...',
+      technologies: [
+        '/assets/icons/skill/HTML.png',
+        '/assets/icons/skill/CSS.png',
+        '/assets/icons/skill/Javascript.png',
+      ],
+      image: './assets/img/Screenshot-join-project.png',
+      liveTestLink: '',
+      githubLink: '',
+    },
+
+    {
+      title: 'Ongoing Project',
+      duration: '',
+      aboutText: 'Kommt bald...',
+      organisationText: 'Kommt bald...',
+      learnedTitle: 'Was ich gelernt habe',
+      learnedText: 'Kommt bald...',
+      technologies: ['/assets/icons/skill/Vue Js.png', '/assets/icons/skill/React.png'],
+      image: './assets/img/Ongoing-project.png',
+      liveTestLink: '',
+      githubLink: '',
+    },
+  ];
+
+  englishProjects: Project[] = [
     {
       title: 'Pokedex',
       duration: '2 weeks',
@@ -86,29 +167,3 @@ export class Projects {
     },
   ];
 }
-
-// Welche Daten braucht projectDetails:
-// Duration
-// about Text
-// organisation Text
-// learned Text || group work experience
-// Technologies
-// Image
-// Github Link
-// Live Test Link
-
-//  SChritte:
-// Datenmodell überlegen
-// Parent kennt alle Projekte
-// activeProject festlegen
-// activeProject an Child geben
-// Tabs schalten active Project um
-
-// Variante - mit Index
-// bedeutet dann:
-// 0 = Pokedex
-// 1 = El Pollo Loco
-// 2 = Join
-// 3 = Ongoing Project
-
-// Vorteil -> sehr einfach und passt perfekt zu dem Array

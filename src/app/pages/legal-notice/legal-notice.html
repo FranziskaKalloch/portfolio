@@ -1,9 +1,9 @@
 <section class="app-legal-notice content-limit">
   <div class="legal-notice__inner">
-    <h1 class="headline color-blue">Legal Notice</h1>
+    <h1 class="headline color-blue">{{ 'legalNotice.headline' | translate }}</h1>
 
     <div class="legal-notice__content">
-      <h2 class="color-blue">Information according to Section 5 DDG</h2>
+      <h2 class="color-blue">{{ 'legalNotice.information' | translate }}</h2>
 
       <p>
         Franziska Kalloch<br />
@@ -11,12 +11,12 @@
         22419 Hamburg<br />
         Germany
       </p>
-      <h2 class="color-blue">Contact</h2>
+      <h2 class="color-blue">{{ 'legalNotice.contact' | translate }}</h2>
       <p>
         E-Mail:
         <a href="mailto:f.kalloch@outlook.de">f.kalloch@outlook.de</a>
       </p>
-      <h2 class="color-blue">Responsible for content according to Section 18 para. 2 MStV</h2>
+      <h2 class="color-blue">{{ 'legalNotice.responsible' | translate }}</h2>
       <p>
         Franziska Kalloch<br />
         Käkenflur 9<br />
@@ -24,7 +24,9 @@
         Germany
       </p>
       <div class="back-to-home">
-        <button class="button button--primary" routerLink="/">Home</button>
+        <button class="button button--primary" routerLink="/">
+          {{ 'legalNotice.home' | translate }}
+        </button>
       </div>
     </div>
   </div>

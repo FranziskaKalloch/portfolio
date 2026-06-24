@@ -1,52 +1,47 @@
 <section class="app-privacy-policy content-limit">
   <div class="policy__inner">
-    <h1 class="headline color-blue">Privacy Policy</h1>
+    <h1 class="headline color-blue">{{ 'privacyPolicy.headline' | translate }}</h1>
 
     <div class="policy__content">
-      <h2 class="color-blue">1. General Information</h2>
+      <h2 class="color-blue">{{ 'privacyPolicy.section1Title' | translate }}</h2>
       <p>
-        The protection of your personal data is important to me. This website processes personal
-        data only to the extent necessary to provide the website and its contact functionality.
+        {{ 'privacyPolicy.section1Text' | translate }}
       </p>
 
-      <h2 class="color-blue">2. Contact Form</h2>
+      <h2 class="color-blue">{{ 'privacyPolicy.section2Title' | translate }}</h2>
       <p>
-        When you use the contact form on this website, the information you provide (name, email
-        address, and message) will be processed solely for the purpose of responding to your
-        inquiry.
+        {{ 'privacyPolicy.section2Text' | translate }}
       </p>
 
       <p>
-        Your data will not be shared with third parties and will only be used for communication
-        regarding your request.
+        {{ 'privacyPolicy.section2Text2' | translate }}
       </p>
 
-      <h2 class="color-blue">3. Data Storage</h2>
+      <h2 class="color-blue">{{ 'privacyPolicy.section3Title' | translate }}</h2>
       <p>
-        Personal data submitted through the contact form will only be stored as long as necessary to
-        process your request and fulfill legal obligations.
+        {{ 'privacyPolicy.section3Text' | translate }}
       </p>
 
-      <h2 class="color-blue">4. Your Rights</h2>
+      <h2 class="color-blue">{{ 'privacyPolicy.section4Title' | translate }}</h2>
       <p>
-        You have the right to request information about your stored personal data, correction of
-        inaccurate data, deletion of your data, restriction of processing, and data portability,
-        where applicable.
+        {{ 'privacyPolicy.section4Text' | translate }}
       </p>
 
-      <h2 class="color-blue">5. Contact</h2>
-      <p>If you have questions regarding the processing of your personal data, please contact:</p>
+      <h2 class="color-blue">{{ 'privacyPolicy.section5Title' | translate }}</h2>
+      <p>{{ 'privacyPolicy.section5Text' | translate }}</p>
 
       <p>
         Franziska Kalloch<br />
         Käkenflur 9<br />
         22419 Hamburg<br />
-        Germany<br />
+        {{ 'privacyPolicy.location' | translate }}<br />
         E-Mail: f.kalloch@outlook.de
       </p>
 
       <div class="back-to-home">
-        <button class="button button--primary" routerLink="/">Home</button>
+        <button class="button button--primary" routerLink="/">
+          {{ 'privacyPolicy.home' | translate }}
+        </button>
       </div>
     </div>
   </div>
