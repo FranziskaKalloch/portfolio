@@ -7,6 +7,7 @@ import { Header } from '../../layout/header/header';
 
 @Component({
   selector: 'app-privacy-policy',
+  standalone: true,
   imports: [RouterLink, TranslatePipe, Header, Footer],
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',

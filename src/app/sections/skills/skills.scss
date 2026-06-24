@@ -3,10 +3,10 @@
 @use '../../../scss/components/buttons';
 
 .app-skill {
-  height: 100vh;
-  // padding-top: var(--section-gap);
   padding-inline: var(--section-inl-sm);
+  padding-block: 32px;
   font-size: 20px;
+  height: 100%;
 }
 
 .skills__inner {
@@ -87,4 +87,12 @@
 
 .learning__section:hover .bubble-hover {
   opacity: 1;
+}
+
+// RESPONSIVE
+
+@include mixin.responsive(desktop) {
+  .app-skill {
+    outline: 3px solid red;
+  }
 }

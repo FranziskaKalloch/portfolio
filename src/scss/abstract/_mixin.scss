@@ -1,6 +1,19 @@
+@use './breakpoints' as *;
+
 @mixin flex-center($direction: row) {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: $direction;
 }
+
+@mixin responsive($size) {
+  @media screen and (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// @include responsive(desktop) {}
+// @include responsive(tablet) {}
+// @include responsive(mobile) {}
+// @include responsive(mobileSmall) {}
