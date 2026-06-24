@@ -1,0 +1,16 @@
+{
+  "header": {
+    "whyMe": "Why me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "whyMe": {
+    "located": "I am located in Hamburg",
+    "aboutHeadline": "Why are you passionate about coding?",
+    "aboutText": `My passion for coding comes from solving problems and continuously learning new things. I enjoy understanding how systems work, breaking down complex challenges into smaller steps, and finding practical solutions. Software development challenges me to think
+            logically, stay persistent, and keep improving my skills. Every project teaches me
+            something new and motivates me to grow as a developer.`,
+    "button": "Let's talk"
+  }
+}

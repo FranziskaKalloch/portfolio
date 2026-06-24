@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
+  constructor(private translate: TranslateService) {}
+
   activeLanguage = 'en';
   hoveredLanguage = '';
   activeSection = '';
 
-  changeLanguage(lng: string) {
-    if (lng === 'en') {
+  changeLanguage(language: string) {
+    if (language === 'en') {
       this.activeLanguage = 'en';
     } else {
       this.activeLanguage = 'de';
     }
+
+    this.translate.use(language);
   }
 
   onMouseOver(language: string) {

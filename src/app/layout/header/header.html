@@ -16,7 +16,7 @@
             <img class="header__nav-item-bubble" src="./assets/bubbles/Ellipse-24.png" />
           }
           <a class="header__nav-link" href="#why-me" [class.color-white]="activeSection == 'why-me'"
-            ><h3>Why me</h3></a
+            ><h3>{{ 'header.whyMe' | translate }}</h3></a
           >
         </div>
         <div class="header__nav-item" (click)="setActiveSection('skills')">
@@ -28,7 +28,7 @@
             href="#skills"
             [class.color-white]="activeSection == 'skills'"
           >
-            <h3>Skills</h3></a
+            <h3>{{ 'header.skills' | translate }}</h3></a
           >
         </div>
         <div class="header__nav-item" (click)="setActiveSection('projects')">
@@ -39,7 +39,7 @@
             class="header__nav-link"
             href="#projects"
             [class.color-white]="activeSection == 'projects'"
-            ><h3>Projects</h3></a
+            ><h3>{{ 'header.projects' | translate }}</h3></a
           >
         </div>
         <div class="header__nav-item" (click)="setActiveSection('contact')">
@@ -50,7 +50,7 @@
             class="header__nav-link"
             href="#contact"
             [class.color-white]="activeSection == 'contact'"
-            ><h3>Contact</h3></a
+            ><h3>{{ 'header.contact' | translate }}</h3></a
           >
         </div>
       </nav>

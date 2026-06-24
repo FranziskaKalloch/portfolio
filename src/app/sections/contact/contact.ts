@@ -77,3 +77,24 @@ export class Contact {
 // this.showPolicyError = false;
 // }
 // }
+
+// async submitsendMailForm() {
+// prüfen, ob FORM Valide ist, wenn nein return
+
+//  const{senderName, email, message} = this.sendMailForm.value
+//  try {
+//     const httpResponse = await fetch('https://deine-domain.de/sendMail.php'), {
+//     method: 'POST',
+//      headers: { 'Content-Type': 'applications/json'},
+//      body: JSON.stringify({
+//        name: senderName,
+//        email: email,
+//        message: message,
+// }),
+// }),
+//  const result = await httpResponse.json();
+//  if(result.sucess) {
+//    TO-DO EMAIL erfolgreich gesendet
+// } else { TO-DO: Fehler beim senden}
+//  catch (error) {TO DO: Netzwerkfehler}
+//  }
