@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -9,12 +10,14 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact.scss',
 })
 export class Contact {
+  constructor(private http: HttpClient) {}
+
   form = new FormGroup({
     name: new FormControl('', {
       validators: [Validators.required, Validators.minLength(3)],
     }),
 
-    mail: new FormControl('', {
+    email: new FormControl('', {
       validators: [Validators.required, Validators.email],
     }),
 
@@ -37,6 +40,8 @@ export class Contact {
       this.form.markAllAsTouched();
       return;
     }
+    console.log(this.form.value);
+    this.formReset();
   }
 
   formReset() {

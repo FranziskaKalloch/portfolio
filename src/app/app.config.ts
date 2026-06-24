@@ -1,3 +1,4 @@
+import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter } from '@angular/router';
 
@@ -6,7 +7,8 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
+    provideRouter(routes),
+    provideHttpClient(),
 
     // Zwischen den Sprachen switch:
     // provideTranslateService({
@@ -15,9 +17,9 @@ export const appConfig: ApplicationConfig = {
     //  loader: provideTranslateHttpLoader({
     //
     //  })
-  // })
- ]
-}
+    // })
+  ],
+};
 
 // TranslateDirective in den Import von der app.ts schreiben
 // dann wird es in das HTML ebenfalls eingebunden mit eine Pipe
