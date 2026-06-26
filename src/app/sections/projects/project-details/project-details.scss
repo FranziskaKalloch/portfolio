@@ -2,6 +2,10 @@
 @use '../../../../scss/base/global';
 @use '../../../../scss/components/buttons';
 
+.project__card--mobile {
+  display: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -50,9 +54,6 @@ p {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-
-  line-height: 1.4;
-  min-height: 100px;
 }
 
 .project__info-headline {
@@ -116,4 +117,111 @@ p {
 
 .button--secondary:hover {
   background-color: var(--secondary-color);
+}
+
+// Responsive
+
+@include mixin.responsive(tabletPro) {
+  .project__card {
+    padding-inline: 50px;
+    gap: var(--space-lg);
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  // project infos left side
+
+  .project__info-list {
+    gap: 32px;
+  }
+
+  .project__info-item {
+    gap: var(--space-sm);
+  }
+
+  .project__info-bubble {
+    width: 28px;
+    height: 28px;
+  }
+
+  // project infos right side
+
+  .project__image {
+    width: 400px;
+    height: 240px;
+  }
+
+  .project__image-overlay {
+    &-text {
+      font-size: 18px;
+    }
+  }
+}
+
+@include mixin.responsive(tablet) {
+  .project__details-bg {
+    border-radius: 48px;
+  }
+
+  .project__card--desktop {
+    display: none;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .project__card--mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-inline: 48px;
+    padding-block: 48px;
+    color: var(--secondary-color);
+  }
+
+  .project__title {
+    color: var(--primary-color);
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .project__mobile-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .project__mobile-headline {
+    display: flex;
+    gap: 12px;
+    color: var(--primary-color);
+  }
+
+  .project__mobile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project__overview-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
+
+  .info__section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
 }

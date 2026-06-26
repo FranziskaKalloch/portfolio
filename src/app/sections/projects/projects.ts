@@ -38,9 +38,18 @@ export class Projects {
       learnedText:
         'Dieses Projekt hat mein Verständnis für API-Anbindung, dynamisches Rendering und die Organisation größerer JavaScript-Anwendungen verbessert.',
       technologies: [
-        '/assets/icons/skill/HTML.png',
-        '/assets/icons/skill/CSS.png',
-        '/assets/icons/skill/Javascript.png',
+        {
+          icon: '/assets/icons/html.png',
+          name: 'HTML',
+        },
+        {
+          icon: '/assets/icons/css.png',
+          name: 'CSS',
+        },
+        {
+          icon: '/assets/icons/js.png',
+          name: 'JavaScript',
+        },
       ],
       image: '/assets/img/pokedex.png',
       liveTestLink: '',
@@ -58,9 +67,18 @@ export class Projects {
       learnedText:
         'Durch dieses Projekt habe ich mein Verständnis für objektorientierte Programmierung, Kollisionserkennung, Animationen und Game-State-Management vertieft.',
       technologies: [
-        '/assets/icons/skill/HTML.png',
-        '/assets/icons/skill/CSS.png',
-        '/assets/icons/skill/Javascript.png',
+        {
+          icon: '/assets/icons/skill/HTML.png',
+          name: 'HTML',
+        },
+        {
+          icon: '/assets/icons/skill/CSS.png',
+          name: 'CSS',
+        },
+        {
+          icon: '/assets/icons/skill/Javascript.png',
+          name: 'JavaScript',
+        },
       ],
       image: './assets/img/El-Pollo-Loco.png',
       liveTestLink: '',
@@ -75,9 +93,18 @@ export class Projects {
       learnedTitle: 'Meine Erfahrung in der Gruppenarbeit',
       learnedText: 'Kommt bald...',
       technologies: [
-        '/assets/icons/skill/HTML.png',
-        '/assets/icons/skill/CSS.png',
-        '/assets/icons/skill/Javascript.png',
+        {
+          icon: '/assets/icons/skill/HTML.png',
+          name: 'HTML',
+        },
+        {
+          icon: '/assets/icons/skill/CSS.png',
+          name: 'CSS',
+        },
+        {
+          icon: '/assets/icons/skill/Javascript.png',
+          name: 'JavaScript',
+        },
       ],
       image: './assets/img/Screenshot-join-project.png',
       liveTestLink: '',
@@ -91,7 +118,16 @@ export class Projects {
       organisationText: 'Kommt bald...',
       learnedTitle: 'Was ich gelernt habe',
       learnedText: 'Kommt bald...',
-      technologies: ['/assets/icons/skill/Vue Js.png', '/assets/icons/skill/React.png'],
+      technologies: [
+        {
+          icon: '/assets/icons/skill/Vue Js.png',
+          name: 'Vue.js',
+        },
+        {
+          icon: '/assets/icons/skill/React.png',
+          name: 'React',
+        },
+      ],
       image: './assets/img/Ongoing-project.png',
       liveTestLink: '',
       githubLink: '',
@@ -110,9 +146,18 @@ export class Projects {
       learnedText:
         'This project improved my understanding of API integration, dynamic rendering, and organizing larger JavaScript applications.',
       technologies: [
-        '/assets/icons/skill/HTML.png',
-        '/assets/icons/skill/CSS.png',
-        '/assets/icons/skill/Javascript.png',
+        {
+          icon: '/assets/icons/html.png',
+          name: 'HTML',
+        },
+        {
+          icon: '/assets/icons/css.png',
+          name: 'CSS',
+        },
+        {
+          icon: '/assets/icons/js.png',
+          name: 'JavaScript',
+        },
       ],
       image: '/assets/img/pokedex.png',
       liveTestLink: '',
@@ -129,9 +174,18 @@ export class Projects {
       learnedText:
         'Through this project, I strengthened my understanding of object-oriented programming, collision detection, animations, and game state management. I also learned how different classes interact to create a complete game experience.',
       technologies: [
-        '/assets/icons/skill/HTML.png',
-        '/assets/icons/skill/CSS.png',
-        '/assets/icons/skill/Javascript.png',
+        {
+          icon: '/assets/icons/skill/HTML.png',
+          name: 'HTML',
+        },
+        {
+          icon: '/assets/icons/skill/CSS.png',
+          name: 'CSS',
+        },
+        {
+          icon: '/assets/icons/skill/Javascript.png',
+          name: 'JavaScript',
+        },
       ],
       image: './assets/img/El-Pollo-Loco.png',
       liveTestLink: '',
@@ -145,9 +199,18 @@ export class Projects {
       learnedTitle: 'My group work experience',
       learnedText: 'Coming Soon...',
       technologies: [
-        '/assets/icons/skill/HTML.png',
-        '/assets/icons/skill/CSS.png',
-        '/assets/icons/skill/Javascript.png',
+        {
+          icon: '/assets/icons/skill/HTML.png',
+          name: 'HTML',
+        },
+        {
+          icon: '/assets/icons/skill/CSS.png',
+          name: 'CSS',
+        },
+        {
+          icon: '/assets/icons/skill/Javascript.png',
+          name: 'JavaScript',
+        },
       ],
       image: './assets/img/Screenshot-join-project.png',
       liveTestLink: '',
@@ -160,7 +223,16 @@ export class Projects {
       organisationText: 'Coming Soon...',
       learnedTitle: 'What I have learnt',
       learnedText: 'Coming Soon...',
-      technologies: ['/assets/icons/skill/Vue Js.png', '/assets/icons/skill/React.png'],
+      technologies: [
+        {
+          icon: '/assets/icons/skill/Vue Js.png',
+          name: 'Vue.js',
+        },
+        {
+          icon: '/assets/icons/skill/React.png',
+          name: 'React',
+        },
+      ],
       image: './assets/img/Ongoing-project.png',
       liveTestLink: '',
       githubLink: '',

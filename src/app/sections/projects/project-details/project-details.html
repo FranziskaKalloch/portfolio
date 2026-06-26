@@ -1,6 +1,6 @@
 <div class="project__details-bg">
   <div class="content-limit">
-    <div class="project__card">
+    <div class="project__card project__card--desktop">
       <!-- HIER kommt dein kompletter Card-Inhalt rein -->
 
       <!-- PROJECT CARD LEFT SIDE -->
@@ -78,6 +78,66 @@
           <a href="{{ project?.liveTestLink }}" class="button button--secondary">Live Test</a>
           <a href="{{ project?.githubLink }}" class="button button--primary">GitHub</a>
         </div>
+      </div>
+    </div>
+
+    <!-- MOBILE -->
+    <div class="project__card--mobile">
+      <h2 class="project__title">{{ project?.title }}</h2>
+
+      <p>
+        Technologies:
+        @for (technology of project?.technologies; track technology.name; let i = $index) {
+          @if (i > 0) {
+            <span>, </span>
+          }
+          <span>{{ technology.name }}</span>
+        }
+      </p>
+
+      <p>Duration: {{ project?.duration }}</p>
+
+      <div class="project__mobile-image-wrapper">
+        <img class="project__image" [src]="project?.image" />
+
+        @if (project?.title === 'Ongoing Project') {
+          <div class="project__image-overlay">
+            <p class="project__image-overlay-text">
+              {{ 'projects.details.comingSoon' | translate }}
+            </p>
+          </div>
+        }
+      </div>
+
+      <div class="info__section">
+        <div class="project__mobile-info">
+          <div class="project__mobile-headline">
+            <img class="project__info-bubble" src="/assets/bubbles/Ellipse-project.png" />
+            <h2>About the project</h2>
+          </div>
+          <p>{{ project?.aboutText }}</p>
+        </div>
+
+        <div class="project__mobile-info">
+          <div class="project__mobile-headline">
+            <img class="project__info-bubble" src="/assets/bubbles/Ellipse-project.png" />
+            <h2>How I have organized my work</h2>
+          </div>
+          <p>{{ project?.organisationText }}</p>
+        </div>
+
+        <div class="project__mobile-info">
+          <div class="project__mobile-headline">
+            <img class="project__info-bubble" src="/assets/bubbles/Ellipse-project.png" />
+            <h2>{{ project?.learnedTitle }}</h2>
+          </div>
+          <p>{{ project?.learnedText }}</p>
+        </div>
+      </div>
+
+      <div class="project__overview-links">
+        <a href="{{ project?.liveTestLink }}" class="button button--secondary">Live Test</a>
+        <a href="{{ project?.githubLink }}" class="button button--primary">GitHub</a>
       </div>
     </div>
   </div>

@@ -4,10 +4,12 @@
 .app-hero {
   height: calc(100vh - 130px);
   font-family: 'Anta';
+  position: relative;
 }
 
 .hero {
   &__inner {
+    position: relative;
     display: flex;
     color: var(--secondary-color);
 
@@ -181,6 +183,7 @@
     width: 40px;
     height: 90px;
     cursor: pointer;
+    margin-bottom: 16px;
   }
 }
 
@@ -206,3 +209,42 @@
     transform: rotate(360deg);
   }
 }
+
+// RESPONSIVE
+
+@include mixin.responsive(tabletPro) {
+  .hero__inner {
+    padding-inline: 48px;
+  }
+
+  .hero__image-side {
+    width: 380px;
+    height: 380px;
+    margin-top: auto;
+  }
+
+  .background--default,
+  .background--hover {
+    width: 150%;
+    height: auto;
+  }
+
+  .hero__image-overlay {
+    width: 60%;
+    height: auto;
+  }
+
+  .hero__content-side {
+    width: calc(100% - 380px);
+  }
+
+  .hero__top {
+    padding-top: 16px;
+  }
+
+  .hero__content-side {
+    gap: 55px;
+  }
+}
+// @include mixin.responsive(mobile) {}
+// @include mixin.responsive(mobileSmall) {}

@@ -21,6 +21,33 @@
   top: 0;
 }
 
+.contact__scroll-button--mobile {
+  display: none;
+  position: relative;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button-default-mobile {
+  opacity: 1;
+}
+
+.button-hover-mobile {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.contact__scroll-button--mobile:hover .button-default-mobile {
+  opacity: 0;
+}
+
+.contact__scroll-button--mobile:hover .button-hover-mobile {
+  opacity: 1;
+}
+
 .button-default {
   opacity: 1;
 }
@@ -206,6 +233,11 @@ textarea {
   font-size: 18px;
 }
 
+input::placeholder,
+textarea::placeholder {
+  opacity: 0;
+}
+
 .input-error {
   border-color: var(--error-color) !important;
 }
@@ -241,6 +273,10 @@ label {
   cursor: pointer;
   opacity: 0;
   z-index: 5;
+}
+
+.text__mobile {
+  display: none;
 }
 
 // CHECKBOX STATES
@@ -319,3 +355,135 @@ label {
 .contact__information-policy.error .checkbox-error-text {
   opacity: 1;
 }
+
+// RESPONSIVE
+
+@include mixin.responsive(desktop) {
+  .contact__inner {
+    padding-inline: 16px;
+  }
+}
+
+@include mixin.responsive(tabletPro) {
+  .contact__inner {
+    padding-inline: 48px;
+  }
+
+  .contact__text,
+  .contact__form {
+    padding-inline: 0;
+  }
+}
+
+@include mixin.responsive(tablet) {
+  .contact__scroll-button {
+    display: none;
+  }
+
+  .text__mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 62px;
+
+    & p {
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .contact__text-contact {
+    order: 1;
+    gap: 6px;
+    font-size: 18px;
+  }
+
+  .contact__text-contact img {
+    width: 42px;
+    height: auto;
+  }
+
+  .contact__text-description {
+    order: 2;
+    font-size: 18px;
+  }
+
+  .contact__work-together {
+    order: 3;
+  }
+
+  .contact__text {
+    flex-direction: column;
+    padding-inline: 48px;
+  }
+
+  .contact__text-description,
+  .contact__text-contact {
+    width: 100%;
+  }
+
+  .contact__information {
+    flex-direction: column;
+
+    gap: 32px;
+  }
+
+  .contact__information-name,
+  .contact__information-mail {
+    width: 100%;
+  }
+
+  .contact__form {
+    padding-inline: 48px;
+  }
+
+  .contact__information label,
+  .contact__information-message label {
+    display: none;
+  }
+
+  #name,
+  #email {
+    height: 84px;
+  }
+
+  #message {
+    height: 250px;
+    border-radius: 54px;
+    padding-top: 32px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1;
+    font-size: 24px;
+    padding-left: 22px;
+  }
+
+  .policy-checkbox {
+    width: 34px;
+    height: 34px;
+  }
+
+  .checkbox-default,
+  .checkbox-hover,
+  .checkbox-checked,
+  .checkbox-error {
+    width: 32px;
+    height: 32px;
+  }
+
+  .policy-text-wrapper {
+    padding-left: 22px;
+    font-size: 18px;
+  }
+
+  .contact__scroll-button--mobile {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 150px;
+  }
+}
+// @include mixin.responsive(mobile) {}
+// @include mixin.responsive(mobileSmall) {}

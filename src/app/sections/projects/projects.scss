@@ -42,10 +42,47 @@
 
 .active-tab {
   background-color: var(--surface-color);
-  width: 100%;
   height: 120px;
   padding-inline: 32px;
   border-radius: 32px 32px 0 0;
-
   color: var(--secondary-color);
+}
+
+// RESPONSIVE
+
+@include mixin.responsive(desktop) {
+  .projects__tabs {
+    gap: 70px;
+  }
+  .projects__tabs-headline {
+    font-size: 24px;
+  }
+}
+
+@include mixin.responsive(tabletPro) {
+  .projects__tabs {
+    gap: 50px;
+    padding-inline: 50px;
+    font-size: 26px;
+  }
+}
+
+@include mixin.responsive(tablet) {
+  .projects__tabs {
+    gap: 40px;
+    padding-left: 0px;
+    padding-right: 16px;
+    font-size: 20px;
+    &-headline {
+      text-wrap: balance;
+    }
+  }
+
+  .active-tab {
+    background-color: var(--surface-color);
+    height: 100px;
+    padding-inline: 20px;
+    border-radius: 32px 32px 0 0;
+    color: var(--secondary-color);
+  }
 }

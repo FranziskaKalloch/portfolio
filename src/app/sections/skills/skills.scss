@@ -67,10 +67,11 @@
 .bubble-default,
 .bubble-hover {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
-  height: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
 }
 
 .bubble-default {
@@ -92,7 +93,44 @@
 // RESPONSIVE
 
 @include mixin.responsive(desktop) {
-  .app-skill {
-    outline: 3px solid red;
+  .bubble-default,
+  .bubble-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 115%;
+    height: auto;
+    transform: translate(-50%, -50%);
   }
 }
+@include mixin.responsive(tabletPro) {
+  .app-skill {
+    padding-inline: 48px;
+  }
+
+  .skill__section-seperator {
+    gap: 10px;
+  }
+
+  .skill__section {
+    padding-left: 0;
+    width: 450px;
+  }
+
+  .learning__section {
+    width: 50%;
+  }
+
+  .bubble-default,
+  .bubble-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 105%;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+// @include mixin.responsive(tablet) {}
+// @include mixin.responsive(mobile) {}
+// @include mixin.responsive(mobileSmall) {}

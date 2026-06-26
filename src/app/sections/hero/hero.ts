@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
-export class Hero {}
+export class Hero {
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+
+    contactSection?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+}

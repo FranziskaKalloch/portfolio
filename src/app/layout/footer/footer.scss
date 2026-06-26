@@ -58,6 +58,14 @@
 
 // social media
 
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
 .footer__social {
   display: flex;
   align-items: flex-end;
@@ -94,4 +102,121 @@
 
 .footer__social-icon:hover .social__icon--hover {
   opacity: 1;
+}
+
+// RESPONSIVE
+
+@include mixin.responsive(tabletPro) {
+  .app-footer {
+    padding-inline: 48px;
+  }
+}
+
+@include mixin.responsive(tablet) {
+  .app-footer {
+    padding-block: 48px;
+  }
+
+  .footer__logo {
+    order: 1;
+  }
+
+  .footer__social {
+    order: 2;
+  }
+
+  .footer__description {
+    order: 3;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    gap: 62px;
+  }
+
+  .footer__description,
+  .footer__logo,
+  .footer__social {
+    width: 100%;
+  }
+
+  .footer__description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 20px;
+  }
+
+  .footer__logo {
+    @include mixin.flex-center(column);
+    gap: 2px;
+
+    &-img {
+      height: 84px;
+      width: 84px;
+    }
+
+    &-text {
+      letter-spacing: 2px;
+      font-size: 16px;
+    }
+  }
+
+  // RESPONSIVE SOCIAL ICONS
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .footer__social {
+    justify-content: center;
+    gap: 52px;
+
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  // Mobile Icons
+  .social__icon--default-mobile,
+  .social__icon--hover-mobile {
+    position: absolute;
+    inset: 0;
+  }
+
+  .social__icon--default-mobile {
+    opacity: 1;
+  }
+
+  .social__icon--hover-mobile {
+    opacity: 0;
+  }
+
+  // Hover
+  .footer__social-icon:hover .social__icon--default-mobile {
+    opacity: 0;
+  }
+
+  .footer__social-icon:hover .social__icon--hover-mobile {
+    opacity: 1;
+  }
+
+  // Desktop-Default ist zunächst unsichtbar
+  .social__icon--default.desktop {
+    display: none;
+  }
+
+  // Nach Klick anzeigen
+  .social__icon--default.desktop.active {
+    display: block;
+  }
 }

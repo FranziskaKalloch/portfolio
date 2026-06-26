@@ -13,38 +13,83 @@
     </div>
     <div class="footer__social">
       <div class="footer__social-icon">
-        <a href="https://github.com/FranziskaKalloch/FranziskaKalloch.git">
+        <a
+          href="https://github.com/FranziskaKalloch/FranziskaKalloch.git"
+          (click)="changeSocial('github')"
+        >
+          <!-- Desktop -->
           <img
-            class="social__icon--default"
+            class="social__icon--default desktop"
+            [class.active]="activeSocial === 'github'"
             src="./assets/icons/contact-form/social-media/github-default.png"
           />
           <img
-            class="social__icon--hover"
+            class="social__icon--hover desktop"
             src="./assets/icons/contact-form/social-media/github-hover.png"
+          />
+
+          <!-- Mobile -->
+          <img
+            class="social__icon--default-mobile mobile"
+            src="./assets/icons/social/github-default-white.png"
+          />
+          <img
+            class="social__icon--hover-mobile mobile"
+            src="./assets/icons/social/github-hover-white.png"
           />
         </a>
       </div>
+      <!-- EMAIL -->
       <div class="footer__social-icon">
-        <a href="mailto:f.kalloch@outlook.de">
+        <a href="mailto:f.kalloch@outlook.de" (click)="changeSocial('email')">
+          <!-- Desktop -->
           <img
-            class="social__icon--default"
+            class="social__icon--default desktop"
+            [class.active]="activeSocial === 'email'"
             src="./assets/icons/contact-form/social-media/email-default.png"
           />
           <img
-            class="social__icon--hover"
+            class="social__icon--hover desktop"
             src="./assets/icons/contact-form/social-media/email-hover.png"
+          />
+
+          <!-- Mobile -->
+          <img
+            class="social__icon--default-mobile mobile"
+            src="./assets/icons/social/mail-default-white.png"
+          />
+          <img
+            class="social__icon--hover-mobile mobile"
+            src="./assets/icons/social/mail-hover-white.png"
           />
         </a>
       </div>
+
+      <!-- LinkedIn -->
       <div class="footer__social-icon">
-        <a href="">
+        <a
+          href="https://www.linkedin.com/in/kalloch-franziska-a570b2175/"
+          (click)="changeSocial('linkedin')"
+        >
+          <!-- Desktop -->
           <img
-            class="social__icon--default"
+            class="social__icon--default desktop"
+            [class.active]="activeSocial === 'linkedin'"
             src="./assets/icons/contact-form/social-media/linkin-default.png"
           />
           <img
-            class="social__icon--hover"
+            class="social__icon--hover desktop"
             src="./assets/icons/contact-form/social-media/linkin-hover.png"
+          />
+
+          <!-- Mobile -->
+          <img
+            class="social__icon--default-mobile mobile"
+            src="./assets/icons/social/linkedin-default-white.png"
+          />
+          <img
+            class="social__icon--hover-mobile mobile"
+            src="./assets/icons/social/linkedin-hover-white.png"
           />
         </a>
       </div>

@@ -84,9 +84,93 @@
 
 // RESPONSIVE
 
-$breakpoints: (
-  sDesktop: 1200px,
-  tablet: 992px,
-  mobile: 768px,
-  sMobile: 480px,
-);
+@include mixin.responsive(desktop) {
+  .ref__list {
+    gap: 12px;
+  }
+
+  .bubble-default,
+  .bubble-hover {
+    width: 360px;
+    height: auto;
+  }
+
+  .ref__content-feedback {
+    width: 210px;
+  }
+}
+@include mixin.responsive(tabletPro) {
+  .ref__list {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    padding-bottom: 16px;
+    padding-inline: 42px;
+
+    gap: 64px;
+  }
+}
+
+@include mixin.responsive(tablet) {
+  .ref__inner {
+    align-items: flex-start;
+  }
+
+  .ref__headline-div {
+    display: none;
+  }
+
+  .ref__headline-div-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: flex-start;
+    margin-bottom: 48px;
+    padding-inline: 48px;
+  }
+
+  .teamplayer {
+    letter-spacing: 2px;
+    font-size: 48px;
+  }
+
+  .color-white {
+    color: var(--secondary-color);
+    font-size: 20px;
+  }
+
+  .bubble-default,
+  .bubble-hover {
+    width: 500px;
+    height: auto;
+  }
+
+  .ref__list {
+    padding-inline: 100px;
+  }
+
+  .ref__content {
+    align-items: flex-start;
+  }
+
+  .ref__content-header {
+    align-items: flex-start;
+  }
+
+  .ref__content-feedback {
+    text-align: left;
+  }
+
+  .ref__content p,
+  .ref__content span {
+    font-size: 20px;
+  }
+
+  .ref__content h2 {
+    font-size: 32px;
+  }
+}
+// @include mixin.responsive(mobile) {}
+// @include mixin.responsive(mobileSmall) {}

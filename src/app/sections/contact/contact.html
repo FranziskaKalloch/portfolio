@@ -9,7 +9,7 @@
     </div>
 
     <!-- TEXT AREA -->
-    <div class="contact__text">
+    <div class="contact__text" id="contact">
       <div class="contact__text-description">
         <p>
           {{ 'contact.description' | translate }}
@@ -36,7 +36,7 @@
         </div>
       </div>
     </div>
-
+    <div class="text__mobile color-blue"><p>Let us work together!</p></div>
     <!-- FORM AREA -->
     <form class="contact__form" [formGroup]="form" (ngSubmit)="formSubmit()">
       <div class="contact__information">
@@ -50,6 +50,7 @@
             type="text"
             id="name"
             formControlName="name"
+            [placeholder]="'contact.name' | translate"
             [class.input-error]="form.controls.name.invalid && form.controls.name.touched"
           />
         </div>
@@ -64,6 +65,7 @@
             type="email"
             id="email"
             formControlName="email"
+            [placeholder]="'contact.email' | translate"
             [class.input-error]="form.controls.email.invalid && form.controls.email.touched"
           />
         </div>
@@ -77,6 +79,7 @@
         <textarea
           id="message"
           formControlName="message"
+          [placeholder]="'contact.message' | translate"
           [class.input-error]="form.controls.message.invalid && form.controls.message.touched"
         ></textarea>
       </div>
@@ -114,5 +117,9 @@
       </div>
     </form>
     <!-- FORM AREA END -->
+    <div class="contact__scroll-button--mobile">
+      <img class="button-default-mobile" src="./assets/icons/Arrow-up-default.png" />
+      <img class="button-hover-mobile" src="./assets/icons/Arrow-up-hover.png" />
+    </div>
   </div>
 </section>

@@ -1,3 +1,18 @@
+@use '../../../scss/abstract/mixin';
+
 .position_relative {
   position: relative;
+}
+
+// RESPONSIVE
+
+@include mixin.responsive(tablet) {
+  .position_relative {
+    display: flex;
+    flex-direction: column;
+  }
+
+  app-header {
+    order: -1;
+  }
 }
