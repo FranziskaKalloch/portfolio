@@ -2,7 +2,7 @@
   <div class="contact__inner">
     <div class="contact__header">
       <h2 class="headline color-blue">{{ 'contact.headline' | translate }}</h2>
-      <div class="contact__scroll-button">
+      <div class="contact__scroll-button" (click)="scrollToTop()">
         <img class="button-default" src="./assets/icons/Arrow-up-default.png" />
         <img class="button-hover" src="./assets/icons/Arrow-up-hover.png" />
       </div>
@@ -117,7 +117,7 @@
       </div>
     </form>
     <!-- FORM AREA END -->
-    <div class="contact__scroll-button--mobile">
+    <div class="contact__scroll-button--mobile" (click)="scrollToTop()">
       <img class="button-default-mobile" src="./assets/icons/Arrow-up-default.png" />
       <img class="button-hover-mobile" src="./assets/icons/Arrow-up-hover.png" />
     </div>

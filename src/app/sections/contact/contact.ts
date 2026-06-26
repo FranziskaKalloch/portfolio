@@ -48,6 +48,12 @@ export class Contact {
   formReset() {
     this.form.reset();
   }
+  scrollToTop() {
+    document.getElementById('hero')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 }
 
 // @if(policy.touched && !name.valid) {
