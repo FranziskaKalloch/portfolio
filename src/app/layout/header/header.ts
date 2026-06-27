@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -40,5 +40,10 @@ export class Header {
 
   setActiveSection(sec: string) {
     this.activeSection = sec;
+  }
+  @Output() burgerClicked = new EventEmitter<void>();
+
+  toggleBurgerMenu() {
+    this.burgerClicked.emit();
   }
 }

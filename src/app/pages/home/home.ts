@@ -15,4 +15,10 @@ import { WhyMe } from '../../sections/why-me/why-me';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {}
+export class Home {
+  isBurgerMenuOpen = false;
+
+  toggleBurgerMenu() {
+    this.isBurgerMenuOpen = !this.isBurgerMenuOpen;
+  }
+}

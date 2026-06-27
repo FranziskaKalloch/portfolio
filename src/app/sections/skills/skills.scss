@@ -2,6 +2,10 @@
 @use '../../../scss/base/global';
 @use '../../../scss/components/buttons';
 
+.skills-mobile {
+  display: none;
+}
+
 .app-skill {
   padding-inline: var(--section-inl-sm);
   padding-block: 32px;
@@ -131,6 +135,98 @@
     transform: translate(-50%, -50%);
   }
 }
-// @include mixin.responsive(tablet) {}
+@include mixin.responsive(tablet) {
+  .skills-desktop {
+    display: none;
+  }
+
+  .skills-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill__section-seperator {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .skill-icon-text {
+    display: none;
+  }
+
+  .skill__section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-inline: 88px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .skills-mobile__headline {
+    font-size: 22px;
+    padding-bottom: 50px;
+    letter-spacing: 2px;
+  }
+
+  .skills-mobile__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 20px;
+    gap: 32px;
+    padding-bottom: 48px;
+  }
+
+  .skills-mobile__text {
+    width: 60%;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  .skills-mobile__bubble {
+    width: 160px;
+    position: relative;
+  }
+
+  .skills-mobile__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .bubble-default-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .bubble-hover-mobile {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+  }
+  .skills-mobile__bubble:hover .bubble-default-mobile {
+    opacity: 0;
+  }
+
+  .skills-mobile__bubble:hover .bubble-hover-mobile {
+    opacity: 1;
+  }
+
+  .button--secondary:hover {
+    background-color: var(--secondary-color);
+  }
+}
 // @include mixin.responsive(mobile) {}
 // @include mixin.responsive(mobileSmall) {}

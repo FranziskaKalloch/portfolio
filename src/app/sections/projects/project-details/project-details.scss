@@ -166,7 +166,7 @@ p {
 
 @include mixin.responsive(tablet) {
   .project__details-bg {
-    border-radius: 48px;
+    border-radius: 0 0 48px 48px;
   }
 
   .project__card--desktop {

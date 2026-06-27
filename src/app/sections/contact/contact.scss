@@ -479,10 +479,13 @@ label {
   }
 
   .contact__scroll-button--mobile {
+    position: relative;
+    width: 60px;
+    height: 135px;
     display: flex;
     justify-content: center;
-
     margin-top: 150px;
+    margin-inline: auto;
   }
 }
 // @include mixin.responsive(mobile) {}

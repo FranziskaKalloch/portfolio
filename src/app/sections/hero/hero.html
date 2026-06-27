@@ -2,15 +2,101 @@
   <div class="hero__inner">
     <!-- LEFT -->
     <div class="hero__image-side">
+      <!-- DESKTOP / TABLET PRO -->
+
       <img
-        class="hero__image-background background--default"
+        class="hero__image-background background--default desktop"
         src="./assets/hero-section/shape-default.png"
       />
+
       <img
-        class="hero__image-background background--hover"
+        class="hero__image-background background--hover desktop"
         src="./assets/hero-section/shape-hover.png"
       />
-      <img class="hero__image-overlay" src="./assets/img/franzy.png" />
+
+      <img class="hero__image-overlay desktop" src="./assets/img/franzy.png" />
+
+      <!-- MOBILE NORMAL IMAGE -->
+
+      @if (!isBurgerMenuOpen) {
+        <img class="hero__image-mobile mobile" src="./assets/img/Group1.png" />
+      }
+
+      <!-- BURGER MENU -->
+
+      @if (isBurgerMenuOpen) {
+        <div class="hero__burger-menu">
+          <img
+            class="hero__burger-menu-background"
+            src="./assets/hero-section/responsive/Ellipse 35.png"
+          />
+          <nav class="hero__burger-menu-nav">
+            <div class="hero__burger-menu-item">
+              <a href="#why-me">{{ 'header.whyMe' | translate }}</a>
+            </div>
+
+            <div class="hero__burger-menu-item">
+              <a href="#skills">
+                {{ 'header.skills' | translate }}
+              </a>
+            </div>
+
+            <div class="hero__burger-menu-item">
+              <a href="#projects"
+                ><a href="#why-me">{{ 'header.projects' | translate }}</a></a
+              >
+            </div>
+
+            <div class="hero__burger-menu-item">
+              <a href="#contact"
+                ><a href="#why-me">{{ 'header.contact' | translate }}</a></a
+              >
+            </div>
+
+            <div class="hero__burger-menu-language">
+              <div
+                class="burger__language-item"
+                (mouseover)="onMouseOver('de')"
+                (mouseleave)="onMouseLeave()"
+              >
+                @if (activeLanguage == 'de' && hoveredLanguage == '') {
+                  <img class="burger__language-bubble" src="./assets/bubbles/Ellipse-24.png" />
+                }
+
+                <button
+                  class="burger__language-button"
+                  [class.burger__language-button--active]="
+                    hoveredLanguage == 'de' || (hoveredLanguage == '' && activeLanguage == 'de')
+                  "
+                  (click)="changeLanguage('de')"
+                >
+                  DE
+                </button>
+              </div>
+
+              <div
+                class="burger__language-item"
+                (mouseover)="onMouseOver('en')"
+                (mouseleave)="onMouseLeave()"
+              >
+                @if (activeLanguage == 'en' && hoveredLanguage == '') {
+                  <img class="burger__language-bubble" src="./assets/bubbles/Ellipse-24.png" />
+                }
+
+                <button
+                  class="burger__language-button"
+                  [class.burger__language-button--active]="
+                    hoveredLanguage == 'en' || (hoveredLanguage == '' && activeLanguage == 'en')
+                  "
+                  (click)="changeLanguage('en')"
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+          </nav>
+        </div>
+      }
     </div>
 
     <!-- HERO RIGHT -->

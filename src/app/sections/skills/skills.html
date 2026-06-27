@@ -1,14 +1,129 @@
 <section class="content-limit app-skill" id="skills">
   <div class="skills__inner">
-    <h2 class="skills__headline color-blue headline">{{ 'skills.headline' | translate }}</h2>
-    <div class="skill__section-seperator">
-      <div class="skill__section">
-        <div class="skill__section-icon">
-          <img class="skill-icon" src="./assets/icons/skill/angular.png" /><span
-            class="skill-icon-text"
-            >Angular</span
-          >
+    <h2 class="skills__headline color-blue headline">
+      {{ 'skills.headline' | translate }}
+    </h2>
+
+    <!-- DESKTOP VERSION -->
+    <div class="skills-desktop">
+      <div class="skill__section-seperator">
+        <div class="skill__section">
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/TypeScript.png" /><span
+              class="skill-icon-text"
+              >TypeScript</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Javascript.png" /><span
+              class="skill-icon-text"
+              >JavaScript</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/HTML.png" /><span
+              class="skill-icon-text"
+              >HTML</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/CSS.png" /><span
+              class="skill-icon-text"
+              >CSS</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/SQL.png" /><span
+              class="skill-icon-text"
+              >SQL</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Supabase.png" /><span
+              class="skill-icon-text"
+              >Supabase</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/git.png" /><span
+              class="skill-icon-text"
+              >Git</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/RxJs.png" /><span
+              class="skill-icon-text"
+              >RxJS</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Docker.png" /><span
+              class="skill-icon-text"
+              >Docker</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Django.png" /><span
+              class="skill-icon-text"
+              >Django</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Firebase.png" /><span
+              class="skill-icon-text"
+              >Firebase</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Docker.png" /><span
+              class="skill-icon-text"
+              >Docker</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/Scrum.png" /><span
+              class="skill-icon-text"
+              >Scrum</span
+            >
+          </div>
+          <div class="skill__section-icon">
+            <img class="skill-icon" src="./assets/icons/skill/material-design.png" /><span
+              class="skill-icon-text"
+              >Material Design</span
+            >
+          </div>
         </div>
+
+        <div class="learning__section">
+          <p>{{ 'skills.currentlyLearning' | translate }}</p>
+
+          <div class="learning__section-icons">
+            <div class="learning__section-skill">
+              <img src="./assets/icons/skill/React.png" />
+              <span>React</span>
+            </div>
+
+            <div class="learning__section-skill">
+              <img class="bubble-default" src="/assets/bubbles/Ellipse-default.png" />
+              <img
+                class="bubble-hover"
+                src="/assets/bubbles/references-section/Ellipse-hover.png"
+              />
+              <img src="./assets/icons/skill/Vue Js.png" />
+              <span>Vue.js</span>
+            </div>
+          </div>
+
+          <p>
+            {{ 'skills.learningText' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE VERSION -->
+    <div class="skills-mobile">
+      <div class="skill__section">
         <div class="skill__section-icon">
           <img class="skill-icon" src="./assets/icons/skill/TypeScript.png" /><span
             class="skill-icon-text"
@@ -91,24 +206,43 @@
           >
         </div>
       </div>
-      <div class="learning__section">
-        <p>{{ 'skills.currentlyLearning' | translate }}</p>
-        <div class="learning__section-icons">
-          <div class="learning__section-skill">
-            <img src="./assets/icons/skill/React.png" />
-            <span>React</span>
-          </div>
 
-          <div class="learning__section-skill">
-            <img class="bubble-default" src="/assets/bubbles/Ellipse-default.png" />
-            <img class="bubble-hover" src="/assets/bubbles/references-section/Ellipse-hover.png" />
-            <img src="./assets/icons/skill/Vue Js.png" />
-            <span>Vue.js</span>
+      <div class="skills-mobile__headline">
+        <h3 class="color-blue">
+          {{ 'skills.currentlyLearningMobile' | translate }}
+        </h3>
+      </div>
+
+      <div class="skills-mobile__content">
+        <div class="skills-mobile__text">
+          <p>
+            {{ 'skills.learningText' | translate }}
+          </p>
+        </div>
+
+        <div class="skills-mobile__bubble">
+          <img class="bubble-default-mobile" src="/assets/bubbles/Ellipse-default.png" />
+          <img
+            class="bubble-hover-mobile"
+            src="/assets/bubbles/references-section/Ellipse-hover.png"
+          />
+
+          <div class="skills-mobile__icons">
+            <div class="skills-mobile__icon">
+              <img src="./assets/icons/skill/React.png" />
+              <span>React</span>
+            </div>
+
+            <div class="skills-mobile__icon">
+              <img src="./assets/icons/skill/Vue Js.png" />
+              <span>Vue.js</span>
+            </div>
           </div>
         </div>
-        <p>
-          {{ 'skills.learningText' | translate }}
-        </p>
+      </div>
+
+      <div class="skills-mobile__button">
+        <button class="button button--secondary">{{ 'skills.button' | translate }}</button>
       </div>
     </div>
   </div>

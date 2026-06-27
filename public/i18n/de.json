@@ -1,7 +1,7 @@
 {
   "header": {
     "whyMe": "Warum ich",
-    "skills": "Skills",
+    "skills": "Fähigkeiten",
     "projects": "Projekte",
     "contact": "Kontakt"
   },
@@ -17,7 +17,9 @@
   "skills": {
   "headline": "Meine Fähigkeiten",
   "currentlyLearning": "Ich lerne aktuell",
-  "learningText": "Ich bin motiviert, meine Fähigkeiten kontinuierlich zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien auf dem neuesten Stand zu bleiben."
+  "currentlyLearningMobile": "Was ich aktuell lerne",
+  "learningText": "Ich bin motiviert, meine Fähigkeiten kontinuierlich zu verbessern, innovative Lösungen umzusetzen und mit neuen Technologien auf dem neuesten Stand zu bleiben.",
+  "button": "Lass uns sprechen"
 },
 "projects": {
   "headline": "Meine Projekte",
