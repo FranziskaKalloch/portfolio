@@ -11,7 +11,15 @@
         (click)="changeProject(0)"
         [class.active-tab]="activeProject === 0"
       >
-        <h3>{{ 'projects.tabs.pokedex' | translate }}</h3>
+        <h3>
+          <span class="tab-title-desktop">
+            {{ 'projects.tabs.pokedex' | translate }}
+          </span>
+
+          <span class="tab-title-mobile">
+            {{ 'projects.tabs.project1' | translate }}
+          </span>
+        </h3>
       </div>
       <div
         class="projects__tabs-headline"
@@ -19,7 +27,15 @@
         (click)="changeProject(1)"
         [class.active-tab]="activeProject === 1"
       >
-        <h3>{{ 'projects.tabs.elPolloLoco' | translate }}</h3>
+        <h3>
+          <span class="tab-title-desktop">
+            {{ 'projects.tabs.elPolloLoco' | translate }}
+          </span>
+
+          <span class="tab-title-mobile">
+            {{ 'projects.tabs.project2' | translate }}
+          </span>
+        </h3>
       </div>
       <div
         class="projects__tabs-headline"
@@ -27,7 +43,15 @@
         (click)="changeProject(2)"
         [class.active-tab]="activeProject === 2"
       >
-        <h3>{{ 'projects.tabs.join' | translate }}</h3>
+        <h3>
+          <span class="tab-title-desktop">
+            {{ 'projects.tabs.join' | translate }}
+          </span>
+
+          <span class="tab-title-mobile">
+            {{ 'projects.tabs.project3' | translate }}
+          </span>
+        </h3>
       </div>
       <div
         class="projects__tabs-headline"
@@ -35,7 +59,15 @@
         (click)="changeProject(3)"
         [class.active-tab]="activeProject === 3"
       >
-        <h3>{{ 'projects.tabs.ongoing' | translate }}</h3>
+        <h3>
+          <span class="tab-title-desktop">
+            {{ 'projects.tabs.ongoin' | translate }}
+          </span>
+
+          <span class="tab-title-mobile">
+            {{ 'projects.tabs.project4' | translate }}
+          </span>
+        </h3>
       </div>
     </div>
   </div>

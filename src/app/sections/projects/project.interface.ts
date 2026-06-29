@@ -1,5 +1,6 @@
 export interface Project {
   title: string;
+  mobileTitle: string;
   duration: string;
   aboutText: string;
   organisationText: string;

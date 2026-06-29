@@ -220,3 +220,13 @@
     display: block;
   }
 }
+
+@include mixin.responsive(tablet) {
+  .footer__inner {
+    gap: 40px;
+  }
+
+  .footer__description {
+    font-size: 16px;
+  }
+}

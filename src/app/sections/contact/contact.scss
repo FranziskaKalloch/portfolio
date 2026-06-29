@@ -488,5 +488,26 @@ label {
     margin-inline: auto;
   }
 }
-// @include mixin.responsive(mobile) {}
+@include mixin.responsive(mobile) {
+  .headline {
+    font-size: 52px;
+  }
+
+  .contact__inner {
+    padding-inline: 32px;
+  }
+
+  .contact__text {
+    padding-inline: 0;
+  }
+
+  .contact__form {
+    padding-inline: 0;
+  }
+
+  .contact__scroll-button--mobile {
+    width: 50px;
+    height: 125px;
+  }
+}
 // @include mixin.responsive(mobileSmall) {}

@@ -106,3 +106,13 @@
     display: none;
   }
 }
+
+@include mixin.responsive(mobile) {
+  .app-why-me {
+    padding-block: 48px;
+  }
+
+  .why-me__located {
+    gap: 20px;
+  }
+}

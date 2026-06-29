@@ -167,6 +167,7 @@ p {
 @include mixin.responsive(tablet) {
   .project__details-bg {
     border-radius: 0 0 48px 48px;
+    margin-top: -1px;
   }
 
   .project__card--desktop {
@@ -223,5 +224,25 @@ p {
     display: flex;
     flex-direction: column;
     gap: 32px;
+  }
+}
+
+@include mixin.responsive(mobile) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .project__card--mobile {
+    padding-inline: 28px;
+    padding-block: 28px;
+  }
+
+  .project__overview-links {
+    gap: 16px;
+  }
+
+  .project__image {
+    width: 320px;
+    height: 200px;
   }
 }

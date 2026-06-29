@@ -228,5 +228,18 @@
     background-color: var(--secondary-color);
   }
 }
-// @include mixin.responsive(mobile) {}
+@include mixin.responsive(mobile) {
+  .app-skill {
+    padding-block: 48px;
+    padding-inline: 32px;
+  }
+
+  .skill__section {
+    padding-inline: 0;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
 // @include mixin.responsive(mobileSmall) {}

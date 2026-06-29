@@ -172,5 +172,44 @@
     font-size: 32px;
   }
 }
-// @include mixin.responsive(mobile) {}
+@include mixin.responsive(mobile) {
+  .app-references {
+    padding-block: 48px;
+  }
+
+  .teamplayer {
+    font-size: 30px;
+  }
+
+  .color-white {
+    font-size: 18px;
+  }
+
+  .ref__list {
+    padding-inline: 32px;
+  }
+
+  .bubble-default,
+  .bubble-hover {
+    width: 380px;
+    height: 400px;
+  }
+
+  .ref__content {
+    align-items: center;
+
+    & p {
+      text-align: center;
+    }
+  }
+
+  .ref__content p,
+  .ref__content span {
+    font-size: 16px;
+  }
+
+  .ref__content h2 {
+    font-size: 28px;
+  }
+}
 // @include mixin.responsive(mobileSmall) {}

@@ -2,6 +2,10 @@
 @use '../../../scss/base/global';
 @use '../../../scss/components/buttons';
 
+.tab-title-mobile {
+  display: none;
+}
+
 .app-projects {
   padding-top: var(--section-gap);
 }
@@ -84,5 +88,29 @@
     padding-inline: 20px;
     border-radius: 32px 32px 0 0;
     color: var(--secondary-color);
+  }
+}
+
+@include mixin.responsive(mobile) {
+  .app-projects {
+    padding-block: 48px;
+  }
+
+  .tab-title-desktop {
+    display: none;
+  }
+
+  .tab-title-mobile {
+    display: inline;
+    font-size: 17px;
+    text-wrap: balance;
+  }
+
+  .projects__tabs {
+    gap: 20px;
+  }
+
+  .active-tab {
+    height: 50px;
   }
 }

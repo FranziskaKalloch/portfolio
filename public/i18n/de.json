@@ -24,6 +24,11 @@
 "projects": {
   "headline": "Meine Projekte",
   "tabs": {
+    "project1": "1. Projekt",
+    "project2": "2. Projekt",
+    "project3": "3. Projekt",
+    "project4": "4. Projekt",
+
     "pokedex": "1. Pokedex",
     "elPolloLoco": "2. El Pollo Loco",
     "join": "3. Join",

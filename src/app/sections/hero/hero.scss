@@ -392,5 +392,30 @@
   }
 }
 
-// @include mixin.responsive(mobile) {}
+@include mixin.responsive(mobile) {
+  .hero__name {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+
+  .hero__job-title {
+    font-size: 24px;
+  }
+
+  .hero__burger-menu-background {
+    width: 400px;
+    height: 480px;
+  }
+
+  .hero__burger-menu-nav {
+    gap: 50px;
+    top: 46%;
+  }
+
+  .hero__button img {
+    width: 50px;
+    height: 125px;
+    margin-top: -100px;
+  }
+}
 // @include mixin.responsive(mobileSmall) {}

@@ -29,6 +29,7 @@ export class Projects {
   germanProjects: Project[] = [
     {
       title: 'Pokedex',
+      mobileTitle: '1. Projekt',
       duration: '2 Wochen',
       aboutText:
         'Eine interaktive Pokédex-Anwendung, mit der Nutzer Pokémon-Daten durchsuchen, nach Namen suchen und detaillierte Informationen in einer responsiven Oberfläche anzeigen können.',
@@ -58,6 +59,7 @@ export class Projects {
 
     {
       title: 'El Pollo Loco',
+      mobileTitle: '2. Projekt',
       duration: '3 Wochen',
       aboutText:
         'El Pollo Loco ist ein browserbasiertes Jump-and-Run-Spiel mit objektorientiertem JavaScript. Der Spieler sammelt Münzen und Flaschen, besiegt Gegner und kämpft gegen einen Endboss.',
@@ -87,6 +89,7 @@ export class Projects {
 
     {
       title: 'Join',
+      mobileTitle: '3. Projekt',
       duration: '2 Wochen',
       aboutText: 'Kommt bald...',
       organisationText: 'Kommt bald...',
@@ -113,6 +116,7 @@ export class Projects {
 
     {
       title: 'Ongoing Project',
+      mobileTitle: '4. Projekt',
       duration: '',
       aboutText: 'Kommt bald...',
       organisationText: 'Kommt bald...',
@@ -137,6 +141,7 @@ export class Projects {
   englishProjects: Project[] = [
     {
       title: 'Pokedex',
+      mobileTitle: '1. Project',
       duration: '2 weeks',
       aboutText:
         'An interactive Pokédex application that allows users to explore Pokémon data, search by name, and view detailed information in a responsive interface.',
@@ -165,6 +170,7 @@ export class Projects {
     },
     {
       title: 'El Pollo Loco',
+      mobileTitle: '2. Project',
       duration: '3 weeks',
       aboutText:
         'El Pollo Loco is a browser-based jump-and-run game built with object-oriented JavaScript. The player collects coins and bottles, defeats enemies, and faces an end boss while exploring a side-scrolling game world.',
@@ -193,6 +199,7 @@ export class Projects {
     },
     {
       title: 'Join',
+      mobileTitle: '3. Project',
       duration: '2 weeks',
       aboutText: 'Coming Soon...',
       organisationText: 'Coming Soon...',
@@ -218,6 +225,7 @@ export class Projects {
     },
     {
       title: 'Ongoing Project',
+      mobileTitle: '4. Project',
       duration: '',
       aboutText: 'Coming Soon...',
       organisationText: 'Coming Soon...',
