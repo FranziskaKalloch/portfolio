@@ -38,3 +38,19 @@
 .button:hover {
   background-color: rgb(192, 193, 195, 0.2);
 }
+
+@include mixin.responsive(tablet) {
+  .app-legal-notice {
+    padding-inline: 80px;
+  }
+}
+
+@include mixin.responsive(mobile) {
+  .app-legal-notice {
+    padding-inline: 38px;
+  }
+
+  .headline {
+    font-size: 50px;
+  }
+}

@@ -3,7 +3,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "/",
+    "baseUrl": "/angular-projects/portfolio/",
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
