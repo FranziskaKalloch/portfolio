@@ -1,6 +1,5 @@
 @use '../../../../scss/abstract/mixin';
 @use '../../../../scss/base/global';
-@use '../../../../scss/components/buttons';
 
 .project__card--mobile {
   display: none;
@@ -244,5 +243,11 @@ p {
   .project__image {
     width: 320px;
     height: 200px;
+  }
+}
+
+@include mixin.responsive(mobileSmall) {
+  h2 {
+    font-size: 20px;
   }
 }

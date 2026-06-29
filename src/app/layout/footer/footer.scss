@@ -230,3 +230,16 @@
     font-size: 16px;
   }
 }
+
+@include mixin.responsive(mobileSmall) {
+  .app-footer {
+    padding-inline: 28px;
+  }
+  .footer__inner {
+    padding-inline: 0px;
+  }
+
+  .footer__description {
+    font-size: 16px;
+  }
+}

@@ -94,6 +94,12 @@
   opacity: 1;
 }
 
+.skills-mobile__icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 // RESPONSIVE
 
 @include mixin.responsive(desktop) {
@@ -251,4 +257,17 @@
     height: 50px;
   }
 }
-// @include mixin.responsive(mobileSmall) {}
+@include mixin.responsive(mobileSmall) {
+  h3 {
+    font-size: 18px;
+  }
+
+  .skills-mobile__content {
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}

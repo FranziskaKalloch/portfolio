@@ -212,4 +212,18 @@
     font-size: 28px;
   }
 }
-// @include mixin.responsive(mobileSmall) {}
+@include mixin.responsive(mobileSmall) {
+  .app-references {
+    padding-block: 38px;
+  }
+
+  .teamplayer {
+    font-size: 26px;
+  }
+
+  .bubble-default,
+  .bubble-hover {
+    width: 340px;
+    height: 380px;
+  }
+}

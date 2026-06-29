@@ -120,3 +120,13 @@
     font-size: 50px;
   }
 }
+
+@include mixin.responsive(mobileSmall) {
+  .app-why-me {
+    padding-block: 38px;
+  }
+
+  .app-why-me p {
+    font-size: 16px;
+  }
+}

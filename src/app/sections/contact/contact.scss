@@ -510,4 +510,41 @@ label {
     height: 125px;
   }
 }
-// @include mixin.responsive(mobileSmall) {}
+@include mixin.responsive(mobileSmall) {
+  .app-contact {
+    padding-block: 38px;
+  }
+
+  .contact__mail,
+  .contact__phone {
+    font-size: 16px;
+
+    & img {
+      width: 28px;
+    }
+  }
+
+  .contact__text-description p {
+    font-size: 16px;
+  }
+
+  .text__mobile p {
+    font-size: 24px;
+  }
+
+  #name,
+  #email {
+    height: 64px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 18px;
+    padding-left: 18px;
+  }
+
+  .contact__scroll-button--mobile {
+    width: 40px;
+    height: 105px;
+  }
+}

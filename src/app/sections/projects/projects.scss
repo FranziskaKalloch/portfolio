@@ -118,3 +118,17 @@
     font-size: 50px;
   }
 }
+
+@include mixin.responsive(mobileSmall) {
+  .projects__tabs {
+    gap: 12px;
+  }
+
+  .active-tab {
+    padding-inline: 12px;
+  }
+
+  .projects__tabs-headline {
+    font-size: 18px;
+  }
+}

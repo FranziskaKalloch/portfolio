@@ -1,12 +1,12 @@
+@use '../abstract/mixin';
+@use '../base/global';
+
 .button {
   cursor: pointer;
   border-radius: 40px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  width: 160px;
-
   &__icon {
     width: 24px;
     height: 24px;
@@ -53,4 +53,25 @@
   padding-block: 14px;
   padding-inline: 26px;
   width: 120px;
+}
+
+@include mixin.responsive(mobileSmall) {
+  .button {
+    width: 120px;
+    height: 45px;
+
+    &--primary,
+    &--secondary {
+      font-size: 16px;
+      padding-block: 28px;
+      padding-inline: 26px;
+    }
+  }
+
+  .button--disabled,
+  .button--active {
+    font-size: 16px;
+    padding-block: 28px;
+    padding-inline: 26px;
+  }
 }
