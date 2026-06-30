@@ -4,13 +4,15 @@
 
 .app-footer {
   background-color: var(--primary-color);
-  padding-block: var(--section-gap);
-  padding-inline: var(--section-inl-sm);
-  width: 100%;
+  @include mixin.flex-center;
 }
 
 .footer__inner {
   display: flex;
+  justify-content: space-between;
+  padding-block: 100px;
+  padding-inline: var(--section-inl-sm);
+  width: 100%;
 }
 
 .footer__description,
@@ -26,6 +28,10 @@
   align-items: flex-start;
   gap: 16px;
   font-size: 18px;
+}
+
+.footer__legal-notice {
+  cursor: pointer;
 }
 
 .footer__legal-notice:hover {

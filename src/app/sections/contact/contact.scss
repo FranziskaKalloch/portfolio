@@ -79,8 +79,9 @@ a {
   padding-inline: var(--section-inl-big);
   color: var(--secondary-color);
   display: flex;
+  justify-content: space-between;
   letter-spacing: 1px;
-  gap: 32px;
+  gap: 90px;
   padding-bottom: 64px;
 
   &-description {
@@ -189,6 +190,10 @@ a {
     position: relative;
 
     color: white;
+
+    & span {
+      cursor: pointer;
+    }
   }
 }
 

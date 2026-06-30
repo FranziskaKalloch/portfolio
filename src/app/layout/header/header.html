@@ -16,7 +16,11 @@
           @if (activeSection == 'why-me') {
             <img class="header__nav-item-bubble" src="./assets/bubbles/Ellipse-24.png" />
           }
-          <a class="header__nav-link" href="#why-me" [class.color-white]="activeSection == 'why-me'"
+          <a
+            class="header__nav-link"
+            routerLink="/"
+            fragment="why-me"
+            [class.color-white]="activeSection == 'why-me'"
             ><h3>{{ 'header.whyMe' | translate }}</h3></a
           >
         </div>
@@ -26,7 +30,8 @@
           }
           <a
             class="header__nav-link"
-            href="#skills"
+            routerLink="/"
+            fragment="skills"
             [class.color-white]="activeSection == 'skills'"
           >
             <h3>{{ 'header.skills' | translate }}</h3></a
@@ -38,7 +43,8 @@
           }
           <a
             class="header__nav-link"
-            href="#projects"
+            routerLink="/"
+            fragment="projects"
             [class.color-white]="activeSection == 'projects'"
             ><h3>{{ 'header.projects' | translate }}</h3></a
           >
@@ -49,7 +55,8 @@
           }
           <a
             class="header__nav-link"
-            href="#contact"
+            routerLink="/"
+            fragment="contact"
             [class.color-white]="activeSection == 'contact'"
             ><h3>{{ 'header.contact' | translate }}</h3></a
           >

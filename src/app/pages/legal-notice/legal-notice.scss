@@ -6,6 +6,9 @@
   padding-block: var(--section-gap);
   padding-inline: var(--section-gap);
   color: var(--secondary-color);
+  min-height: calc(100vh - 130px - 299px);
+  @include mixin.flex-center(column);
+  align-items: flex-start;
 }
 
 .legal-notice__inner {
