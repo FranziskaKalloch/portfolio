@@ -22,7 +22,7 @@
         </div>
         <!-- WORK ORGANISATION -->
         <div class="project__info-item">
-          <img class="project__info-bubble" src="/assets/bubbles/Ellipse-project.png" />
+          <img class="project__info-bubble" src="./assets/bubbles/Ellipse-project.png" />
 
           <div class="project__info-content">
             <div class="project__info-headline">
@@ -56,8 +56,8 @@
         <div class="project__overview-tech">
           <p>{{ 'projects.details.technologies' | translate }}</p>
           <div class="project__overview-tech-list">
-            @for (path of project?.technologies; track path) {
-              <img [src]="path" />
+            @for (technology of project?.technologies; track technology.name) {
+              <img [src]="technology.icon" [alt]="technology.name" />
             }
           </div>
         </div>

@@ -16,6 +16,7 @@ export class Hero {
   }
 
   @Input() isBurgerMenuOpen = false;
+
   scrollToContact() {
     const contactSection = document.getElementById('contact');
 

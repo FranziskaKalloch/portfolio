@@ -2,7 +2,7 @@
 @use '../../../scss/base/global';
 
 .app-hero {
-  height: calc(100vh - 130px);
+  min-height: calc(100vh - 130px);
   font-family: 'Anta';
   position: relative;
 }

@@ -7,4 +7,12 @@ import { TranslatePipe } from '@ngx-translate/core';
   templateUrl: './why-me.html',
   styleUrl: './why-me.scss',
 })
-export class WhyMe {}
+export class WhyMe {
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+
+    contactSection?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }
+}

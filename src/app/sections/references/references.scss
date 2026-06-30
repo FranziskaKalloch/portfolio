@@ -4,6 +4,7 @@
 
 .app-references {
   padding-top: var(--section-gap);
+  scroll-margin-top: 130px;
 }
 
 .ref__inner {
@@ -45,6 +46,10 @@
 
 .ref__list-item:hover .bubble-hover {
   opacity: 1;
+}
+
+.ref__headline-div-mobile {
+  display: none;
 }
 
 // CONTENT
