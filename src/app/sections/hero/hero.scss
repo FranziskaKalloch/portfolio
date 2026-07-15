@@ -1,9 +1,8 @@
 @use '../../../scss/abstract/mixin';
 @use '../../../scss/base/global';
 
-.app-hero {
-  min-height: calc(100vh - 130px);
-  font-family: 'Anta';
+.hero {
+  height: calc(100vh - 130px);
   position: relative;
 }
 
