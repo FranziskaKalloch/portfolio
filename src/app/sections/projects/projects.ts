@@ -28,16 +28,13 @@ export class Projects {
 
   germanProjects: Project[] = [
     {
-      title: 'Pokedex',
+      title: 'Join',
       mobileTitle: '1. Projekt',
       duration: '2 Wochen',
-      aboutText:
-        'Eine interaktive Pokédex-Anwendung, mit der Nutzer Pokémon-Daten durchsuchen, nach Namen suchen und detaillierte Informationen in einer responsiven Oberfläche anzeigen können.',
-      organisationText:
-        'Ich habe das Projekt Schritt für Schritt entwickelt und Datenverarbeitung, Rendering und Styling klar voneinander getrennt.',
-      learnedTitle: 'Was ich gelernt habe',
-      learnedText:
-        'Dieses Projekt hat mein Verständnis für API-Anbindung, dynamisches Rendering und die Organisation größerer JavaScript-Anwendungen verbessert.',
+      aboutText: 'Kommt bald...',
+      organisationText: 'Kommt bald...',
+      learnedTitle: 'Meine Erfahrung in der Gruppenarbeit',
+      learnedText: 'Kommt bald...',
       technologies: [
         {
           icon: './assets/icons/skill/HTML.png',
@@ -52,9 +49,9 @@ export class Projects {
           name: 'JavaScript',
         },
       ],
-      image: './assets/img/pokedex.png',
+      image: './assets/img/Screenshot-join-project.png',
       liveTestLink: '',
-      githubLink: 'https://github.com/FranziskaKalloch/Pokedex.git',
+      githubLink: '',
     },
 
     {
@@ -83,18 +80,21 @@ export class Projects {
         },
       ],
       image: './assets/img/El-Pollo-Loco.png',
-      liveTestLink: '',
+      liveTestLink: 'https://franziskakalloch.developerakademie.net/el%20pollo%20loco/',
       githubLink: 'https://github.com/FranziskaKalloch/El-Pollo-Loco.git',
     },
 
     {
-      title: 'Join',
+      title: 'Pokedex',
       mobileTitle: '3. Projekt',
       duration: '2 Wochen',
-      aboutText: 'Kommt bald...',
-      organisationText: 'Kommt bald...',
-      learnedTitle: 'Meine Erfahrung in der Gruppenarbeit',
-      learnedText: 'Kommt bald...',
+      aboutText:
+        'Eine interaktive Pokédex-Anwendung, mit der Nutzer Pokémon-Daten durchsuchen, nach Namen suchen und detaillierte Informationen in einer responsiven Oberfläche anzeigen können.',
+      organisationText:
+        'Ich habe das Projekt Schritt für Schritt entwickelt und Datenverarbeitung, Rendering und Styling klar voneinander getrennt.',
+      learnedTitle: 'Was ich gelernt habe',
+      learnedText:
+        'Dieses Projekt hat mein Verständnis für API-Anbindung, dynamisches Rendering und die Organisation größerer JavaScript-Anwendungen verbessert.',
       technologies: [
         {
           icon: './assets/icons/skill/HTML.png',
@@ -109,11 +109,10 @@ export class Projects {
           name: 'JavaScript',
         },
       ],
-      image: './assets/img/Screenshot-join-project.png',
-      liveTestLink: '',
-      githubLink: '',
+      image: './assets/img/pokedex.png',
+      liveTestLink: 'https://franziskakalloch.developerakademie.net/pokedex/index.html',
+      githubLink: 'https://github.com/FranziskaKalloch/Pokedex.git',
     },
-
     {
       title: 'Ongoing Project',
       mobileTitle: '4. Projekt',
@@ -140,16 +139,13 @@ export class Projects {
 
   englishProjects: Project[] = [
     {
-      title: 'Pokedex',
+      title: 'Join',
       mobileTitle: '1. Project',
       duration: '2 weeks',
-      aboutText:
-        'An interactive Pokédex application that allows users to explore Pokémon data, search by name, and view detailed information in a responsive interface.',
-      organisationText:
-        'I developed the project step by step, separating data handling, rendering, and styling into clear and maintainable structures.',
-      learnedTitle: 'What I have learnt',
-      learnedText:
-        'This project improved my understanding of API integration, dynamic rendering, and organizing larger JavaScript applications.',
+      aboutText: 'Coming Soon...',
+      organisationText: 'Coming Soon...',
+      learnedTitle: 'My group work experience',
+      learnedText: 'Coming Soon...',
       technologies: [
         {
           icon: './assets/icons/skill/HTML.png',
@@ -164,9 +160,9 @@ export class Projects {
           name: 'JavaScript',
         },
       ],
-      image: './assets/img/pokedex.png',
+      image: './assets/img/Screenshot-join-project.png',
       liveTestLink: '',
-      githubLink: 'https://github.com/FranziskaKalloch/Pokedex.git',
+      githubLink: '',
     },
     {
       title: 'El Pollo Loco',
@@ -194,17 +190,20 @@ export class Projects {
         },
       ],
       image: './assets/img/El-Pollo-Loco.png',
-      liveTestLink: '',
+      liveTestLink: 'https://franziskakalloch.developerakademie.net/el%20pollo%20loco/',
       githubLink: 'https://github.com/FranziskaKalloch/El-Pollo-Loco.git',
     },
     {
-      title: 'Join',
+      title: 'Pokedex',
       mobileTitle: '3. Project',
       duration: '2 weeks',
-      aboutText: 'Coming Soon...',
-      organisationText: 'Coming Soon...',
-      learnedTitle: 'My group work experience',
-      learnedText: 'Coming Soon...',
+      aboutText:
+        'An interactive Pokédex application that allows users to explore Pokémon data, search by name, and view detailed information in a responsive interface.',
+      organisationText:
+        'I developed the project step by step, separating data handling, rendering, and styling into clear and maintainable structures.',
+      learnedTitle: 'What I have learnt',
+      learnedText:
+        'This project improved my understanding of API integration, dynamic rendering, and organizing larger JavaScript applications.',
       technologies: [
         {
           icon: './assets/icons/skill/HTML.png',
@@ -219,9 +218,9 @@ export class Projects {
           name: 'JavaScript',
         },
       ],
-      image: './assets/img/Screenshot-join-project.png',
-      liveTestLink: '',
-      githubLink: '',
+      image: './assets/img/pokedex.png',
+      liveTestLink: 'https://franziskakalloch.developerakademie.net/pokedex/index.html',
+      githubLink: 'https://github.com/FranziskaKalloch/Pokedex.git',
     },
     {
       title: 'Ongoing Project',

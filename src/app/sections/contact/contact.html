@@ -25,15 +25,16 @@
           <img class="hover__icon" src="./assets/icons/contact/email-hover.png" />
           <a href="mailto: f.kalloch@outlook.de">E-Mail: f.kalloch@outlook.de</a>
         </div>
-        <div
+        <a
           class="contact__phone"
+          href="tel:+4917663159061"
           (click)="contact('phone')"
           [class.active]="activeContact === 'phone'"
         >
           <img class="default__icon" src="./assets/icons/contact/phone-default.png" />
           <img class="hover__icon" src="./assets/icons/contact/phone-hover.png" />
-          <p>Tel: 0176 631 59 061</p>
-        </div>
+          <p>0176 631 59 061</p>
+        </a>
       </div>
     </div>
     <div class="text__mobile color-blue"><p>Let us work together!</p></div>
@@ -55,10 +56,18 @@
           />
         </div>
         <div class="contact__information-mail">
-          @if (form.controls.email.invalid && form.controls.email.touched) {
-            <label for="email" class="color-red">{{ 'contact.emailError' | translate }}</label>
+          @if (form.controls.email.touched && form.controls.email.hasError('required')) {
+            <label for="email" class="color-red">
+              {{ 'contact.emailRequiredError' | translate }}
+            </label>
+          } @else if (form.controls.email.touched && form.controls.email.hasError('email')) {
+            <label for="email" class="color-red">
+              {{ 'contact.emailInvalidError' | translate }}
+            </label>
           } @else {
-            <label for="email" class="color-blue">{{ 'contact.email' | translate }}</label>
+            <label for="email" class="color-blue">
+              {{ 'contact.email' | translate }}
+            </label>
           }
 
           <input

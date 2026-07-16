@@ -63,7 +63,8 @@
   "nameError": "Dein Name ist erforderlich",
 
   "email": "Deine E-Mail",
-  "emailError": "Deine E-Mail ist erforderlich",
+  "emailRequiredError": "Deine E-Mail-Adresse ist erforderlich",
+  "emailInvalidError": "Bitte gib eine gültige E-Mail-Adresse ein",
 
   "message": "Deine Nachricht",
   "messageError": "Deine Nachricht ist erforderlich",

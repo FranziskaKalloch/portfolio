@@ -1,57 +1,117 @@
 @use '../../../scss/abstract/mixin';
 @use '../../../scss/base/global';
 
+.hero__image-widescreen {
+  display: none;
+
+  @include mixin.responsive-min(ultraWide) {
+    display: block;
+    width: clamp(700px, 28vw, 900px);
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.hero__image-mobile {
+  display: none;
+}
+
+.hero__image-background,
+.hero__image-overlay {
+  display: block;
+
+  @include mixin.responsive-min(ultraWide) {
+    display: none;
+  }
+}
+
+// HERO SECTION START
+
 .hero {
-  height: calc(100vh - 130px);
+  min-height: calc(100vh - 130px);
   position: relative;
+
+  @include mixin.responsive-min(wideScreen) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .hero {
   &__inner {
     position: relative;
     display: flex;
+    align-items: stretch;
     color: var(--secondary-color);
-
-    padding-top: 100px;
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    box-sizing: border-box;
     padding-inline: var(--section-inl-sm);
-  }
-}
 
-.mobile {
-  display: none;
+    @include mixin.responsive-min(wideScreen) {
+      min-height: calc(100vh - 130px);
+      align-items: center;
+      padding-inline: 0;
+    }
+  }
 }
 
 .hero__image {
   &-side {
-    width: 40%;
-
+    // Gemeinsame Größenbasis für Blase und Person
+    --bubble-size: 600px;
+    // --bubble-size: clamp(440px, 44vw, 620px);
+    --person-size: calc(var(--bubble-size) * 0.43);
+    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    position: relative;
-    width: 600px;
-    height: 600px;
+    flex: 0 0 55%;
+    min-height: calc(100vh - 130px);
+    overflow: visible;
+    @include mixin.responsive-min(wideScreen) {
+      justify-content: center;
+      align-items: center;
+      flex: 0 0 55%;
+    }
   }
 
   &-overlay {
     position: absolute;
     bottom: -10px;
-    left: auto;
+    left: clamp(50px, 10vw, 70px);
     z-index: 2;
+    width: var(--person-size);
+    height: auto;
   }
+}
+
+.hero__image-background {
+  position: absolute;
+  bottom: -100px;
+  left: calc(var(--section-inl-sm) * -1);
+  width: var(--bubble-size);
+  height: auto;
+  transform-origin: center;
+  transition:
+    opacity 125ms ease-in-out,
+    transform 250ms ease-in-out;
 }
 
 .background--default {
   position: absolute;
+  z-index: 1;
   opacity: 1;
+  transform: scale(1) rotate(0deg);
 }
 
 .background--hover {
-  opacity: 0;
-  transform: scale(0.55);
-
   z-index: 1;
+  opacity: 0;
+  transform-origin: center;
+  transform: scale(0.9) rotate(0deg);
 }
 
 // CHANGE BUBBLES
@@ -62,6 +122,7 @@
   }
   .background--hover {
     opacity: 1;
+    transform: scale(0.9) rotate(4deg);
   }
 }
 
@@ -69,9 +130,18 @@
 
 .hero__content-side {
   @include mixin.flex-center(column);
-  gap: 64px;
-  width: 60%;
+  position: relative;
+  gap: clamp(60px, 6vh, 80px);
+  flex: 0 0 45%;
+  min-width: 0;
+  padding-top: clamp(70px, 8vh, 120px);
+  padding-bottom: 24px;
   text-align: center;
+  @include mixin.responsive-min(wideScreen) {
+    width: auto;
+    flex: 1;
+    max-width: 100%;
+  }
 }
 
 .hero {
@@ -81,7 +151,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -80px;
   }
 
   &__logo {
@@ -122,9 +191,10 @@
 
 .hero__social {
   @include mixin.flex-center(column);
-
   position: absolute;
   right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   gap: 12px;
 
   &-item {
@@ -166,27 +236,45 @@
   }
 
   &__name {
-    font-size: 60px;
+    font-size: clamp(48px, 4.7vw, 75px);
     letter-spacing: 2px;
+    white-space: nowrap;
+    @include mixin.responsive-min(wideScreen) {
+      font-size: 75px;
+    }
   }
 
   &__job-title {
     font-size: 32px;
     letter-spacing: 2px;
+    @include mixin.responsive-min(wideScreen) {
+      font-size: 38px;
+    }
   }
 }
 
 // BUTTON
-
 .hero {
   &__button {
     margin-top: 100px;
     position: relative;
-    display: inline-block; // Passt den Container an die Bildgröße an
+    display: inline-block;
     width: 40px;
     height: 90px;
     cursor: pointer;
     margin-bottom: 16px;
+
+    @include mixin.responsive-min(wideScreen) {
+      width: 50px;
+      height: 125px;
+    }
+    img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 }
 
@@ -284,42 +372,9 @@
   color: var(--secondary-color);
 }
 
-// RESPONSIVE
-
-@include mixin.responsive(tabletPro) {
-  .hero__inner {
-    padding-inline: 48px;
-  }
-
-  .hero__image-side {
-    width: 380px;
-    height: 380px;
-    margin-top: auto;
-  }
-
-  .background--default,
-  .background--hover {
-    width: 150%;
-    height: auto;
-  }
-
-  .hero__image-overlay {
-    width: 60%;
-    height: auto;
-  }
-
-  .hero__content-side {
-    width: calc(100% - 380px);
-  }
-
-  .hero__top {
-    padding-top: 16px;
-  }
-
-  .hero__content-side {
-    gap: 55px;
-  }
-}
+// ------------------------------------------
+// ----------- RESPONSIVE -------------------
+// ------------------------------------------
 
 @include mixin.responsive(tablet) {
   .desktop {
@@ -350,6 +405,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .hero__image-widescreen {
+    display: none;
   }
 
   .hero__burger-menu-background {
