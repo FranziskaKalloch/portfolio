@@ -364,6 +364,12 @@ label {
 
 // RESPONSIVE
 
+@include mixin.responsive(wideScreen) {
+  .contact__inner {
+    padding-inline: 16px;
+  }
+}
+
 @include mixin.responsive(desktop) {
   .contact__inner {
     padding-inline: 16px;
