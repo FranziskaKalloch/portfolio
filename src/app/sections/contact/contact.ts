@@ -11,8 +11,6 @@ import { TranslatePipe } from '@ngx-translate/core';
   styleUrl: './contact.scss',
 })
 export class Contact {
-  constructor(private http: HttpClient) {}
-
   form = new FormGroup({
     name: new FormControl('', {
       validators: [Validators.required, Validators.minLength(3)],
@@ -36,12 +34,12 @@ export class Contact {
     this.activeContact = param;
   }
 
-  formSubmit() {
+  async formSubmit(): Promise<void> {
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
     }
-    console.log(this.form.value);
+    // await this.submitSendMailForm();
     this.formReset();
   }
 
@@ -53,5 +51,52 @@ export class Contact {
       behavior: 'smooth',
       block: 'start',
     });
+  }
+
+  async submitSendMailForm(): Promise<void> {
+    // Zusätzliche Sicherheit:
+    // Falls die Methode irgendwann direkt aufgerufen wird.
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
+
+    // Werte aus dem Formular auslesen
+    const { name, email, message } = this.form.value;
+
+    try {
+      // Später den Domainnamen anpassen.
+      // Lokal kannst du auch nur "send_mail.php" verwenden,
+      // wenn die PHP-Datei im gleichen Verzeichnis auf dem Server liegt.
+      const httpResponse = await fetch('./send_mail.php', {
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json',
+        },
+
+        // Die Keys müssen exakt so heißen,
+        // wie sie in deiner send_mail.php erwartet werden.
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+      });
+
+      // Antwort der PHP-Datei lesen
+      const result = await httpResponse.json();
+
+      if (result.success) {
+        console.log('✅ E-Mail erfolgreich versendet.');
+
+        // Formular zurücksetzen
+        this.formReset();
+      } else {
+        console.error('❌ Fehler beim Mailversand:', result.error);
+      }
+    } catch (error) {
+      console.error('❌ Netzwerkfehler:', error);
+    }
   }
 }
