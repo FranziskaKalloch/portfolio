@@ -81,7 +81,7 @@
 
   &-overlay {
     position: absolute;
-    bottom: -10px;
+    bottom: -30px;
     left: clamp(5px, 3vw, 5px);
     z-index: 2;
 
@@ -92,28 +92,29 @@
 
 .hero__image-background {
   position: absolute;
-  bottom: -100px;
+  bottom: -130px;
   left: calc(var(--section-inl-sm) * -1);
   width: var(--bubble-size);
   height: auto;
   transform-origin: center;
   transition:
-    opacity 125ms ease-in-out,
-    transform 250ms ease-in-out;
+    opacity 200ms ease-in-out,
+    transform 700ms ease-in-out;
 }
 
 .background--default {
   position: absolute;
   z-index: 1;
   opacity: 1;
-  transform: scale(1) rotate(0deg);
+  transform-origin: center;
+  transform: rotate(0deg);
 }
 
 .background--hover {
   z-index: 1;
   opacity: 0;
   transform-origin: center;
-  transform: scale(0.9) rotate(0deg);
+  transform: scale(0.73) rotate(0deg);
 }
 
 // CHANGE BUBBLES
@@ -126,7 +127,8 @@
 
     .background--hover {
       opacity: 1;
-      transform: scale(0.9) rotate(4deg);
+      transform: scale(0.73) rotate(24deg);
+      bottom: -140px;
     }
   }
 }
@@ -404,11 +406,11 @@
   }
 
   .hero__image-background {
-    bottom: -110px;
+    bottom: -130px;
   }
 }
 
-@media screen and (min-width: 951px) and (max-width: 1023px) {
+@media screen and (min-width: 951px) and (max-width: 1090px) {
   .hero__image-side {
     --bubble-size: 600px;
     --person-size: calc(var(--bubble-size) * 0.72);
@@ -416,6 +418,7 @@
 
   .hero__image-background {
     left: -120px;
+    bottom: -100px;
   }
 
   .hero__image-overlay {
