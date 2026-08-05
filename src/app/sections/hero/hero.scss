@@ -380,7 +380,35 @@
 // ------------------------------------------
 // ----------- RESPONSIVE -------------------
 // ------------------------------------------
-@media screen and (min-width: 951px) and (max-width: 1000px) {
+@media screen and (min-width: 1024px) and (max-width: 1100px) and (orientation: portrait) {
+  // Anpassungen für iPad Pro im Hochformat
+  .hero__inner {
+    min-height: calc(100vh - 130px);
+    align-items: center;
+    padding-left: 12px;
+  }
+
+  .hero__image-side {
+    --bubble-size: 800px;
+    --person-size: calc(var(--bubble-size) * 0.72);
+  }
+
+  .hero__content-side {
+    gap: 80px;
+    padding-bottom: 0;
+    padding-top: 160px;
+  }
+
+  .hero__image-overlay {
+    left: 25px;
+  }
+
+  .hero__image-background {
+    bottom: -110px;
+  }
+}
+
+@media screen and (min-width: 951px) and (max-width: 1023px) {
   .hero__image-side {
     --bubble-size: 600px;
     --person-size: calc(var(--bubble-size) * 0.72);
