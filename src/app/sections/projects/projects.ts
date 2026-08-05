@@ -54,7 +54,7 @@ export class Projects {
       ],
       image: './assets/img/Screenshot-join-project.png',
       liveTestLink: '',
-      githubLink: '',
+      githubLink: 'https://github.com/MarcRiehl/join.git',
     },
 
     {
@@ -168,7 +168,7 @@ export class Projects {
       ],
       image: './assets/img/Screenshot-join-project.png',
       liveTestLink: '',
-      githubLink: '',
+      githubLink: 'https://github.com/MarcRiehl/join.git',
     },
     {
       title: 'El Pollo Loco',

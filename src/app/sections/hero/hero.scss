@@ -118,13 +118,16 @@
 
 // CHANGE BUBBLES
 
-.hero__image-side:hover {
-  .background--default {
-    opacity: 0;
-  }
-  .background--hover {
-    opacity: 1;
-    transform: scale(0.9) rotate(4deg);
+@media (hover: hover) and (pointer: fine) {
+  .hero__image-side:hover {
+    .background--default {
+      opacity: 0;
+    }
+
+    .background--hover {
+      opacity: 1;
+      transform: scale(0.9) rotate(4deg);
+    }
   }
 }
 

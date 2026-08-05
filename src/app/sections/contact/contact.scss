@@ -404,6 +404,14 @@ label {
     }
   }
 
+  .contact__text {
+    gap: 48px;
+
+    & p {
+      text-align: left;
+    }
+  }
+
   .contact__text-contact {
     order: 1;
     gap: 6px;
