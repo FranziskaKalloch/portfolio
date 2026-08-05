@@ -30,11 +30,14 @@ export class Projects {
     {
       title: 'Join',
       mobileTitle: '1. Projekt',
-      duration: '2 Wochen',
-      aboutText: 'Kommt bald...',
-      organisationText: 'Kommt bald...',
-      learnedTitle: 'Meine Erfahrung in der Gruppenarbeit',
-      learnedText: 'Kommt bald...',
+      duration: '5 Wochen',
+      aboutText:
+        'Join ist eine Kanban-basierte Task-Management-Anwendung, die als Teamprojekt während meiner Webentwicklungs-Ausbildung entstanden ist. Nutzer können Aufgaben mithilfe einer intuitiven Drag-and-Drop-Funktion erstellen, organisieren und verwalten. Die Anwendung umfasst eine Benutzerauthentifizierung, Aufgabenzuweisungen und Unteraufgaben. Das Projekt wurde mit Angular und Supabase entwickelt und legt den Fokus auf eine saubere Architektur, wartbaren Code und eine benutzerfreundliche Bedienung.',
+      organisationText:
+        'Ich habe meine Arbeit mit einem strukturierten Git-Workflow, Feature-Branches, Pull Requests und Code-Reviews organisiert. Neue Features habe ich vor der Umsetzung geplant, auf sauberen und wiederverwendbaren Code geachtet und jede Funktion sorgfältig getestet, bevor sie in den Hauptbranch übernommen wurde.',
+      learnedTitle: 'Meine Gruppenerfahrung',
+      learnedText:
+        'Die Arbeit in einem Entwicklungsteam hat meine Kommunikations- und Teamfähigkeiten gestärkt. Wir arbeiteten mit GitHub, Feature-Branches, Pull Requests und Code-Reviews und unterstützten uns gegenseitig beim Debugging und der Lösungsfindung. Diese Erfahrung hat sowohl meine technischen Fähigkeiten als auch meine Fähigkeit zur erfolgreichen Zusammenarbeit in einem agilen Team verbessert.',
       technologies: [
         {
           icon: './assets/icons/skill/HTML.png',
@@ -141,11 +144,14 @@ export class Projects {
     {
       title: 'Join',
       mobileTitle: '1. Project',
-      duration: '2 weeks',
-      aboutText: 'Coming Soon...',
-      organisationText: 'Coming Soon...',
-      learnedTitle: 'My group work experience',
-      learnedText: 'Coming Soon...',
+      duration: '5 weeks',
+      aboutText:
+        'Join is a Kanban-based task management application developed as a team project during my web development training. It enables users to create, organize, and manage tasks through an intuitive drag-and-drop interface. The application includes user authentication, task assignment and subtasks. The project was built with Angular and Supabase, focusing on clean architecture, maintainable code, and a user-friendly experience.',
+      organisationText:
+        'I organized my work using a structured Git workflow with feature branches, pull requests, and code reviews. I planned features before implementation, focused on clean and reusable code, and tested each feature carefully before merging it into the main branch.',
+      learnedTitle: 'My team experience',
+      learnedText:
+        'Working in a development team strengthened my communication and collaboration skills. We worked with GitHub, feature branches, pull requests, and code reviews while supporting each other with debugging and finding solutions. This experience improved both my technical skills and my ability to work effectively in an agile team.',
       technologies: [
         {
           icon: './assets/icons/skill/HTML.png',
