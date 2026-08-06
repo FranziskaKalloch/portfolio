@@ -23,7 +23,7 @@
         >
           <img class="default__icon" src="./assets/icons/contact/email-default.png" />
           <img class="hover__icon" src="./assets/icons/contact/email-hover.png" />
-          <a href="mailto: f.kalloch@outlook.de">E-Mail: f.kalloch@outlook.de</a>
+          <a href="mailto: hello@franziska-kalloch.de">hello@franziska-kalloch.de</a>
         </div>
         <a
           class="contact__phone"
@@ -125,6 +125,23 @@
         </button>
       </div>
     </form>
+
+    @if (mailSent || mailError) {
+      <div
+        class="contact-feedback"
+        [class.contact-feedback--success]="mailSent"
+        [class.contact-feedback--error]="mailError"
+        role="status"
+        aria-live="polite"
+      >
+        @if (mailSent) {
+          <span>Deine Nachricht wurde erfolgreich versendet.</span>
+        } @else {
+          <span>Die Nachricht konnte nicht versendet werden. Bitte versuche es erneut.</span>
+        }
+      </div>
+    }
+
     <!-- FORM AREA END -->
     <div class="contact__scroll-button--mobile" (click)="scrollToTop()">
       <img class="button-default-mobile" src="./assets/icons/Arrow-up-default.png" />

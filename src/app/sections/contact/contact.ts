@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
@@ -29,6 +28,9 @@ export class Contact {
   });
 
   activeContact = '';
+  mailSent = false;
+  mailError = false;
+  private feedbackTimeout?: ReturnType<typeof setTimeout>;
 
   contact(param: string) {
     this.activeContact = param;
@@ -39,8 +41,7 @@ export class Contact {
       this.form.markAllAsTouched();
       return;
     }
-    // await this.submitSendMailForm();
-    this.formReset();
+    await this.submitSendMailForm();
   }
 
   formReset() {
@@ -54,29 +55,21 @@ export class Contact {
   }
 
   async submitSendMailForm(): Promise<void> {
-    // Zusätzliche Sicherheit:
-    // Falls die Methode irgendwann direkt aufgerufen wird.
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
     }
 
-    // Werte aus dem Formular auslesen
     const { name, email, message } = this.form.value;
 
     try {
-      // Später den Domainnamen anpassen.
-      // Lokal kannst du auch nur "send_mail.php" verwenden,
-      // wenn die PHP-Datei im gleichen Verzeichnis auf dem Server liegt.
-      const httpResponse = await fetch('./send_mail.php', {
+      const httpResponse = await fetch('./contact_form_mail.php', {
         method: 'POST',
 
         headers: {
           'Content-Type': 'application/json',
         },
 
-        // Die Keys müssen exakt so heißen,
-        // wie sie in deiner send_mail.php erwartet werden.
         body: JSON.stringify({
           name,
           email,
@@ -84,19 +77,30 @@ export class Contact {
         }),
       });
 
-      // Antwort der PHP-Datei lesen
       const result = await httpResponse.json();
 
-      if (result.success) {
-        console.log('✅ E-Mail erfolgreich versendet.');
-
-        // Formular zurücksetzen
+      if (httpResponse.ok && result.success) {
+        this.showFeedback(true);
         this.formReset();
-      } else {
-        console.error('❌ Fehler beim Mailversand:', result.error);
+        return;
       }
-    } catch (error) {
-      console.error('❌ Netzwerkfehler:', error);
+      this.showFeedback(false);
+    } catch {
+      this.showFeedback(false);
     }
+  }
+
+  private showFeedback(success: boolean): void {
+    this.mailSent = success;
+    this.mailError = !success;
+
+    if (this.feedbackTimeout) {
+      clearTimeout(this.feedbackTimeout);
+    }
+
+    this.feedbackTimeout = setTimeout(() => {
+      this.mailSent = false;
+      this.mailError = false;
+    }, 5000);
   }
 }

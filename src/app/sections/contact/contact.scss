@@ -376,6 +376,56 @@ label {
   opacity: 1;
 }
 
+// FORM FEEDBACK
+
+.contact-feedback {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  z-index: 1000;
+
+  width: min(calc(100% - 32px), 520px);
+  padding: 18px 24px;
+
+  border: 2px solid;
+  border-radius: 16px;
+
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  box-shadow: 0 12px 32px rgb(0 0 0 / 25%);
+  transform: translateX(-50%);
+
+  animation: contact-feedback-in 250ms ease-out;
+}
+
+.contact-feedback--success {
+  color: #155d35;
+  border-color: #4caf78;
+  background-color: #e7f8ed;
+}
+
+.contact-feedback--error {
+  color: var(--error-color);
+  border-color: var(--error-color);
+  background-color: #fff0f0;
+}
+
+@keyframes contact-feedback-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+// -------------------------
 // RESPONSIVE
 
 @include mixin.responsive(tabletPro) {
