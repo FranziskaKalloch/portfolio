@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Portfolio bauen
-        run: npm run build -- --configuration production --base-href /portfolio/
+        run: npm run build
 
       - name: Build auf Netcup übertragen
         uses: appleboy/scp-action@v1

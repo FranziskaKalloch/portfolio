@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -31,6 +31,7 @@ export class Contact {
   mailSent = false;
   mailError = false;
   private feedbackTimeout?: ReturnType<typeof setTimeout>;
+  private cdr = inject(ChangeDetectorRef);
 
   contact(param: string) {
     this.activeContact = param;
@@ -101,6 +102,8 @@ export class Contact {
     this.feedbackTimeout = setTimeout(() => {
       this.mailSent = false;
       this.mailError = false;
-    }, 5000);
+
+      this.cdr.detectChanges();
+    }, 4000);
   }
 }
