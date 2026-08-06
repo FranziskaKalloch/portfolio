@@ -28,9 +28,9 @@
     "project2": "2. Project",
     "project3": "3. Project",
     "project4": "4. Project",
-    "pokedex": "1. Pokedex",
+    "join": "1. Join",
     "elPolloLoco": "2. El Pollo Loco",
-    "join": "3. Join",
+    "pokedex": "3. Pokedex",
     "ongoing": "4. Ongoing Project"
   },
   "details": {
@@ -64,7 +64,7 @@
 
   "email": "Your Email",
   "emailRequiredError": "Your email address is required",
-  "emailInvalidError": "Please enter a valid email address",
+   "emailInvalidError": "Please enter a valid email address",
 
   "message": "Your message",
   "messageError": "Your message is required",
