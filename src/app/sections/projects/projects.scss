@@ -76,9 +76,10 @@
   .projects__tabs {
     gap: 40px;
     padding-left: 0px;
-    padding-right: 16px;
+    padding-right: 0px;
     font-size: 20px;
     &-headline {
+      padding-inline: 20px;
       text-wrap: balance;
     }
   }
@@ -131,5 +132,28 @@
 
   .projects__tabs-headline {
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .headline {
+    font-size: 40px;
+  }
+
+  .projects__tabs {
+    gap: 7px;
+  }
+
+  .projects__tabs-headline {
+    padding-inline: 7px;
+    font-size: 16px;
+  }
+
+  .tab-title-mobile {
+    font-size: 16px;
+  }
+
+  .active-tab {
+    border-radius: 24px 24px 0 0;
   }
 }

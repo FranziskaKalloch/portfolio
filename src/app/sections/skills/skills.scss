@@ -234,6 +234,12 @@
   .button--secondary:hover {
     background-color: var(--secondary-color);
   }
+
+  .skills-mobile__button .button {
+    width: fit-content;
+    min-width: max-content;
+    white-space: nowrap;
+  }
 }
 @include mixin.responsive(mobile) {
   .app-skill {
@@ -270,5 +276,11 @@
   .icon {
     width: 32px;
     height: 32px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .headline {
+    font-size: 40px;
   }
 }
