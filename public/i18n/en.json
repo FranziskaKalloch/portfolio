@@ -75,7 +75,10 @@
 
   "privacyError": "Please accept the privacy policy",
 
-  "send": "Send"
+  "send": "Send",
+
+  "mailSuccess": "Your message has been sent successfully!",
+  "mailError": "Something went wrong. Please try again."
 },
 "legalNotice": {
   "headline": "Legal Notice",

@@ -28,7 +28,7 @@ export class Contact {
   });
 
   activeContact = '';
-  mailSent = true;
+  mailSent = false;
   mailError = false;
   private feedbackTimeout?: ReturnType<typeof setTimeout>;
   private cdr = inject(ChangeDetectorRef);
@@ -93,17 +93,17 @@ export class Contact {
 
   private showFeedback(success: boolean): void {
     this.mailSent = success;
-    // this.mailError = !success;
+    this.mailError = !success;
 
-    // if (this.feedbackTimeout) {
-    // clearTimeout(this.feedbackTimeout);
-    // }
+    if (this.feedbackTimeout) {
+      clearTimeout(this.feedbackTimeout);
+    }
 
-    // this.feedbackTimeout = setTimeout(() => {
-    // this.mailSent = false;
-    // this.mailError = false;
+    this.feedbackTimeout = setTimeout(() => {
+      this.mailSent = false;
+      this.mailError = false;
 
-    // this.cdr.detectChanges();
-    // }, 4000);
+      this.cdr.detectChanges();
+    }, 4000);
   }
 }

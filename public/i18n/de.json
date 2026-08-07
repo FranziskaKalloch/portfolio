@@ -75,7 +75,10 @@
 
   "privacyError": "Bitte akzeptiere die Datenschutzerklärung",
 
-  "send": "Senden"
+  "send": "Senden",
+
+  "mailSuccess": "Deine Nachricht wurde erfolgreich versendet!",
+  "mailError": "Es ist ein Fehler aufgetreten. Bitte versuche es erneut."
 },
 "legalNotice": {
   "headline": "Impressum",

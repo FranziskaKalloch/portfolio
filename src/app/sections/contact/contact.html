@@ -136,9 +136,9 @@
           aria-live="polite"
         >
           @if (mailSent) {
-            <span>Deine Nachricht wurde erfolgreich versendet.</span>
+            <span>{{ 'contact.mailSuccess' | translate }}</span>
           } @else {
-            <span>Die Nachricht konnte nicht versendet werden. Bitte versuche es erneut.</span>
+            <span>{{ 'contact.mailError' | translate }}</span>
           }
         </div>
       </div>
