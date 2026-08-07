@@ -1,4 +1,15 @@
-//  BURGER MENU
+@use '../../../scss/abstract/mixin';
+@use '../../../scss/base/global';
+
+.burger-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+}
 
 .hero__burger-menu {
   display: none;
@@ -67,4 +78,74 @@
 
 .burger__language-button--active {
   color: var(--secondary-color);
+}
+
+@include mixin.responsive(tablet) {
+  .hero__burger-menu-background {
+    width: 500px;
+    height: 580px;
+  }
+
+  .hero__burger-menu-nav {
+    top: 52%;
+  }
+
+  .hero__burger-menu-item a {
+    font-size: 32px;
+  }
+
+  .hero__burger-menu {
+    display: block;
+  }
+}
+
+// @include mixin.responsive(mobile) {
+// .hero__burger-menu-background {
+// width: 400px;
+// height: 480px;
+// }
+
+// .hero__burger-menu-nav {
+// gap: 50px;
+// top: 46%;
+// }
+// }
+@media screen and (min-width: 320px) and (max-width: 530px) {
+  .hero__burger-menu-background {
+    width: 340px;
+    height: 370px;
+  }
+
+  .hero__burger-menu-nav {
+    gap: 40px;
+    top: 50%;
+  }
+
+  .hero__burger-menu-item a {
+    font-size: 22px;
+  }
+
+  .burger__language-button {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 390px) {
+  .hero__burger-menu-background {
+    width: 300px;
+    height: 340px;
+  }
+
+  .hero__burger-menu-nav {
+    gap: 32px;
+    top: 50%;
+  }
+
+  .hero__burger-menu-item a {
+    font-size: 18px;
+  }
+
+  .burger__language-button {
+    font-size: 18px;
+  }
 }

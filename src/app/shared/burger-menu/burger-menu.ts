@@ -40,4 +40,8 @@ export class BurgerMenu {
     this.translate.use(language);
     localStorage.setItem('language', language);
   }
+
+  closeMenu() {
+    this.isBurgerMenuOpen = false;
+  }
 }

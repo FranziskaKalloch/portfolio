@@ -1,73 +1,75 @@
 @if (isBurgerMenuOpen) {
-  <div class="hero__burger-menu">
-    <img
-      class="hero__burger-menu-background"
-      src="./assets/hero-section/responsive/Ellipse 35.png"
-    />
-    <nav class="hero__burger-menu-nav">
-      <div class="hero__burger-menu-item">
-        <a href="#why-me">{{ 'header.whyMe' | translate }}</a>
-      </div>
-
-      <div class="hero__burger-menu-item">
-        <a href="#skills">
-          {{ 'header.skills' | translate }}
-        </a>
-      </div>
-
-      <div class="hero__burger-menu-item">
-        <a href="#projects"
-          ><a href="#projects">{{ 'header.projects' | translate }}</a></a
-        >
-      </div>
-
-      <div class="hero__burger-menu-item">
-        <a href="#contact"
-          ><a href="#contact">{{ 'header.contact' | translate }}</a></a
-        >
-      </div>
-
-      <div class="hero__burger-menu-language">
-        <div
-          class="burger__language-item"
-          (mouseover)="onMouseOver('de')"
-          (mouseleave)="onMouseLeave()"
-        >
-          @if (activeLanguage == 'de' && hoveredLanguage == '') {
-            <img class="burger__language-bubble" src="./assets/bubbles/Ellipse-24.png" />
-          }
-
-          <button
-            class="burger__language-button"
-            [class.burger__language-button--active]="
-              hoveredLanguage == 'de' || (hoveredLanguage == '' && activeLanguage == 'de')
-            "
-            (click)="changeLanguage('de')"
-          >
-            DE
-          </button>
+  <div class="burger-overlay" (click)="closeMenu()">
+    <div class="hero__burger-menu">
+      <img
+        class="hero__burger-menu-background"
+        src="./assets/hero-section/responsive/Ellipse 35.png"
+      />
+      <nav class="hero__burger-menu-nav">
+        <div class="hero__burger-menu-item">
+          <a href="#why-me">{{ 'header.whyMe' | translate }}</a>
         </div>
 
-        <div
-          class="burger__language-item"
-          (mouseover)="onMouseOver('en')"
-          (mouseleave)="onMouseLeave()"
-        >
-          @if (activeLanguage == 'en' && hoveredLanguage == '') {
-            <img class="burger__language-bubble" src="./assets/bubbles/Ellipse-24.png" />
-          }
-
-          <button
-            class="burger__language-button"
-            [class.burger__language-button--active]="
-              hoveredLanguage == 'en' || (hoveredLanguage == '' && activeLanguage == 'en')
-            "
-            (click)="changeLanguage('en')"
-          >
-            EN
-          </button>
+        <div class="hero__burger-menu-item">
+          <a href="#skills">
+            {{ 'header.skills' | translate }}
+          </a>
         </div>
-      </div>
-    </nav>
+
+        <div class="hero__burger-menu-item">
+          <a href="#projects"
+            ><a href="#projects">{{ 'header.projects' | translate }}</a></a
+          >
+        </div>
+
+        <div class="hero__burger-menu-item">
+          <a href="#contact"
+            ><a href="#contact">{{ 'header.contact' | translate }}</a></a
+          >
+        </div>
+
+        <div class="hero__burger-menu-language">
+          <div
+            class="burger__language-item"
+            (mouseover)="onMouseOver('de')"
+            (mouseleave)="onMouseLeave()"
+          >
+            @if (activeLanguage == 'de' && hoveredLanguage == '') {
+              <img class="burger__language-bubble" src="./assets/bubbles/Ellipse-24.png" />
+            }
+
+            <button
+              class="burger__language-button"
+              [class.burger__language-button--active]="
+                hoveredLanguage == 'de' || (hoveredLanguage == '' && activeLanguage == 'de')
+              "
+              (click)="changeLanguage('de')"
+            >
+              DE
+            </button>
+          </div>
+
+          <div
+            class="burger__language-item"
+            (mouseover)="onMouseOver('en')"
+            (mouseleave)="onMouseLeave()"
+          >
+            @if (activeLanguage == 'en' && hoveredLanguage == '') {
+              <img class="burger__language-bubble" src="./assets/bubbles/Ellipse-24.png" />
+            }
+
+            <button
+              class="burger__language-button"
+              [class.burger__language-button--active]="
+                hoveredLanguage == 'en' || (hoveredLanguage == '' && activeLanguage == 'en')
+              "
+              (click)="changeLanguage('en')"
+            >
+              EN
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
   </div>
 }
