@@ -104,6 +104,6 @@ export class Contact {
       this.mailError = false;
 
       this.cdr.detectChanges();
-    }, 4000);
+    }, 3000);
   }
 }

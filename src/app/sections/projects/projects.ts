@@ -53,8 +53,8 @@ export class Projects {
         },
       ],
       image: './assets/img/Screenshot-join-project.png',
-      liveTestLink: 'https://franziska-kalloch.de/join/',
-      githubLink: 'https://github.com/FranziskaKalloch/join.git',
+      liveTestLink: 'https://join.franziska-kalloch.de',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
 
     {
@@ -83,8 +83,8 @@ export class Projects {
         },
       ],
       image: './assets/img/El-Pollo-Loco.png',
-      liveTestLink: 'https://franziska-kalloch.de/el-pollo-loco/',
-      githubLink: 'https://github.com/FranziskaKalloch/El-Pollo-Loco.git',
+      liveTestLink: 'https://elpolloloco.franziska-kalloch.de',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
 
     {
@@ -113,8 +113,8 @@ export class Projects {
         },
       ],
       image: './assets/img/pokedex.png',
-      liveTestLink: 'https://franziska-kalloch.de/pokedex/',
-      githubLink: 'https://github.com/FranziskaKalloch/Pokedex.git',
+      liveTestLink: 'https://github.com/franziskakalloch/pokedex',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
     {
       title: 'Ongoing Project',
@@ -136,7 +136,7 @@ export class Projects {
       ],
       image: './assets/img/Ongoing-project.png',
       liveTestLink: '',
-      githubLink: '',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
   ];
 
@@ -167,8 +167,8 @@ export class Projects {
         },
       ],
       image: './assets/img/Screenshot-join-project.png',
-      liveTestLink: 'https://franziska-kalloch.de/join/',
-      githubLink: 'https://github.com/FranziskaKalloch/join.git',
+      liveTestLink: 'https://join.franziska-kalloch.de',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
     {
       title: 'El Pollo Loco',
@@ -196,8 +196,8 @@ export class Projects {
         },
       ],
       image: './assets/img/El-Pollo-Loco.png',
-      liveTestLink: 'https://franziska-kalloch.de/el-pollo-loco/',
-      githubLink: 'https://github.com/FranziskaKalloch/El-Pollo-Loco.git',
+      liveTestLink: 'https://elpolloloco.franziska-kalloch.de',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
     {
       title: 'Pokedex',
@@ -225,8 +225,8 @@ export class Projects {
         },
       ],
       image: './assets/img/pokedex.png',
-      liveTestLink: 'https://franziska-kalloch.de/pokedex/',
-      githubLink: 'https://github.com/FranziskaKalloch/Pokedex.git',
+      liveTestLink: 'https://pokedex.franziska-kalloch.de',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
     {
       title: 'Ongoing Project',
@@ -248,7 +248,7 @@ export class Projects {
       ],
       image: './assets/img/Ongoing-project.png',
       liveTestLink: '',
-      githubLink: '',
+      githubLink: 'https://github.com/FranziskaKalloch',
     },
   ];
 }
