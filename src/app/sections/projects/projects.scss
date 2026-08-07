@@ -121,9 +121,9 @@
   }
 }
 
-@include mixin.responsive(mobileSmall) {
+@media screen and (min-width: 401px) and (max-width: 528px) {
   .projects__tabs {
-    gap: 12px;
+    gap: 10px;
   }
 
   .active-tab {

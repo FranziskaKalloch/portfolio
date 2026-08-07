@@ -264,7 +264,7 @@
     height: 50px;
   }
 }
-@include mixin.responsive(mobileSmall) {
+@media screen and (min-width: 401px) and (max-width: 480px) {
   h3 {
     font-size: 18px;
   }
@@ -280,7 +280,28 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 400px) {
+  .skill__section-icon {
+    width: 50px;
+    height: 50px;
+  }
+
   .headline {
     font-size: 40px;
+  }
+
+  .skills-mobile__text {
+    width: 100%;
+  }
+
+  .skills-mobile__content {
+    flex-direction: column;
+    padding: 0;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
   }
 }

@@ -1,4 +1,5 @@
-<app-header></app-header>
+<app-header (burgerClicked)="toggleBurgerMenu()"></app-header>
+<app-burger-menu [isBurgerMenuOpen]="isBurgerMenuOpen"></app-burger-menu>
 <section class="app-legal-notice content-limit">
   <div class="legal-notice__inner">
     <h1 class="headline color-blue">{{ 'legalNotice.headline' | translate }}</h1>

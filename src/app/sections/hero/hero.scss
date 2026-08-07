@@ -9,6 +9,7 @@
     width: clamp(700px, 28vw, 900px);
     max-width: 100%;
     height: auto;
+    margin-right: 42px;
   }
 }
 
@@ -52,7 +53,7 @@
     @include mixin.responsive-min(wideScreen) {
       min-height: calc(100vh - 130px);
       align-items: center;
-      padding-inline: 0;
+      padding-inline: 20px;
     }
   }
 }
@@ -212,7 +213,6 @@
   }
 
   &-icon {
-    position: absolute;
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -224,6 +224,8 @@
     }
 
     &--hover {
+      position: absolute;
+      inset: 0;
       opacity: 0;
     }
   }
