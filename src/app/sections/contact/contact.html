@@ -127,18 +127,20 @@
     </form>
 
     @if (mailSent || mailError) {
-      <div
-        class="contact-feedback"
-        [class.contact-feedback--success]="mailSent"
-        [class.contact-feedback--error]="mailError"
-        role="status"
-        aria-live="polite"
-      >
-        @if (mailSent) {
-          <span>Deine Nachricht wurde erfolgreich versendet.</span>
-        } @else {
-          <span>Die Nachricht konnte nicht versendet werden. Bitte versuche es erneut.</span>
-        }
+      <div class="contact-feedback-overlay">
+        <div
+          class="contact-feedback"
+          [class.contact-feedback--success]="mailSent"
+          [class.contact-feedback--error]="mailError"
+          role="status"
+          aria-live="polite"
+        >
+          @if (mailSent) {
+            <span>Deine Nachricht wurde erfolgreich versendet.</span>
+          } @else {
+            <span>Die Nachricht konnte nicht versendet werden. Bitte versuche es erneut.</span>
+          }
+        </div>
       </div>
     }
 

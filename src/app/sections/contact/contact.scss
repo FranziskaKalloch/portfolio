@@ -380,15 +380,15 @@ label {
 
 .contact-feedback {
   position: fixed;
-  top: 32px;
+  top: 50%;
   left: 50%;
   z-index: 1000;
 
-  width: min(calc(100% - 32px), 520px);
-  padding: 18px 24px;
+  transform: translateX(-50%);
+  padding: 28px 32px;
 
   border: 2px solid;
-  border-radius: 16px;
+  border-radius: 22px;
 
   text-align: center;
   font-size: 18px;
@@ -396,33 +396,45 @@ label {
   letter-spacing: 0.5px;
 
   box-shadow: 0 12px 32px rgb(0 0 0 / 25%);
-  transform: translateX(-50%);
 
-  animation: contact-feedback-in 250ms ease-out;
+  animation: contact-feedback-in 350ms ease;
 }
 
 .contact-feedback--success {
-  color: #155d35;
-  border-color: #4caf78;
-  background-color: #e7f8ed;
+  color: var(--done-color);
+  border-color: var(--done-color);
+  background-color: var(--background-color);
 }
 
 .contact-feedback--error {
   color: var(--error-color);
   border-color: var(--error-color);
-  background-color: #fff0f0;
+  background-color: var(--background-color);
 }
 
 @keyframes contact-feedback-in {
   from {
     opacity: 0;
-    transform: translate(-50%, -16px);
+    transform: translate(0%, 0%);
   }
 
   to {
     opacity: 1;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
   }
+}
+
+.contact-feedback-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
 }
 
 // -------------------------
