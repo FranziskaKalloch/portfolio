@@ -1,353 +1,104 @@
-# Mein Portfolio Projekt
-
-Dieses Projekt wird in Angular umgesetzt.
-Der Fokus liegt auf einem modernen, dunklen Design mit hellblauen Akzenten, Bubble Elementen, Hover-Effekten, responsive Layout und klarer Projektstruktur.
+# Join – Kanban Project Management Tool
 
-## Farbpalette
-
-- Background color | #262E34 | Haupt-Hintergrund der Webseite |
-- Primary color | #89BCD9 | Akzente, Highlights, Links, Icons, aktive Elemente |
-- Secondary color | #F8F5EC | Helle Schrift, Kontraste, wichtige Texte |
-- Hover color dark | rgb(58, 68, 72) | Dunkler Hover-Zustand |
-- Surface color | rgb(45, 56, 64) | Projekt-Section, Tabs/Reiter, Skill-Bubbles, hervorgehobene Flächen |
-- Error color | #E44C36 | Fehlermeldungen im Kontaktformular |
-- Done color | #97E163 | Erfolgreiche Formularzustände |
-
-## Schriften
-
-### Anta
-
-Verwendung für:
-
-- Logo
-- Überschriften
-- Navigation
-- Buttons
-
-### Josefin Sans
-
-Verwendung für:
-
-- Absätze
-- Projektbeschreibungen
-- About-Me-Texte
-- Formulartexte
-- längere Lesetexte
-
-## Geplante Sections
-
-1. Header / Navigation
-2. Hero Section
-3. Why Me / About Me
-4. Skills
-5. Projects
-6. Contact
-7. Footer
-8. Legal Notice / Impressum
-9. Privacy Policy / Datenschutzerklärung
-
-## Komponenten
-
-## Phase 1
-
-1. Header
-2. Hero
-3. WhyMe
-4. Skills
-5. Projects
-6. Contact
-7. Footer
-
-## Phase 2
-
-ProjectCard
-Button
-Bubble
-
-## Project Card Komponente Inhalt
-
-- Titel
-- Beschreibung
-- Organisation
-- Learnings
-- Icons
-- Image
-- Live-Link
-- GitHub-Link
-
-## Assets
-
-Alle heruntergeladenen Design-Dateien werden lokal im Projekt gespeichert.
-Geplante Asset-Struktur:
-
-- Logos
-- Icons
-- Bilder
-- Bubbles
-- Fonts
-- Projektbilder
-
-## Besonderheiten aus der Projekts
-
-- Bubble im Hero-Bereich
-- Header im unteren Herobereich und beim scrollen sticky oben
-- Bubble-Hover-Effekte im Header
-- Bubble-Elemente bei Navigation
-- Projektbereich mit Tabs/Reitern
-- Skill-Bereich mit Bubble-Design
-- Kontaktformular mit Validierung
-- Responsive Mobile-Menü
-- Mehrsprachigkeit Deutsch / Englisch
+Join is a modern Kanban-based project management application developed as a team project during the Developer Akademie.
 
-## Projektaufbau - Component
+The application enables users to create, organize and manage tasks efficiently using a drag-and-drop board. It includes authentication, contact management, subtasks, priorities and responsive layouts for desktop and mobile devices.
 
-src/app/
-├-layout/
-├── header/
-└── footer/
+---
 
-sections/
-├── hero/
-├── why-me/
-├── skills/
-├── projects/
-├── references/
-└── contact/
+## Live Demo
 
-pages/
-├── home/
-├── legal-notice/
-└── privacy-policy/
+https://join.franziska-kalloch.de
 
-## Ordnerstruktur | SCSS 7-1 Pattern
+---
 
-Die Idee:
+## Features
 
-- Es gibt 7 Ordner für verschiedene SCSS-Bereiche.
-- Es gibt 1 Hauptdatei, meistens `main.scss`.
-- In der `main.scss` werden alle Teil-Dateien gesammelt/importiert.
+- User authentication
+- Guest access
+- Kanban board with drag & drop
+- Create, edit and delete tasks
+- Task priorities (Urgent, Medium, Low)
+- Due dates
+- Contact management
+- Subtasks
+- Search and filter tasks
+- Responsive design
+- Multi-language support
 
-scss/
-│
-├── abstract/
-├── base/
-├── components/
-├── layout/
-├── pages/
-├── themes/
-├── vendors/
-│
-└── main.scss
+---
 
-1. abstract
--> hier liegen Funktionen, Mixins, Maps und Variablen drin.
+## Technologies
 
-2. base
--> hier liegen die Grundstyles für das gesamte Projekt. Z.b. Reset, Schriftarten, Body-styles, allg. HTML Elemente.
--> _reset.scss
-->_typography.scss
--> _base.scss
+- Angular
+- TypeScript
+- SCSS
+- HTML5
+- Supabase
+- RxJS
+- Angular Signals
 
-3. components
--> Hier kommen wiederverwendbare Baustein hinein.
--> Buttons, Cars, Badges, Tabs, Formularfelder.
+---
 
-4. layout
--> hier liegen größere Layout-Bereiche der Seite.
--> z.B. Header, Footer, Navigation, Grid-System, Sections
+## Installation
 
-5. pages
--> Hier kommen Styles hinein, die nur für eine bestimmte Seite gelten.
--> z.B. Home-Seite, Impressum, Datenschutz.
+Clone the repository
 
-6. themes
--> hier liegen alternative Designs oder Farbschemata.
--> z.B. Dark Theme, Light Theme
+```bash
+git clone https://github.com/franziskakalloch/join.git
+```
 
-7. vendor
--> alles was externes Styles betrifft, wie z.B. bootstrap, externe Libraries, fremde Stylesheets
+Install dependencies
 
-## main.scss
+```bash
+npm install
+```
 
-Ist die zentrale Sammeldatei. Hier werden alle SCSS-Dateien zusammengeführt.
-@use "./abstracts/variables" as *;
-@use "./abstracts/mixins" as*;
-@use "./base/reset" as *;
-@use "./base/typography" as*;
-@use "./layout/header" as *;
+Start the development server
 
-WICHTIG: bei SCSS-Dateien mit Unterstrich wird der Unterstrich beim Import nicht mitgeschrieben.
+```bash
+ng serve
+```
 
-## Kontaktformular
+Open
 
-Das Formular soll visuelles Feedback geben.
+```
+http://localhost:4200
+```
 
-Fehlerzustand:
+---
 
-- leeres Pflichtfeld
-- ungültige Eingabe
-- Privacy Policy nicht angekreuzt
+## Project Structure
 
-Erfolgszustand:
+```
+src/
+ ├── app/
+ ├── assets/
+ ├── environments/
+ └── styles/
+```
 
-- korrekt ausgefüllte Felder
-- erfolgreich gesendete Nachricht
+---
 
-## globale Variablen
+## Team Project
 
-Diese Dinge werden überall benutzt.
+This application was developed collaboratively as part of the Developer Akademie curriculum.
 
-- Farben ✅
-- Fonts ✅
-- Abstände ✅
-- Container-Breiten ✅
-- Breakpoints
-- Animation
+My main responsibilities included:
 
-## Content Breite
+- Authentication
+- Contact management
+- Task management
+- Responsive design
+- Bug fixing
+- Code reviews
+- UI improvements
 
-Content Widths
+---
 
-Wide Container
+## Author
 
-- Hero
-- Projects
-- References
+Franziska Kalloch
 
-Narrow Container
-
-- Why Me
-- Skills
-- Contact
-
-## Style
-
-## BEM (Block Element Modifier)
-
-Ziel:
-
-- eindeutige Klassennamen
-- wiederverwendbare Komponenten
-- weniger CSS Konflikte
-- bessere Lesbarkeit
-
------ AUFBAU ------
-
-.block
-.block__element
-.block--modifier
-
------ BLOCK ------
-
-Ein Block ist eine eigenständige Komponente.
-
-- .button
-- .header
-- .footer
-- .project-card
-- .contact-form
-
-``scss
-.button {}
-``html
-``<button class="button>Kontakt</button>
-
------ ELEMENT ------
-
-Ein Element gehört zu einem Block. Ein Element kann nicht alleine existieren.
-
-- .button__icon
-- .button__text
-- .header__logo
-- .header__navigation
-- .card__title
-
-``
-<button class="button">
-  <span class="button__icon"></span>
-  <span class="button__text">Kontakt</span>
-</button>
-``
-
------ MODIFIER ------
-
-- .button--primary
-- .button--secondary
-- .button--disabled
-
-- .card--active
-- .card--selected
-
-.button {
-  // Grundstil
-
-  &--primary {
-    // Hauptbutton
-  }
-
-  &--secondary {
-    // Zweitbutton
-  }
-
-  &--ghost {
-    // transparenter Button
-  }
-}
-
-`
-<button class="button button--primary">
-  Kontakt
-</button>
-`
-
-## Nestin mit BEM
-
-.button {
-  border: none;
-  cursor: pointer;
-
-  &__icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  &__text {
-    font-size: 1rem;
-  }
-
-  &--primary {
-    background-color: var(--primary-color);
-  }
-
-  &--secondary {
-    background-color: transparent;
-  }
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-## DE EN Button HOVER TECHNIK
-
-Normaler Zustand:
-
-DE dunkel
-EN weiß + Bubble
-
-Hover auf DE:
-
-DE weiß
-EN dunkel + Bubble weg
-
-Mouse weg:
-
-DE dunkel
-EN weiß + Bubble
-
-Klick auf DE:
-
-DE weiß + Bubble
-EN dunkel
-
-Danach ist DE der neue Active State
+GitHub:
+https://github.com/franziskakalloch
