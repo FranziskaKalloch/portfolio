@@ -33,6 +33,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           source: dist/portfolio/browser/*
-          target: franziska-kalloch.de/httpdocs/portfolio
+          target: franziska-kalloch.de/httpdocs
           strip_components: 3
           overwrite: true
