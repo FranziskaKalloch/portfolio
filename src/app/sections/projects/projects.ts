@@ -113,7 +113,7 @@ export class Projects {
         },
       ],
       image: './assets/img/pokedex.png',
-      liveTestLink: 'https://github.com/franziskakalloch/pokedex',
+      liveTestLink: 'https://pokedex.franziska-kalloch.de',
       githubLink: 'https://github.com/FranziskaKalloch/Pokedex',
     },
     {
