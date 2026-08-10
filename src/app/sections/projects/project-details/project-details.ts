@@ -10,6 +10,5 @@ import { Project } from '../project.interface';
   styleUrl: './project-details.scss',
 })
 export class ProjectDetails {
-  // der Klasse muss activeProject übergeben werden - es bekommt also ein Projekt von außen
   @Input() project?: Project;
 }
