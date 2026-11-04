@@ -117,26 +117,29 @@ export class Projects {
       githubLink: 'https://github.com/FranziskaKalloch/Pokedex',
     },
     {
-      title: 'Ongoing Project',
+      title: 'Coderr',
       mobileTitle: '4. Projekt',
-      duration: '',
-      aboutText: 'Kommt bald...',
-      organisationText: 'Kommt bald...',
+      duration: '2 Wochen',
+      aboutText: 'Coderr ist ein Marktplatz für Dienstleistungen, auf dem Anbieter Angebote veröffentlichen und Kunden Bestellungen aufgeben sowie Bewertungen hinterlassen können. Ich habe das Backend mit Django und Django REST Framework entwickelt – einschließlich Token-Authentifizierung, Benutzerprofilen und rollenbasierten Berechtigungen. Das vorgegebene Frontend greift auf meine REST-API zu.',
+      organisationText: 'Ich habe das Backend in separate Django-Apps für Authentifizierung, Profile, Angebote, Bestellungen und Bewertungen aufgeteilt. Die Endpunkte habe ich anhand der API-Vorgaben umgesetzt und ihr Verhalten sowie die Berechtigungen mit automatisierten Tests geprüft. Anschließend habe ich das vorgegebene Frontend angebunden und die Anwendung auf einen Server bereitgestellt.',
       learnedTitle: 'Was ich gelernt habe',
-      learnedText: 'Kommt bald...',
+      learnedText: 'Ich habe mein Verständnis für REST-APIs, Serializer, relationale Datenmodelle und rollenbasierte Berechtigungen vertieft. Durch die Frontend-Anbindung konnte ich CORS und Token-Authentifizierung praktisch nachvollziehen. Beim Deployment habe ich gelernt, eine Python-Anwendung einzurichten, Abhängigkeiten bereitzustellen und Django für den Produktivbetrieb zu konfigurieren.',
       technologies: [
         {
-          icon: './assets/icons/skill/Vue Js.png',
-          name: 'Vue.js',
+          icon: './assets/icons/skill/Django.png',
+          name: 'Django',
         },
         {
-          icon: './assets/icons/skill/React.png',
-          name: 'React',
+          icon: './assets/icons/skill/Django-REST-Framework.png',
+          name: 'DRF',
         },
+        {icon: './assets/icons/skill/Python.png',
+          name: 'Python',
+        }
       ],
-      image: './assets/img/Ongoing-project.png',
-      liveTestLink: '',
-      githubLink: 'https://github.com/FranziskaKalloch',
+      image: './assets/img/Coderr-preview.jpg',
+      liveTestLink: 'https://coderr.franziska-kalloch.de/',
+      githubLink: 'https://github.com/FranziskaKalloch/Coderr',
     },
   ];
 
@@ -229,26 +232,29 @@ export class Projects {
       githubLink: 'https://github.com/FranziskaKalloch/Pokedex',
     },
     {
-      title: 'Ongoing Project',
+      title: 'Coderr',
       mobileTitle: '4. Project',
-      duration: '',
-      aboutText: 'Coming Soon...',
-      organisationText: 'Coming Soon...',
+      duration: '2 Weeks',
+      aboutText: 'Coderr is a freelance marketplace where business users publish service offers and customers place orders and leave reviews. I developed the backend with Django and Django REST Framework, including token authentication, user profiles and role-based permissions. The provided frontend connects to my REST API.',
+      organisationText: 'I divided the backend into separate Django apps for authentication, profiles, offers, orders and reviews. I implemented the endpoints according to the API specification and tested their behaviour and permissions with automated tests. Finally, I connected the provided frontend and deployed the application on Netcup.',
       learnedTitle: 'What I have learnt',
-      learnedText: 'Coming Soon...',
+      learnedText: 'I deepened my understanding of REST API design, serializers, relational data models and role-based permissions. Connecting the frontend helped me understand CORS and token authentication in practice. Deploying the project taught me how to configure a Python application, manage dependencies and adapt Django settings for production.',
       technologies: [
         {
-          icon: './assets/icons/skill/Vue Js.png',
-          name: 'Vue.js',
+          icon: './assets/icons/skill/Django.png',
+          name: 'Django',
         },
         {
-          icon: './assets/icons/skill/React.png',
-          name: 'React',
+          icon: './assets/icons/skill/Django-REST-Framework.png',
+          name: 'DRF',
         },
+        {icon: './assets/icons/skill/Python.png',
+          name: 'Python',
+        }
       ],
-      image: './assets/img/Ongoing-project.png',
-      liveTestLink: '',
-      githubLink: 'https://github.com/FranziskaKalloch',
+      image: './assets/img/Coderr-preview.jpg',
+      liveTestLink: 'https://coderr.franziska-kalloch.de/',
+      githubLink: 'https://github.com/FranziskaKalloch/Coderr',
     },
   ];
 }

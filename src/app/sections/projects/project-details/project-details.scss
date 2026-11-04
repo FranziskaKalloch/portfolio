@@ -77,7 +77,18 @@ p {
 
     &-list {
       display: flex;
+      align-items: center;
       gap: 32px;
+
+      img {
+        max-width: 45px;
+        max-height: 47px;
+        object-fit: contain;
+
+        &[alt='Django'] {
+          filter: brightness(0.85) saturate(1.5);
+        }
+      }
     }
   }
   &-image {
@@ -90,6 +101,11 @@ p {
 
   width: 500px;
   height: 340px;
+}
+
+.project__image[src$='Coderr-preview.jpg'] {
+  object-fit: contain;
+  background-color: #fff;
 }
 
 .project__image-overlay {

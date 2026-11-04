@@ -45,6 +45,13 @@
 .skill-icon {
   width: 60px;
   height: 60px;
+
+  &[alt='DRF'],
+  &[alt='Python'] {
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: brightness(1.18) saturate(0.65);
+  }
 }
 
 .learning__section {
@@ -162,6 +169,10 @@
 
   .skill-icon-text {
     display: none;
+
+    &--named {
+      display: block;
+    }
   }
 
   .skill__section {
